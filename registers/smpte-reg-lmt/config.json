@@ -1,0 +1,30 @@
+{
+    "_help": "Configuration file for smpte-reg-lmt",
+    "app_title": "Register: Language Metadata Table",
+    "app_description_MD": "_**PREVIEW** LMT pending development as SMPTE ST xxxx_",
+    "version": "0.1.0",
+    "folder": {
+        "server": "server",
+        "browser": "server",
+        "process": "smpte-process"
+    },
+    "smpte_process": {
+        "control-doc": "lmt-control.pdf",
+        "control-doc-download-name": "smpte-st-xxxx(online):2020.pdf",
+        "register": {
+            "current": "lmt.json",
+            "previous": "lmt-previous.json",
+            "candidate": "lmt-candidate.json"
+        },
+        "narrative": {
+            "current": "lmt-narrative.md",
+            "previous": "lmt-narrative-previous.md",
+            "candidate": "lmt-narrative-candidate.md"
+        },
+        "schema": {
+            "current": "lmt-schema.json",
+            "previous": "lmt-schema-previous.json",
+            "candidate": "lmt-schema-candidate.json"
+        }
+    }
+}

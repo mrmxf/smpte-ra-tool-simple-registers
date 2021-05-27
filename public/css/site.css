@@ -1,0 +1,26 @@
+.header-wrapper {
+  background-color: #0070af;
+}
+header {
+  color: white;
+}
+header h1 {
+  color: white;
+}
+header img {
+  display: block;
+  margin: 5px 20px 5px 0;
+  max-height: 85px;
+}
+#lmt-files {
+  margin-top: 20px;
+}
+#lmt-tabs {
+  margin-top: 20px;
+  margin-bottom: -1px;
+}
+@media only screen and (max-width: 768px) {
+  header img {
+    margin: 5px auto;
+  }
+}

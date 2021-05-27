@@ -1,0 +1,51 @@
+{
+  "name": "smpte-ra-tool-simple-registers",
+  "version": "0.9.2",
+  "description": "Display Simple Register",
+  "main": "lmt-srv/server-lmt.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node lmt-srv/server-lmt.js",
+    "pretty": "node lmt-srv/server-lmt.js | pino-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mrmxf",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/SMPTE/RegLMT-WebTools/issues"
+  },
+  "homepage": "https://github.com/SMPTE/RegLMT-WebTools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMPTE/RegLMT-WebTools.git"
+  },
+  "keywords": [
+    "LMT",
+    "SMPTE"
+  ],
+  "dependencies": {
+    "convict": "^6.1.0",
+    "deep-diff": "^1.0.2",
+    "dotenv": "^8.2.0",
+    "ecstatic": "^4.1.4",
+    "escape-html": "^1.0.3",
+    "koa": "^2.12.0",
+    "koa-basic-auth": "^4.0.0",
+    "koa-body": "^4.2.0",
+    "koa-mount": "^4.0.0",
+    "koa-pino-logger": "^3.0.0",
+    "koa-router": "^9.1.0",
+    "koa-static": "^5.0.0",
+    "libxmljs": "^0.19.7",
+    "libxmljs2": "^0.26.0",
+    "marked": "^1.0.0",
+    "mustache": "^4.0.1",
+    "pino": "^6.2.1",
+    "prismjs": "^1.20.0",
+    "spacetime": "^6.16.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,4055 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Zthes>
+    <!-- The first element is for the LMT publishing process-->
+    <LMTMetadata>
+        <version>3.0</version>
+        <maintainer>MESA Alliance</maintainer>
+        <DatesISO8601>
+            <release>2020-06-12</release>
+            <publish>2020-07-20</publish>
+        </DatesISO8601>
+    </LMTMetadata>
+<term>
+<termId>16884047</termId>
+<termUpdate>add</termUpdate>
+<termName>Abkhazian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ab</termNote>
+<termNote label="Long Description 1">Abkhazian</termNote>
+<termNote label="Audio Language Display Name 1">аҧсуа бызшәа</termNote>
+<termNote label="Visual Language Tag 1">ab</termNote>
+<termNote label="Visual Language Display Name 1">аҧсуа бызшәа</termNote>
+</term>
+<term>
+<termId>16873375</termId>
+<termUpdate>add</termUpdate>
+<termName>Afrikaans</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">af</termNote>
+<termNote label="Long Description 1">Afrikaans</termNote>
+<termNote label="Audio Language Display Name 1">Afrikaans</termNote>
+<termNote label="Visual Language Tag 1">af</termNote>
+<termNote label="Visual Language Display Name 1">Afrikaans</termNote>
+<termNote label="Code">urn:ietf:bcp:47:af</termNote>
+</term>
+<term>
+<termId>16873470</termId>
+<termUpdate>add</termUpdate>
+<termName>Albanian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sq</termNote>
+<termNote label="Long Description 1">Albanian</termNote>
+<termNote label="Audio Language Display Name 1">Shqip</termNote>
+<termNote label="Visual Language Tag 1">sq</termNote>
+<termNote label="Visual Language Display Name 1">Shqip</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sq</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873523</termId>
+<termName>Albanian languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873523</termId>
+<termUpdate>add</termUpdate>
+<termName>Albanian languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Albanian languages</termNote>
+<termNote label="Language Group Tag">sq</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:sq</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873470</termId>
+<termName>Albanian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883611</termId>
+<termUpdate>add</termUpdate>
+<termName>Algic family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Algic family</termNote>
+<termNote label="Language Group Tag">alq</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:alq</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883610</termId>
+<termName>Arapaho</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873528</termId>
+<termUpdate>add</termUpdate>
+<termName>American Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Long Description 1">American Sign Language</termNote>
+<termNote label="Audio Language Display Name 1">American Sign Language</termNote>
+<termNote label="Visual Language Tag 1">ase</termNote>
+<termNote label="Visual Language Display Name 1">American Sign Language</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ase</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873520</termId>
+<termName>Sign Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873376</termId>
+<termUpdate>add</termUpdate>
+<termName>Amharic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">am</termNote>
+<termNote label="Long Description 1">Amharic</termNote>
+<termNote label="Audio Language Display Name 1">አማርኛ</termNote>
+<termNote label="Visual Language Tag 1">am</termNote>
+<termNote label="Visual Language Display Name 1">አማርኛ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:am</termNote>
+</term>
+<term>
+<termId>16873532</termId>
+<termUpdate>add</termUpdate>
+<termName>Ancient Greek</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">grc</termNote>
+<termNote label="Long Description 1">Ancient Greek</termNote>
+<termNote label="Visual Language Tag 1">grc</termNote>
+<termNote label="Code">urn:ietf:bcp:47:grc</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873531</termId>
+<termName>Greek</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873377</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ar</termNote>
+<termNote label="Long Description 1">Arabic</termNote>
+<termNote label="Audio Language Display Name 1">العربية</termNote>
+<termNote label="Visual Language Tag 1">ar</termNote>
+<termNote label="Visual Language Display Name 1">العربية</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ar</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873501</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Arabic</termNote>
+<termNote label="Language Group Tag">ar</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:ar</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873377</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884046</termId>
+<termName>Arabic as spoken in Algeria</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883607</termId>
+<termName>Arabic as spoken in Egypt</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883606</termId>
+<termName>Arabic as spoken in Lebanon</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883653</termId>
+<termName>Arabic as spoken in Morocco</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883608</termId>
+<termName>Arabic as spoken in Tunisia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883609</termId>
+<termName>Standard Arabic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884046</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic as spoken in Algeria</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">arq</termNote>
+<termNote label="Long Description 1">Arabic as spoken in Algeria</termNote>
+<termNote label="Audio Language Display Name 1">دزيرية‎</termNote>
+<termNote label="Visual Language Tag 1">arq</termNote>
+<termNote label="Visual Language Display Name 1">دزيرية‎</termNote>
+<termNote label="Notes">Updated per: https://r12a.github.io/app-subtags/</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883607</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic as spoken in Egypt</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">arz</termNote>
+<termNote label="Long Description 1">Arabic as spoken in Egypt</termNote>
+<termNote label="Audio Language Display Name 1">اللهجة المصرية</termNote>
+<termNote label="Visual Language Tag 1">arz</termNote>
+<termNote label="Visual Language Display Name 1">اللهجة المصرية</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ar-EG</termNote>
+<termNote label="Notes">Updated per https://r12a.github.io/app-subtags/</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883606</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic as spoken in Lebanon</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ar-LB</termNote>
+<termNote label="Long Description 1">Arabic as spoken in Lebanon</termNote>
+<termNote label="Audio Language Display Name 1">اللهجة اللبنانية</termNote>
+<termNote label="Visual Language Tag 1">ar-LB</termNote>
+<termNote label="Visual Language Display Name 1">اللهجة اللبنانية</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ar-LB</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883653</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic as spoken in Morocco</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ary</termNote>
+<termNote label="Long Description 1">Arabic as spoken in Morocco</termNote>
+<termNote label="Audio Language Display Name 1">الدارجة</termNote>
+<termNote label="Visual Language Tag 1">ary</termNote>
+<termNote label="Visual Language Display Name 1">الدارجة</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ar-MA</termNote>
+<termNote label="Notes">Updated as per the validator: https://r12a.github.io/app-subtags/</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883608</termId>
+<termUpdate>add</termUpdate>
+<termName>Arabic as spoken in Tunisia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ar-TN</termNote>
+<termNote label="Long Description 1">Arabic as spoken in Tunisia</termNote>
+<termNote label="Audio Language Display Name 1">تونسي</termNote>
+<termNote label="Visual Language Tag 1">ar-TN</termNote>
+<termNote label="Visual Language Display Name 1">تونسي</termNote>
+<termNote label="Code">urn:bcp:47:ar-TN</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883610</termId>
+<termUpdate>add</termUpdate>
+<termName>Arapaho</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">arp</termNote>
+<termNote label="Long Description 1">Arapaho</termNote>
+<termNote label="Audio Language Display Name 1">Hinónoʼeitíít</termNote>
+<termNote label="Visual Language Tag 1">arp</termNote>
+<termNote label="Visual Language Display Name 1">Hinónoʼeitíít</termNote>
+<termNote label="Code">urn:ietf:bcp:47:arp</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883611</termId>
+<termName>Algic family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873415</termId>
+<termUpdate>add</termUpdate>
+<termName>Armenian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hy</termNote>
+<termNote label="Long Description 1">Armenian</termNote>
+<termNote label="Audio Language Display Name 1">հայերեն</termNote>
+<termNote label="Visual Language Tag 1">hy</termNote>
+<termNote label="Visual Language Display Name 1">հայերեն</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hy</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873510</termId>
+<termName>Armenian Family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873510</termId>
+<termUpdate>add</termUpdate>
+<termName>Armenian Family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Armenian Family</termNote>
+<termNote label="Language Group Tag">hyx</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:hyx</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873415</termId>
+<termName>Armenian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873527</termId>
+<termName>Western Armenian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883612</termId>
+<termUpdate>add</termUpdate>
+<termName>Assamese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">as</termNote>
+<termNote label="Long Description 1">Assamese</termNote>
+<termNote label="Audio Language Display Name 1">Ôxômiya</termNote>
+<termNote label="Visual Language Tag 1">as</termNote>
+<termNote label="Visual Language Display Name 1">Ôxômiya</termNote>
+<termNote label="Code">urn:ietf:bcp:47:as</termNote>
+</term>
+<term>
+<termId>16873529</termId>
+<termUpdate>add</termUpdate>
+<termName>Australian Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Long Description 1">Australian Sign Language</termNote>
+<termNote label="Long Description 2">Auslan</termNote>
+<termNote label="Audio Language Display Name 1">Australian Sign Language</termNote>
+<termNote label="Audio Language Display Name 2">Auslan</termNote>
+<termNote label="Visual Language Tag 1">asf</termNote>
+<termNote label="Visual Language Display Name 1">Australian Sign Language</termNote>
+<termNote label="Visual Language Display Name 2">Auslan</termNote>
+<termNote label="Code">urn:ietf:bcp:47:asf</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873520</termId>
+<termName>Sign Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883613</termId>
+<termUpdate>add</termUpdate>
+<termName>Aymara</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ay</termNote>
+<termNote label="Long Description 1">Aymara</termNote>
+<termNote label="Audio Language Display Name 1">Aymar aru</termNote>
+<termNote label="Visual Language Tag 1">ay</termNote>
+<termNote label="Visual Language Display Name 1">Aymar aru</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ay</termNote>
+</term>
+<term>
+<termId>16873378</termId>
+<termUpdate>add</termUpdate>
+<termName>Azerbaijani</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">az</termNote>
+<termNote label="Long Description 1">Azerbaijani</termNote>
+<termNote label="Audio Language Display Name 1">Azərbaycan dili</termNote>
+<termNote label="Visual Language Tag 1">az-Latn</termNote>
+<termNote label="Visual Language Display Name 1">Azərbaycan dili</termNote>
+<termNote label="Code">urn:ietf:bcp:47:az</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873502</termId>
+<termName>Azerbaijani</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873502</termId>
+<termUpdate>add</termUpdate>
+<termName>Azerbaijani</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Azerbaijani</termNote>
+<termNote label="Language Group Tag">az</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:az</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873378</termId>
+<termName>Azerbaijani</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884048</termId>
+<termUpdate>add</termUpdate>
+<termName>Bagri</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">raj</termNote>
+<termNote label="Long Description 1">Bagri</termNote>
+<termNote label="Audio Language Display Name 1">बागड़ी</termNote>
+<termNote label="Visual Language Tag 1">raj</termNote>
+<termNote label="Visual Language Display Name 1">बागड़ी</termNote>
+</term>
+<term>
+<termId>16873417</termId>
+<termUpdate>add</termUpdate>
+<termName>Bahasa Indonesia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">id</termNote>
+<termNote label="Long Description 1">Bahasa Indonesia</termNote>
+<termNote label="Long Description 2">Indonesian</termNote>
+<termNote label="Audio Language Display Name 1">Bahasa Indonesia</termNote>
+<termNote label="Visual Language Tag 1">id</termNote>
+<termNote label="Visual Language Display Name 1">Bahasa Indonesia</termNote>
+<termNote label="Code">urn:ietf:bcp:47:id</termNote>
+</term>
+<term>
+<termId>16884049</termId>
+<termUpdate>add</termUpdate>
+<termName>Bambara</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bm</termNote>
+<termNote label="Long Description 1">Bambara</termNote>
+<termNote label="Audio Language Display Name 1">bamanankan</termNote>
+<termNote label="Visual Language Tag 1">bm</termNote>
+<termNote label="Visual Language Display Name 1">bamanankan</termNote>
+</term>
+<term>
+<termId>16873400</termId>
+<termUpdate>add</termUpdate>
+<termName>Basque</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">eu</termNote>
+<termNote label="Long Description 1">Basque</termNote>
+<termNote label="Audio Language Display Name 1">euskara</termNote>
+<termNote label="Visual Language Tag 1">eu</termNote>
+<termNote label="Visual Language Display Name 1">euskara</termNote>
+<termNote label="Code">urn:ietf:bcp:47:eu</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873506</termId>
+<termName>Basque Family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873506</termId>
+<termUpdate>add</termUpdate>
+<termName>Basque Family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Basque Family</termNote>
+<termNote label="Language Group Tag">euq</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:euq</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873400</termId>
+<termName>Basque</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873379</termId>
+<termUpdate>add</termUpdate>
+<termName>Belarusian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">be</termNote>
+<termNote label="Long Description 1">Belarusian</termNote>
+<termNote label="Audio Language Display Name 1">беларуская мова</termNote>
+<termNote label="Visual Language Tag 1">be</termNote>
+<termNote label="Visual Language Display Name 1">беларуская мова</termNote>
+<termNote label="Code">urn:ietf:bcp:47:be</termNote>
+</term>
+<term>
+<termId>16873382</termId>
+<termUpdate>add</termUpdate>
+<termName>Bengali</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bn</termNote>
+<termNote label="Long Description 1">Bengali</termNote>
+<termNote label="Long Description 2">Bangla</termNote>
+<termNote label="Audio Language Display Name 1">বাংলা</termNote>
+<termNote label="Visual Language Tag 1">bn</termNote>
+<termNote label="Visual Language Display Name 1">বাংলা</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bn</termNote>
+</term>
+<term>
+<termId>16883614</termId>
+<termUpdate>add</termUpdate>
+<termName>Berber</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ber</termNote>
+<termNote label="Long Description 1">Berber</termNote>
+<termNote label="Audio Language Display Name 1">Tamaziɣt</termNote>
+<termNote label="Visual Language Tag 1">ber</termNote>
+<termNote label="Visual Language Display Name 1">Tamaziɣt</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ber</termNote>
+</term>
+<term>
+<termId>16883615</termId>
+<termUpdate>add</termUpdate>
+<termName>Bhojpuri</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bho</termNote>
+<termNote label="Long Description 1">Bhojpuri</termNote>
+<termNote label="Audio Language Display Name 1">भोजपुरी</termNote>
+<termNote label="Visual Language Tag 1">bho</termNote>
+<termNote label="Visual Language Display Name 1">भोजपुरी</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bho</termNote>
+</term>
+<term>
+<termId>16873381</termId>
+<termUpdate>add</termUpdate>
+<termName>Bislama</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bi</termNote>
+<termNote label="Long Description 1">Bislama</termNote>
+<termNote label="Audio Language Display Name 1">Bislama</termNote>
+<termNote label="Visual Language Tag 1">bi</termNote>
+<termNote label="Visual Language Display Name 1">Bislama</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bi</termNote>
+</term>
+<term>
+<termId>16873383</termId>
+<termUpdate>add</termUpdate>
+<termName>Bosnian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bs</termNote>
+<termNote label="Long Description 1">Bosnian</termNote>
+<termNote label="Audio Language Display Name 1">Bosanski</termNote>
+<termNote label="Visual Language Tag 1">bs</termNote>
+<termNote label="Visual Language Display Name 1">Bosanski</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bs</termNote>
+</term>
+<term>
+<termId>16883872</termId>
+<termUpdate>add</termUpdate>
+<termName>Brazilian Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Long Description 1">Brazilian Sign Language</termNote>
+<termNote label="Long Description 2">Libras</termNote>
+<termNote label="Visual Language Tag 1">bzs</termNote>
+<termNote label="Visual Language Display Name 1">Libras</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873520</termId>
+<termName>Sign Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884050</termId>
+<termUpdate>add</termUpdate>
+<termName>British Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sgn-bfi</termNote>
+<termNote label="Long Description 1">British Sign Language</termNote>
+<termNote label="Audio Language Display Name 1">British Sign Language</termNote>
+<termNote label="Visual Language Tag 1">sgn-bfi</termNote>
+<termNote label="Visual Language Display Name 1">British Sign Language</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873520</termId>
+<termName>Sign Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873380</termId>
+<termUpdate>add</termUpdate>
+<termName>Bulgarian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bg</termNote>
+<termNote label="Long Description 1">Bulgarian</termNote>
+<termNote label="Audio Language Display Name 1">Български</termNote>
+<termNote label="Visual Language Tag 1">bg</termNote>
+<termNote label="Visual Language Display Name 1">Български</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bg</termNote>
+</term>
+<term>
+<termId>16873442</termId>
+<termUpdate>add</termUpdate>
+<termName>Burmese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">my</termNote>
+<termNote label="Long Description 1">Burmese</termNote>
+<termNote label="Audio Language Display Name 1">မြန်မာစာ</termNote>
+<termNote label="Visual Language Tag 1">my</termNote>
+<termNote label="Visual Language Display Name 1">မြန်မာစာ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:my</termNote>
+</term>
+<term>
+<termId>16873494</termId>
+<termUpdate>add</termUpdate>
+<termName>Cantonese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">yue</termNote>
+<termNote label="Long Description 1">Cantonese</termNote>
+<termNote label="Audio Language Display Name 1">粤語</termNote>
+<termNote label="Visual Language Tag 1">zh-Hant</termNote>
+<termNote label="Visual Language Display Name 1">繁体中文</termNote>
+<termNote label="Code">urn:ietf:bcp:47:yue</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873526</termId>
+<termName>Chinese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873398</termId>
+<termUpdate>add</termUpdate>
+<termName>Castilian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-ES</termNote>
+<termNote label="Long Description 1">Castilian</termNote>
+<termNote label="Long Description 2">Castellano</termNote>
+<termNote label="Audio Language Display Name 1">Castellano</termNote>
+<termNote label="Visual Language Tag 1">es-ES</termNote>
+<termNote label="Visual Language Display Name 1">Castellano</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-ES</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873384</termId>
+<termUpdate>add</termUpdate>
+<termName>Catalan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ca</termNote>
+<termNote label="Long Description 1">Catalan</termNote>
+<termNote label="Long Description 2">Valencian</termNote>
+<termNote label="Audio Language Display Name 1">Català</termNote>
+<termNote label="Visual Language Tag 1">ca</termNote>
+<termNote label="Visual Language Display Name 1">Català</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ca</termNote>
+</term>
+<term>
+<termId>16883618</termId>
+<termUpdate>add</termUpdate>
+<termName>Cherokee</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">chr</termNote>
+<termNote label="Long Description 1">Cherokee</termNote>
+<termNote label="Audio Language Display Name 1">ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ</termNote>
+<termNote label="Visual Language Tag 1">chr</termNote>
+<termNote label="Visual Language Display Name 1">ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:chr</termNote>
+</term>
+<term>
+<termId>16873495</termId>
+<termUpdate>add</termUpdate>
+<termName>Chinese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">zh</termNote>
+<termNote label="Long Description 1">Chinese</termNote>
+<termNote label="Audio Language Display Name 1">繁体中文</termNote>
+<termNote label="Audio Language Display Name 2">简体中文</termNote>
+<termNote label="Visual Language Tag 1">zh-Hans</termNote>
+<termNote label="Visual Language Tag 2">zh-Hant</termNote>
+<termNote label="Visual Language Display Name 1">繁体中文</termNote>
+<termNote label="Visual Language Display Name 2">简体中文</termNote>
+<termNote label="Code">urn:ietf:bcp:47:zh</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873526</termId>
+<termName>Chinese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873526</termId>
+<termUpdate>add</termUpdate>
+<termName>Chinese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Chinese</termNote>
+<termNote label="Language Group Tag">zh</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:zh</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873495</termId>
+<termName>Chinese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873494</termId>
+<termName>Cantonese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873385</termId>
+<termName>Mandarin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873444</termId>
+<termName>Min Nan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883619</termId>
+<termUpdate>add</termUpdate>
+<termName>Corsican</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">co</termNote>
+<termNote label="Long Description 1">Corsican</termNote>
+<termNote label="Audio Language Display Name 1">corsu</termNote>
+<termNote label="Visual Language Tag 1">co</termNote>
+<termNote label="Visual Language Display Name 1">corsu</termNote>
+<termNote label="Code">urn:ietf:bcp:47:co</termNote>
+</term>
+<term>
+<termId>16873413</termId>
+<termUpdate>add</termUpdate>
+<termName>Croatian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hr</termNote>
+<termNote label="Long Description 1">Croatian</termNote>
+<termNote label="Audio Language Display Name 1">Hrvatski</termNote>
+<termNote label="Visual Language Tag 1">hr</termNote>
+<termNote label="Visual Language Display Name 1">Hrvatski</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hr</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873521</termId>
+<termName>Serbo-Croatian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873388</termId>
+<termUpdate>add</termUpdate>
+<termName>Czech</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">cs</termNote>
+<termNote label="Long Description 1">Czech</termNote>
+<termNote label="Audio Language Display Name 1">čeština</termNote>
+<termNote label="Visual Language Tag 1">cs</termNote>
+<termNote label="Visual Language Display Name 1">čeština</termNote>
+<termNote label="Code">urn:ietf:bcp:47:cs</termNote>
+</term>
+<term>
+<termId>16873390</termId>
+<termUpdate>add</termUpdate>
+<termName>Danish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">da</termNote>
+<termNote label="Long Description 1">Danish</termNote>
+<termNote label="Audio Language Display Name 1">Dansk</termNote>
+<termNote label="Visual Language Tag 1">da</termNote>
+<termNote label="Visual Language Display Name 1">Dansk</termNote>
+<termNote label="Code">urn:ietf:bcp:47:da</termNote>
+</term>
+<term>
+<termId>16873456</termId>
+<termUpdate>add</termUpdate>
+<termName>Dari</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">prs</termNote>
+<termNote label="Long Description 1">Dari</termNote>
+<termNote label="Long Description 2">Afghan Persian</termNote>
+<termNote label="Audio Language Display Name 1">دری</termNote>
+<termNote label="Visual Language Tag 1">prs</termNote>
+<termNote label="Visual Language Display Name 1">دری</termNote>
+<termNote label="Code">urn:ietf:bcp:47:prs</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873507</termId>
+<termName>Persian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873392</termId>
+<termUpdate>add</termUpdate>
+<termName>Divehi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">dv</termNote>
+<termNote label="Long Description 1">Divehi</termNote>
+<termNote label="Long Description 2">Maldivian</termNote>
+<termNote label="Audio Language Display Name 1">ދިވެހި</termNote>
+<termNote label="Visual Language Display Name 1">ދިވެހި</termNote>
+<termNote label="Code">urn:ietf:bcp:47:dv</termNote>
+</term>
+<term>
+<termId>16873447</termId>
+<termUpdate>add</termUpdate>
+<termName>Dutch</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nl</termNote>
+<termNote label="Long Description 1">Dutch</termNote>
+<termNote label="Audio Language Display Name 1">Nederlands</termNote>
+<termNote label="Visual Language Tag 1">nl</termNote>
+<termNote label="Visual Language Display Name 1">Nederlands</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nl</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873518</termId>
+<termName>Dutch</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873518</termId>
+<termUpdate>add</termUpdate>
+<termName>Dutch</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Dutch</termNote>
+<termNote label="Language Group Tag">nl</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:nl</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873447</termId>
+<termName>Dutch</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873448</termId>
+<termName>Dutch as spoken in Belgium (Flemish)</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873449</termId>
+<termName>Dutch as spoken in The Netherlands</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873448</termId>
+<termUpdate>add</termUpdate>
+<termName>Dutch as spoken in Belgium (Flemish)</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nl-BE</termNote>
+<termNote label="Long Description 1">Dutch as spoken in Belgium (Flemish)</termNote>
+<termNote label="Long Description 2">Flemish</termNote>
+<termNote label="Audio Language Display Name 1">Vlaams</termNote>
+<termNote label="Visual Language Tag 1">nl-BE</termNote>
+<termNote label="Visual Language Display Name 1">Vlaams</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nl-BE</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873518</termId>
+<termName>Dutch</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873449</termId>
+<termUpdate>add</termUpdate>
+<termName>Dutch as spoken in The Netherlands</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nl-DE</termNote>
+<termNote label="Long Description 1">Dutch as spoken in The Netherlands</termNote>
+<termNote label="Audio Language Display Name 1">Nederlands</termNote>
+<termNote label="Visual Language Tag 1">nl-NL</termNote>
+<termNote label="Visual Language Display Name 1">Nederlands</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nl-NL</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873518</termId>
+<termName>Dutch</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873393</termId>
+<termUpdate>add</termUpdate>
+<termName>Dzongkha</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">dz</termNote>
+<termNote label="Long Description 1">Dzongkha</termNote>
+<termNote label="Long Description 2">Bhutanese</termNote>
+<termNote label="Audio Language Display Name 1">རྫོང་ཁ་</termNote>
+<termNote label="Visual Language Tag 1">dz</termNote>
+<termNote label="Visual Language Display Name 1">རྫོང་ཁ་</termNote>
+<termNote label="Code">urn:ietf:bcp:47:dz</termNote>
+</term>
+<term>
+<termId>16873395</termId>
+<termUpdate>add</termUpdate>
+<termName>English</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en</termNote>
+<termNote label="Long Description 1">English</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en</termNote>
+<termNote label="Visual Language Display Name 1">English CC</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en</termNote>
+</term>
+<term>
+<termId>16883621</termId>
+<termUpdate>add</termUpdate>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">English</termNote>
+<termNote label="Language Group Tag">en</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:en</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883620</termId>
+<termName>English as spoken in Australia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883623</termId>
+<termName>English as spoken in Canada</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883624</termId>
+<termName>English as spoken in Hong Kong</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883625</termId>
+<termName>English as spoken in Malaysia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884051</termId>
+<termName>English as spoken in Montserrat</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883627</termId>
+<termName>English as spoken in People&apos;s Republic of China</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883630</termId>
+<termName>English as spoken in South Africa</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883626</termId>
+<termName>English as spoken in the Philippines</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883628</termId>
+<termName>English as spoken in the United Kingdom</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883629</termId>
+<termName>English as spoken in the United States</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883620</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in Australia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-AU</termNote>
+<termNote label="Long Description 1">English as spoken in Australia</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-AU</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-AU</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883623</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in Canada</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-CA</termNote>
+<termNote label="Long Description 1">English as spoken in Canada</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-CA</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-CA</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883624</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in Hong Kong</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-HK</termNote>
+<termNote label="Long Description 1">English as spoken in Hong Kong</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-HK</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-HK</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883625</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in Malaysia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-MS</termNote>
+<termNote label="Long Description 1">English as spoken in Malaysia</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-MS</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-MS</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884051</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in Montserrat</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-MS</termNote>
+<termNote label="Long Description 1">English as spoken in Montserrat</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-MS</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883627</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in People&apos;s Republic of China</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-CN</termNote>
+<termNote label="Long Description 1">English as spoken in People&apos;s Republic of China</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-CN</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-CN</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883630</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in South Africa</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-ZA</termNote>
+<termNote label="Long Description 1">English as spoken in South Africa</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-ZA</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-ZA</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883626</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in the Philippines</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-PH</termNote>
+<termNote label="Long Description 1">English as spoken in the Philippines</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-PH</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-PH</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883628</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in the United Kingdom</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-GB</termNote>
+<termNote label="Long Description 1">English as spoken in the United Kingdom</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-GB</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-GB</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883629</termId>
+<termUpdate>add</termUpdate>
+<termName>English as spoken in the United States</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">en-US</termNote>
+<termNote label="Long Description 1">English as spoken in the United States</termNote>
+<termNote label="Audio Language Display Name 1">English</termNote>
+<termNote label="Visual Language Tag 1">en-US</termNote>
+<termNote label="Visual Language Display Name 1">English</termNote>
+<termNote label="Code">urn:ietf:bcp:47:en-US</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883621</termId>
+<termName>English</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884052</termId>
+<termUpdate>add</termUpdate>
+<termName>Esperanto</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">eo</termNote>
+<termNote label="Long Description 1">Esperanto</termNote>
+<termNote label="Audio Language Display Name 1">esperanto</termNote>
+<termNote label="Visual Language Tag 1">eo</termNote>
+<termNote label="Visual Language Display Name 1">esperanto</termNote>
+</term>
+<term>
+<termId>16873504</termId>
+<termUpdate>add</termUpdate>
+<termName>Estonian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Estonian</termNote>
+<termNote label="Language Group Tag">et</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:et</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873399</termId>
+<termName>Estonian, Standard</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873399</termId>
+<termUpdate>add</termUpdate>
+<termName>Estonian, Standard</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ekk</termNote>
+<termNote label="Long Description 1">Estonian, Standard</termNote>
+<termNote label="Audio Language Display Name 1">Eesti</termNote>
+<termNote label="Visual Language Tag 1">ekk</termNote>
+<termNote label="Visual Language Display Name 1">Eesti</termNote>
+<termNote label="Code">urn:ietf:bcp:47:et</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873504</termId>
+<termName>Estonian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873405</termId>
+<termUpdate>add</termUpdate>
+<termName>Faroese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fo</termNote>
+<termNote label="Long Description 1">Faroese</termNote>
+<termNote label="Audio Language Display Name 1">føroyskt mál</termNote>
+<termNote label="Visual Language Tag 1">fo</termNote>
+<termNote label="Visual Language Display Name 1">føroyskt mál</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fo</termNote>
+</term>
+<term>
+<termId>16873404</termId>
+<termUpdate>add</termUpdate>
+<termName>Fijian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fj</termNote>
+<termNote label="Long Description 1">Fijian</termNote>
+<termNote label="Audio Language Display Name 1">Na Vosa Vakaviti</termNote>
+<termNote label="Visual Language Tag 1">fj</termNote>
+<termNote label="Visual Language Display Name 1">Na Vosa Vakaviti</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fj</termNote>
+</term>
+<term>
+<termId>16873403</termId>
+<termUpdate>add</termUpdate>
+<termName>Filipino</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fil</termNote>
+<termNote label="Long Description 1">Filipino</termNote>
+<termNote label="Long Description 2">Pilipino</termNote>
+<termNote label="Audio Language Display Name 1">Wikang Filipino</termNote>
+<termNote label="Visual Language Tag 1">fil</termNote>
+<termNote label="Visual Language Display Name 1">Wikang Filipino</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fil</termNote>
+</term>
+<term>
+<termId>16873402</termId>
+<termUpdate>add</termUpdate>
+<termName>Finnish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fi</termNote>
+<termNote label="Long Description 1">Finnish</termNote>
+<termNote label="Audio Language Display Name 1">Suomi</termNote>
+<termNote label="Visual Language Tag 1">fi</termNote>
+<termNote label="Visual Language Display Name 1">Suomi</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fi</termNote>
+</term>
+<term>
+<termId>16873406</termId>
+<termUpdate>add</termUpdate>
+<termName>French</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fr</termNote>
+<termNote label="Long Description 1">French</termNote>
+<termNote label="Audio Language Display Name 1">Français</termNote>
+<termNote label="Visual Language Tag 1">fr</termNote>
+<termNote label="Visual Language Display Name 1">Français</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fr</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873508</termId>
+<termName>French</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873508</termId>
+<termUpdate>add</termUpdate>
+<termName>French</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">French</termNote>
+<termNote label="Language Group Tag">fr</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:fr</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873406</termId>
+<termName>French</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883631</termId>
+<termName>French as spoken in Belgium</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883632</termId>
+<termName>French as spoken in Canada</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883633</termId>
+<termName>French as spoken in Paris</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883631</termId>
+<termUpdate>add</termUpdate>
+<termName>French as spoken in Belgium</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fr-BE</termNote>
+<termNote label="Long Description 1">French as spoken in Belgium</termNote>
+<termNote label="Audio Language Display Name 1">Français</termNote>
+<termNote label="Visual Language Tag 1">fr-BE</termNote>
+<termNote label="Visual Language Display Name 1">Français</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fr-BE</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873508</termId>
+<termName>French</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883632</termId>
+<termUpdate>add</termUpdate>
+<termName>French as spoken in Canada</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fr-CA</termNote>
+<termNote label="Long Description 1">French as spoken in Canada</termNote>
+<termNote label="Audio Language Display Name 1">Français</termNote>
+<termNote label="Visual Language Tag 1">fr-CA</termNote>
+<termNote label="Visual Language Display Name 1">Français</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fr-CA</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873508</termId>
+<termName>French</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883633</termId>
+<termUpdate>add</termUpdate>
+<termName>French as spoken in Paris</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fr-FR</termNote>
+<termNote label="Long Description 1">French as spoken in Paris</termNote>
+<termNote label="Audio Language Display Name 1">Français</termNote>
+<termNote label="Visual Language Tag 1">fr-FR</termNote>
+<termNote label="Visual Language Display Name 1">Français</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fr-FR</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873508</termId>
+<termName>French</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883634</termId>
+<termUpdate>add</termUpdate>
+<termName>Gaelic as spoken in Scotland</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">gd</termNote>
+<termNote label="Long Description 1">Gaelic as spoken in Scotland</termNote>
+<termNote label="Audio Language Display Name 1">Gàidhlig</termNote>
+<termNote label="Visual Language Tag 1">gd</termNote>
+<termNote label="Visual Language Display Name 1">Gàidhlig</termNote>
+<termNote label="Code">urn:ietf:bcp:47:gd</termNote>
+</term>
+<term>
+<termId>16873408</termId>
+<termUpdate>add</termUpdate>
+<termName>Galician</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">gl</termNote>
+<termNote label="Long Description 1">Galician</termNote>
+<termNote label="Audio Language Display Name 1">galego</termNote>
+<termNote label="Visual Language Tag 1">gl</termNote>
+<termNote label="Visual Language Display Name 1">galego</termNote>
+<termNote label="Code">urn:ietf:bcp:47:gl</termNote>
+</term>
+<term>
+<termId>16873431</termId>
+<termUpdate>add</termUpdate>
+<termName>Ganda</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lg</termNote>
+<termNote label="Long Description 1">Ganda</termNote>
+<termNote label="Long Description 2">Oluganda</termNote>
+<termNote label="Audio Language Display Name 1">Oluganda</termNote>
+<termNote label="Visual Language Tag 1">lg</termNote>
+<termNote label="Visual Language Display Name 1">Oluganda</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lg</termNote>
+</term>
+<term>
+<termId>16873424</termId>
+<termUpdate>add</termUpdate>
+<termName>Georgian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ka</termNote>
+<termNote label="Long Description 1">Georgian</termNote>
+<termNote label="Audio Language Display Name 1">ქართული</termNote>
+<termNote label="Visual Language Tag 1">ka</termNote>
+<termNote label="Visual Language Display Name 1">ქართული</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ka</termNote>
+</term>
+<term>
+<termId>16873391</termId>
+<termUpdate>add</termUpdate>
+<termName>German</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">de</termNote>
+<termNote label="Long Description 1">German</termNote>
+<termNote label="Audio Language Display Name 1">Deutsch</termNote>
+<termNote label="Visual Language Tag 1">de</termNote>
+<termNote label="Visual Language Display Name 1">Deutsch</termNote>
+<termNote label="Code">urn:ietf:bcp:47:de</termNote>
+</term>
+<term>
+<termId>16883672</termId>
+<termUpdate>add</termUpdate>
+<termName>German</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">German</termNote>
+<termNote label="Language Group Tag">de</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:de</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883635</termId>
+<termName>German as spoken in Austria</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883636</termId>
+<termName>German as spoken in Germany</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883635</termId>
+<termUpdate>add</termUpdate>
+<termName>German as spoken in Austria</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">de-AT</termNote>
+<termNote label="Long Description 1">German as spoken in Austria</termNote>
+<termNote label="Audio Language Display Name 1">Österreichisches Standarddeutsch</termNote>
+<termNote label="Visual Language Tag 1">de-AT</termNote>
+<termNote label="Visual Language Display Name 1">Österreichisches Standarddeutsch</termNote>
+<termNote label="Code">urn:ietf:bcp:47:de-AT</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883672</termId>
+<termName>German</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883636</termId>
+<termUpdate>add</termUpdate>
+<termName>German as spoken in Germany</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">de-DE</termNote>
+<termNote label="Long Description 1">German as spoken in Germany</termNote>
+<termNote label="Audio Language Display Name 1">Deutsch</termNote>
+<termNote label="Visual Language Tag 1">de-DE</termNote>
+<termNote label="Visual Language Display Name 1">Deutsch</termNote>
+<termNote label="Code">urn:ietf:bcp:47:de-DE</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883672</termId>
+<termName>German</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873531</termId>
+<termUpdate>add</termUpdate>
+<termName>Greek</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Greek</termNote>
+<termNote label="Language Group Tag">el</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:el</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873394</termId>
+<termName>Greek, Modern (1453-)</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873532</termId>
+<termName>Ancient Greek</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883638</termId>
+<termUpdate>add</termUpdate>
+<termName>Greek as spoken in Cyprus</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">el-CY</termNote>
+<termNote label="Long Description 1">Greek as spoken in Cyprus</termNote>
+<termNote label="Audio Language Display Name 1">Ελληνοκύπριοι</termNote>
+<termNote label="Visual Language Tag 1">el-CY</termNote>
+<termNote label="Visual Language Display Name 1">Ελληνοκύπριοι</termNote>
+<termNote label="Code">urn:ietf:bcp:47:el-CY</termNote>
+</term>
+<term>
+<termId>16873394</termId>
+<termUpdate>add</termUpdate>
+<termName>Greek, Modern (1453-)</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">el</termNote>
+<termNote label="Long Description 1">Greek, Modern (1453-)</termNote>
+<termNote label="Audio Language Display Name 1">Ἑλληνική</termNote>
+<termNote label="Visual Language Tag 1">el</termNote>
+<termNote label="Visual Language Display Name 1">Ἑλληνική</termNote>
+<termNote label="Code">urn:ietf:bcp:47:el</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873531</termId>
+<termName>Greek</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883640</termId>
+<termUpdate>add</termUpdate>
+<termName>Guarani</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">gn</termNote>
+<termNote label="Long Description 1">Guarani</termNote>
+<termNote label="Audio Language Display Name 1">avañe&apos;ẽ</termNote>
+<termNote label="Visual Language Tag 1">gn</termNote>
+<termNote label="Visual Language Display Name 1">avañe&apos;ẽ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:gn</termNote>
+</term>
+<term>
+<termId>16873409</termId>
+<termUpdate>add</termUpdate>
+<termName>Gujarati</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">gu</termNote>
+<termNote label="Long Description 1">Gujarati</termNote>
+<termNote label="Audio Language Display Name 1">ગુજરાતી</termNote>
+<termNote label="Visual Language Tag 1">gu</termNote>
+<termNote label="Visual Language Display Name 1">ગુજરાતી</termNote>
+<termNote label="Code">urn:ietf:bcp:47:gu</termNote>
+</term>
+<term>
+<termId>16883641</termId>
+<termUpdate>add</termUpdate>
+<termName>Hausa</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ha</termNote>
+<termNote label="Long Description 1">Hausa</termNote>
+<termNote label="Audio Language Display Name 1">هَرْشَن هَوْسَ</termNote>
+<termNote label="Visual Language Tag 1">ha</termNote>
+<termNote label="Visual Language Display Name 1">هَرْشَن هَوْسَ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ha</termNote>
+</term>
+<term>
+<termId>16883642</termId>
+<termUpdate>add</termUpdate>
+<termName>Hawaiian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">haw</termNote>
+<termNote label="Long Description 1">Hawaiian</termNote>
+<termNote label="Audio Language Display Name 1">ʻŌlelo Hawaiʻi</termNote>
+<termNote label="Visual Language Tag 1">haw</termNote>
+<termNote label="Visual Language Display Name 1">ʻŌlelo Hawaiʻi</termNote>
+<termNote label="Code">urn:ietf:bcp:47:haw</termNote>
+</term>
+<term>
+<termId>16883644</termId>
+<termUpdate>add</termUpdate>
+<termName>Hawaiian Pidgin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hwc</termNote>
+<termNote label="Long Description 1">Hawaiian Pidgin</termNote>
+<termNote label="Audio Language Display Name 1">ōlelo paʻi ʻai</termNote>
+<termNote label="Visual Language Tag 1">hwc</termNote>
+<termNote label="Visual Language Display Name 1">ōlelo paʻi ʻai</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hwc</termNote>
+</term>
+<term>
+<termId>16873410</termId>
+<termUpdate>add</termUpdate>
+<termName>Hebrew</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">he</termNote>
+<termNote label="Long Description 1">Hebrew</termNote>
+<termNote label="Audio Language Display Name 1">עברית‬</termNote>
+<termNote label="Visual Language Tag 1">he</termNote>
+<termNote label="Visual Language Display Name 1">עברית‬</termNote>
+<termNote label="Code">urn:ietf:bcp:47:he</termNote>
+</term>
+<term>
+<termId>16873411</termId>
+<termUpdate>add</termUpdate>
+<termName>Hindi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hi</termNote>
+<termNote label="Long Description 1">Hindi</termNote>
+<termNote label="Audio Language Display Name 1">हिन्दी</termNote>
+<termNote label="Visual Language Tag 1">hi</termNote>
+<termNote label="Visual Language Display Name 1">हिन्दी</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hi</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873509</termId>
+<termName>Hindi</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873509</termId>
+<termUpdate>add</termUpdate>
+<termName>Hindi</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Hindi</termNote>
+<termNote label="Language Group Tag">hi</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:hi</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873411</termId>
+<termName>Hindi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873412</termId>
+<termName>Hindi as spoken in Fiji</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873412</termId>
+<termUpdate>add</termUpdate>
+<termName>Hindi as spoken in Fiji</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hif</termNote>
+<termNote label="Long Description 1">Hindi as spoken in Fiji</termNote>
+<termNote label="Long Description 2">Hindustani</termNote>
+<termNote label="Audio Language Display Name 1">फ़िजी बात</termNote>
+<termNote label="Visual Language Tag 1">hif</termNote>
+<termNote label="Visual Language Display Name 1">फ़िजी बात</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hif</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873509</termId>
+<termName>Hindi</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873414</termId>
+<termUpdate>add</termUpdate>
+<termName>Hungarian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hu</termNote>
+<termNote label="Long Description 1">Hungarian</termNote>
+<termNote label="Long Description 2">Magyar</termNote>
+<termNote label="Audio Language Display Name 1">Magyar</termNote>
+<termNote label="Visual Language Tag 1">hu</termNote>
+<termNote label="Visual Language Display Name 1">Magyar</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hu</termNote>
+</term>
+<term>
+<termId>16873418</termId>
+<termUpdate>add</termUpdate>
+<termName>Icelandic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">is</termNote>
+<termNote label="Long Description 1">Icelandic</termNote>
+<termNote label="Audio Language Display Name 1">íslenska</termNote>
+<termNote label="Visual Language Tag 1">is</termNote>
+<termNote label="Visual Language Display Name 1">íslenska</termNote>
+<termNote label="Code">urn:ietf:bcp:47:is</termNote>
+</term>
+<term>
+<termId>16883643</termId>
+<termUpdate>add</termUpdate>
+<termName>Igbo</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ig</termNote>
+<termNote label="Long Description 1">Igbo</termNote>
+<termNote label="Audio Language Display Name 1">Asụsụ Igbo</termNote>
+<termNote label="Visual Language Tag 1">ig</termNote>
+<termNote label="Visual Language Display Name 1">Asụsụ Igbo</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ig</termNote>
+</term>
+<term>
+<termId>16883645</termId>
+<termUpdate>add</termUpdate>
+<termName>Indonesian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">id</termNote>
+<termNote label="Long Description 1">Indonesian</termNote>
+<termNote label="Audio Language Display Name 1">bahasa Indonesia</termNote>
+<termNote label="Visual Language Tag 1">id</termNote>
+<termNote label="Visual Language Display Name 1">bahasa Indonesia</termNote>
+<termNote label="Code">urn:ietf:bcp:47:id</termNote>
+</term>
+<term>
+<termId>16883646</termId>
+<termUpdate>add</termUpdate>
+<termName>Inuktitut</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">iu</termNote>
+<termNote label="Long Description 1">Inuktitut</termNote>
+<termNote label="Audio Language Display Name 1">ᐃᓄᒃᑎᑐᑦ</termNote>
+<termNote label="Visual Language Tag 1">iu</termNote>
+<termNote label="Visual Language Display Name 1">ᐃᓄᒃᑎᑐᑦ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:iu</termNote>
+</term>
+<term>
+<termId>16873407</termId>
+<termUpdate>add</termUpdate>
+<termName>Irish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ga</termNote>
+<termNote label="Long Description 1">Irish</termNote>
+<termNote label="Long Description 2">Irish Gaelic</termNote>
+<termNote label="Audio Language Display Name 1">Gaeilge</termNote>
+<termNote label="Visual Language Tag 1">ga</termNote>
+<termNote label="Visual Language Display Name 1">Gaeilge</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ga</termNote>
+</term>
+<term>
+<termId>16873419</termId>
+<termUpdate>add</termUpdate>
+<termName>Italian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">it</termNote>
+<termNote label="Long Description 1">Italian</termNote>
+<termNote label="Audio Language Display Name 1">Italiano</termNote>
+<termNote label="Visual Language Tag 1">it</termNote>
+<termNote label="Visual Language Display Name 1">Italiano</termNote>
+<termNote label="Code">urn:ietf:bcp:47:it</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873511</termId>
+<termName>Italian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873511</termId>
+<termUpdate>add</termUpdate>
+<termName>Italian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Italian</termNote>
+<termNote label="Language Group Tag">it</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:it</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873419</termId>
+<termName>Italian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873445</termId>
+<termName>Neapolitan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883647</termId>
+<termUpdate>add</termUpdate>
+<termName>Jamaican Creole English</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">jam</termNote>
+<termNote label="Long Description 1">Jamaican Creole English</termNote>
+<termNote label="Audio Language Display Name 1">Patwa</termNote>
+<termNote label="Visual Language Tag 1">jam</termNote>
+<termNote label="Visual Language Display Name 1">Patwa</termNote>
+<termNote label="Code">urn:ietf:bcp:47:jam</termNote>
+</term>
+<term>
+<termId>16873420</termId>
+<termUpdate>add</termUpdate>
+<termName>Japanese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ja</termNote>
+<termNote label="Long Description 1">Japanese</termNote>
+<termNote label="Audio Language Display Name 1">日本語</termNote>
+<termNote label="Visual Language Tag 1">ja</termNote>
+<termNote label="Visual Language Display Name 1">日本語</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ja</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873512</termId>
+<termName>Japanese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873512</termId>
+<termUpdate>add</termUpdate>
+<termName>Japanese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Japanese</termNote>
+<termNote label="Language Group Tag">ja</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:ja</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873420</termId>
+<termName>Japanese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873422</termId>
+<termName>Japanese in Han (Kanji), Hiragana, and Katakana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873421</termId>
+<termName>Japanese in Hiragana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873423</termId>
+<termName>Japanese in Katakana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873422</termId>
+<termUpdate>add</termUpdate>
+<termName>Japanese in Han (Kanji), Hiragana, and Katakana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ja</termNote>
+<termNote label="Long Description 1">Japanese in Han (Kanji), Hiragana, and Katakana symbols</termNote>
+<termNote label="Audio Language Display Name 1">漢字 + 平仮名 + 片仮名</termNote>
+<termNote label="Visual Language Tag 1">ja-Jpan-JP</termNote>
+<termNote label="Visual Language Display Name 1">漢字 + 平仮名 + 片仮名</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ja-Jpan</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873512</termId>
+<termName>Japanese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873421</termId>
+<termUpdate>add</termUpdate>
+<termName>Japanese in Hiragana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ja</termNote>
+<termNote label="Long Description 1">Japanese in Hiragana symbols</termNote>
+<termNote label="Audio Language Display Name 1">ひらがな</termNote>
+<termNote label="Visual Language Tag 1">ja-Hira-JP</termNote>
+<termNote label="Visual Language Display Name 1">ひらがな</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ja-Hira</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873512</termId>
+<termName>Japanese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873423</termId>
+<termUpdate>add</termUpdate>
+<termName>Japanese in Katakana symbols</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ja</termNote>
+<termNote label="Long Description 1">Japanese in Katakana symbols</termNote>
+<termNote label="Audio Language Display Name 1">カタカナ</termNote>
+<termNote label="Visual Language Tag 1">ja-Kata-JP</termNote>
+<termNote label="Visual Language Display Name 1">カタカナ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ja-Kata</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873512</termId>
+<termName>Japanese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884053</termId>
+<termUpdate>add</termUpdate>
+<termName>Jauer dialect of Romansh</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">rm</termNote>
+<termNote label="Long Description 1">Jauer dialect of Romansh</termNote>
+<termNote label="Audio Language Display Name 1">jauer rumantsch</termNote>
+<termNote label="Visual Language Tag 1">rm</termNote>
+<termNote label="Visual Language Display Name 1">jauer rumantsch</termNote>
+</term>
+<term>
+<termId>16873426</termId>
+<termUpdate>add</termUpdate>
+<termName>Kalaallisut</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">kl</termNote>
+<termNote label="Long Description 1">Kalaallisut</termNote>
+<termNote label="Long Description 2">Greenlandic</termNote>
+<termNote label="Audio Language Display Name 1">Greenlandic</termNote>
+<termNote label="Visual Language Tag 1">kl</termNote>
+<termNote label="Visual Language Display Name 1">Greenlandic</termNote>
+<termNote label="Code">urn:ietf:bcp:47:kl</termNote>
+</term>
+<term>
+<termId>16883648</termId>
+<termUpdate>add</termUpdate>
+<termName>Kannada</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">kn</termNote>
+<termNote label="Long Description 1">Kannada</termNote>
+<termNote label="Audio Language Display Name 1">ಕನ್ನಡ</termNote>
+<termNote label="Visual Language Tag 1">kn</termNote>
+<termNote label="Visual Language Display Name 1">ಕನ್ನಡ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:kn</termNote>
+</term>
+<term>
+<termId>16873425</termId>
+<termUpdate>add</termUpdate>
+<termName>Kazakh</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">kk</termNote>
+<termNote label="Long Description 1">Kazakh</termNote>
+<termNote label="Audio Language Display Name 1">қазақ тілі</termNote>
+<termNote label="Visual Language Tag 1">kk</termNote>
+<termNote label="Visual Language Display Name 1">қазақ тілі</termNote>
+<termNote label="Code">urn:ietf:bcp:47:kk</termNote>
+</term>
+<term>
+<termId>16873427</termId>
+<termUpdate>add</termUpdate>
+<termName>Khmer</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">km</termNote>
+<termNote label="Long Description 1">Khmer</termNote>
+<termNote label="Long Description 2">Central Khmer</termNote>
+<termNote label="Audio Language Display Name 1">ភាសាខ្មែរ</termNote>
+<termNote label="Visual Language Tag 1">km</termNote>
+<termNote label="Visual Language Display Name 1">ភាសាខ្មែរ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:km</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873515</termId>
+<termName>Mon-Khmer Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873464</termId>
+<termUpdate>add</termUpdate>
+<termName>Kinyarwanda</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">rw</termNote>
+<termNote label="Long Description 1">Kinyarwanda</termNote>
+<termNote label="Long Description 2">Rwandan</termNote>
+<termNote label="Audio Language Display Name 1">Kinyarwanda</termNote>
+<termNote label="Visual Language Tag 1">rw</termNote>
+<termNote label="Visual Language Display Name 1">Kinyarwanda</termNote>
+<termNote label="Code">urn:ietf:bcp:47:rw</termNote>
+</term>
+<term>
+<termId>16873429</termId>
+<termUpdate>add</termUpdate>
+<termName>Kirghiz</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ky</termNote>
+<termNote label="Long Description 1">Kirghiz</termNote>
+<termNote label="Long Description 2">Kyrgyz</termNote>
+<termNote label="Audio Language Display Name 1">кыргызча</termNote>
+<termNote label="Visual Language Tag 1">ky-Cyrl</termNote>
+<termNote label="Visual Language Display Name 1">кыргызча</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ky</termNote>
+</term>
+<term>
+<termId>16883873</termId>
+<termUpdate>add</termUpdate>
+<termName>Klingon</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tlh</termNote>
+<termNote label="Long Description 1">Klingon</termNote>
+<termNote label="Long Description 2">tlhIngan Hol</termNote>
+<termNote label="Audio Language Display Name 1">tlhIngan Hol</termNote>
+<termNote label="Visual Language Tag 1">tlh</termNote>
+<termNote label="Visual Language Display Name 1">tlhIngan Hol</termNote>
+</term>
+<term>
+<termId>16873428</termId>
+<termUpdate>add</termUpdate>
+<termName>Korean</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ko</termNote>
+<termNote label="Long Description 1">Korean</termNote>
+<termNote label="Audio Language Display Name 1">한국어</termNote>
+<termNote label="Visual Language Tag 1">ko</termNote>
+<termNote label="Visual Language Display Name 1">한국어</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ko</termNote>
+</term>
+<term>
+<termId>16883649</termId>
+<termUpdate>add</termUpdate>
+<termName>Kurdish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ku</termNote>
+<termNote label="Long Description 1">Kurdish</termNote>
+<termNote label="Audio Language Display Name 1">کوردی</termNote>
+<termNote label="Visual Language Tag 1">ku</termNote>
+<termNote label="Visual Language Display Name 1">کوردی</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ku</termNote>
+</term>
+<term>
+<termId>16883650</termId>
+<termUpdate>add</termUpdate>
+<termName>Ladakhi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lbj</termNote>
+<termNote label="Long Description 1">Ladakhi</termNote>
+<termNote label="Audio Language Display Name 1">ལ་དྭགས་ཀྱི་སྐད།</termNote>
+<termNote label="Visual Language Tag 1">lbj</termNote>
+<termNote label="Visual Language Display Name 1">ལ་དྭགས་ཀྱི་སྐད།</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lbj</termNote>
+</term>
+<term>
+<termId>16873432</termId>
+<termUpdate>add</termUpdate>
+<termName>Lao</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lo</termNote>
+<termNote label="Long Description 1">Lao</termNote>
+<termNote label="Audio Language Display Name 1">ລາວ</termNote>
+<termNote label="Visual Language Tag 1">lo</termNote>
+<termNote label="Visual Language Display Name 1">ລາວ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lo</termNote>
+</term>
+<term>
+<termId>16884054</termId>
+<termUpdate>add</termUpdate>
+<termName>Latin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">la</termNote>
+<termNote label="Long Description 1">Latin</termNote>
+<termNote label="Audio Language Display Name 1">latine</termNote>
+<termNote label="Visual Language Tag 1">la</termNote>
+<termNote label="Visual Language Display Name 1">latine</termNote>
+</term>
+<term>
+<termId>16873434</termId>
+<termUpdate>add</termUpdate>
+<termName>Latvian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lv</termNote>
+<termNote label="Long Description 1">Latvian</termNote>
+<termNote label="Audio Language Display Name 1">latviešu valoda</termNote>
+<termNote label="Visual Language Tag 1">lv</termNote>
+<termNote label="Visual Language Display Name 1">latviešu valoda</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lv</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873513</termId>
+<termName>Latvian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873513</termId>
+<termUpdate>add</termUpdate>
+<termName>Latvian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Latvian</termNote>
+<termNote label="Language Group Tag">lv</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:lv</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873434</termId>
+<termName>Latvian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873433</termId>
+<termUpdate>add</termUpdate>
+<termName>Lithuanian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lt</termNote>
+<termNote label="Long Description 1">Lithuanian</termNote>
+<termNote label="Audio Language Display Name 1">lietuvių kalba</termNote>
+<termNote label="Visual Language Tag 1">lt</termNote>
+<termNote label="Visual Language Display Name 1">lietuvių kalba</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lt</termNote>
+</term>
+<term>
+<termId>16873430</termId>
+<termUpdate>add</termUpdate>
+<termName>Luxembourgish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">lb</termNote>
+<termNote label="Long Description 1">Luxembourgish</termNote>
+<termNote label="Audio Language Display Name 1">Lëtzebuergesch</termNote>
+<termNote label="Visual Language Tag 1">lb</termNote>
+<termNote label="Visual Language Display Name 1">Lëtzebuergesch</termNote>
+<termNote label="Code">urn:ietf:bcp:47:lb</termNote>
+</term>
+<term>
+<termId>16873437</termId>
+<termUpdate>add</termUpdate>
+<termName>Macedonian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mk</termNote>
+<termNote label="Long Description 1">Macedonian</termNote>
+<termNote label="Audio Language Display Name 1">Mакедонски</termNote>
+<termNote label="Visual Language Tag 1">mk</termNote>
+<termNote label="Visual Language Display Name 1">Mакедонски</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mk</termNote>
+</term>
+<term>
+<termId>16873436</termId>
+<termUpdate>add</termUpdate>
+<termName>Malagasy</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mg</termNote>
+<termNote label="Long Description 1">Malagasy</termNote>
+<termNote label="Audio Language Display Name 1">Malagasy</termNote>
+<termNote label="Visual Language Tag 1">mg</termNote>
+<termNote label="Visual Language Display Name 1">Malagasy</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mg</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873514</termId>
+<termName>Malagasy</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873514</termId>
+<termUpdate>add</termUpdate>
+<termName>Malagasy</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Malagasy</termNote>
+<termNote label="Language Group Tag">mg</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:mg</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873436</termId>
+<termName>Malagasy</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873496</termId>
+<termUpdate>add</termUpdate>
+<termName>Malay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ms</termNote>
+<termNote label="Long Description 1">Malay</termNote>
+<termNote label="Audio Language Display Name 1">Bahasa Malaysia</termNote>
+<termNote label="Visual Language Tag 1">ms</termNote>
+<termNote label="Visual Language Display Name 1">Bahasa Malaysia</termNote>
+<termNote label="Code">urn:ietf:bcp:47:zlm</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873517</termId>
+<termName>Malay</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873517</termId>
+<termUpdate>add</termUpdate>
+<termName>Malay</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Malay</termNote>
+<termNote label="Language Group Tag">ms</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:ms</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873496</termId>
+<termName>Malay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873438</termId>
+<termUpdate>add</termUpdate>
+<termName>Malayalam</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ml</termNote>
+<termNote label="Long Description 1">Malayalam</termNote>
+<termNote label="Audio Language Display Name 1">മലയാളം</termNote>
+<termNote label="Visual Language Tag 1">ml</termNote>
+<termNote label="Visual Language Display Name 1">മലയാളം</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ml</termNote>
+</term>
+<term>
+<termId>16873441</termId>
+<termUpdate>add</termUpdate>
+<termName>Maltese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mt</termNote>
+<termNote label="Long Description 1">Maltese</termNote>
+<termNote label="Audio Language Display Name 1">Malti</termNote>
+<termNote label="Visual Language Tag 1">mt</termNote>
+<termNote label="Visual Language Display Name 1">Malti</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mt</termNote>
+</term>
+<term>
+<termId>16873385</termId>
+<termUpdate>add</termUpdate>
+<termName>Mandarin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">cmn</termNote>
+<termNote label="Long Description 1">Mandarin</termNote>
+<termNote label="Audio Language Display Name 1">普通话</termNote>
+<termNote label="Visual Language Tag 1">zh-Hans</termNote>
+<termNote label="Visual Language Display Name 1">简体中文</termNote>
+<termNote label="Code">urn:ietf:bcp:47:cmn</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873526</termId>
+<termName>Chinese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883651</termId>
+<termUpdate>add</termUpdate>
+<termName>Maori</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mi</termNote>
+<termNote label="Long Description 1">Maori</termNote>
+<termNote label="Audio Language Display Name 1">Te reo Māori</termNote>
+<termNote label="Visual Language Tag 1">mi</termNote>
+<termNote label="Visual Language Display Name 1">Te reo Māori</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mi</termNote>
+</term>
+<term>
+<termId>16873440</termId>
+<termUpdate>add</termUpdate>
+<termName>Marathi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mr</termNote>
+<termNote label="Long Description 1">Marathi</termNote>
+<termNote label="Audio Language Display Name 1">मराठी</termNote>
+<termNote label="Visual Language Tag 1">mr</termNote>
+<termNote label="Visual Language Display Name 1">मराठी</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mr</termNote>
+</term>
+<term>
+<termId>16883652</termId>
+<termUpdate>add</termUpdate>
+<termName>Mayan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">myn</termNote>
+<termNote label="Long Description 1">Mayan</termNote>
+<termNote label="Audio Language Display Name 1">Mayan</termNote>
+<termNote label="Visual Language Tag 1">myn</termNote>
+<termNote label="Visual Language Display Name 1">Mayan</termNote>
+<termNote label="Code">urn:ietf:bcp:47:myn</termNote>
+</term>
+<term>
+<termId>16873444</termId>
+<termUpdate>add</termUpdate>
+<termName>Min Nan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nan</termNote>
+<termNote label="Long Description 1">Min Nan</termNote>
+<termNote label="Long Description 2">Amoy</termNote>
+<termNote label="Audio Language Display Name 1">閩南語</termNote>
+<termNote label="Audio Language Display Name 2">廈門話</termNote>
+<termNote label="Visual Language Tag 1">zh-Hant</termNote>
+<termNote label="Visual Language Display Name 1">閩南語</termNote>
+<termNote label="Visual Language Display Name 2">廈門話</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nan</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873526</termId>
+<termName>Chinese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873515</termId>
+<termUpdate>add</termUpdate>
+<termName>Mon-Khmer Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Mon-Khmer Languages</termNote>
+<termNote label="Language Group Tag">mkh</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:mkh</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873427</termId>
+<termName>Khmer</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873439</termId>
+<termUpdate>add</termUpdate>
+<termName>Mongolian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mn</termNote>
+<termNote label="Long Description 1">Mongolian</termNote>
+<termNote label="Audio Language Display Name 1">монгол хэл</termNote>
+<termNote label="Visual Language Tag 1">mn-Cyrl</termNote>
+<termNote label="Visual Language Display Name 1">монгол хэл</termNote>
+<termNote label="Code">urn:ietf:bcp:47:mn</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873516</termId>
+<termName>Mongolian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873516</termId>
+<termUpdate>add</termUpdate>
+<termName>Mongolian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Mongolian</termNote>
+<termNote label="Language Group Tag">mn</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:mn</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873439</termId>
+<termName>Mongolian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873386</termId>
+<termUpdate>add</termUpdate>
+<termName>Montenegrin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">cnr</termNote>
+<termNote label="Long Description 1">Montenegrin</termNote>
+<termNote label="Audio Language Display Name 1">Crnogorski</termNote>
+<termNote label="Visual Language Tag 1">cnr-Latn</termNote>
+<termNote label="Visual Language Display Name 1">Crnogorski</termNote>
+<termNote label="Code">urn:ietf:bcp:47:cnr</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873521</termId>
+<termName>Serbo-Croatian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884056</termId>
+<termUpdate>add</termUpdate>
+<termName>Mossi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mos</termNote>
+<termNote label="Long Description 1">Mossi</termNote>
+<termNote label="Audio Language Display Name 1">Mooré</termNote>
+<termNote label="Visual Language Tag 1">mos</termNote>
+<termNote label="Visual Language Display Name 1">Mooré</termNote>
+</term>
+<term>
+<termId>16873435</termId>
+<termUpdate>add</termUpdate>
+<termName>Motu</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">meu</termNote>
+<termNote label="Long Description 1">Motu</termNote>
+<termNote label="Audio Language Display Name 1">Motu</termNote>
+<termNote label="Visual Language Tag 1">meu</termNote>
+<termNote label="Visual Language Display Name 1">Motu</termNote>
+<termNote label="Code">urn:ietf:bcp:47:meu</termNote>
+</term>
+<term>
+<termId>16884057</termId>
+<termUpdate>add</termUpdate>
+<termName>Multiple languages</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">mul</termNote>
+</term>
+<term>
+<termId>16873443</termId>
+<termUpdate>add</termUpdate>
+<termName>Nauru</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">na</termNote>
+<termNote label="Long Description 1">Nauru</termNote>
+<termNote label="Long Description 2">Nauruan</termNote>
+<termNote label="Audio Language Display Name 1">Nauruan</termNote>
+<termNote label="Visual Language Tag 1">na</termNote>
+<termNote label="Visual Language Display Name 1">Nauruan</termNote>
+<termNote label="Code">urn:ietf:bcp:47:na</termNote>
+</term>
+<term>
+<termId>16883654</termId>
+<termUpdate>add</termUpdate>
+<termName>Navajo</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nv</termNote>
+<termNote label="Long Description 1">Navajo</termNote>
+<termNote label="Audio Language Display Name 1">Diné bizaad</termNote>
+<termNote label="Visual Language Tag 1">nv</termNote>
+<termNote label="Visual Language Display Name 1">Diné bizaad</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nv</termNote>
+</term>
+<term>
+<termId>16873445</termId>
+<termUpdate>add</termUpdate>
+<termName>Neapolitan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nap</termNote>
+<termNote label="Long Description 1">Neapolitan</termNote>
+<termNote label="Audio Language Display Name 1">Napulitano</termNote>
+<termNote label="Visual Language Tag 1">nap</termNote>
+<termNote label="Visual Language Display Name 1">Napulitano</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nap</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873511</termId>
+<termName>Italian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873446</termId>
+<termUpdate>add</termUpdate>
+<termName>Nepali</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ne</termNote>
+<termNote label="Long Description 1">Nepali</termNote>
+<termNote label="Audio Language Display Name 1">खस भाषा</termNote>
+<termNote label="Visual Language Tag 1">ne</termNote>
+<termNote label="Visual Language Display Name 1">खस भाषा</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ne</termNote>
+</term>
+<term>
+<termId>16883871</termId>
+<termUpdate>add</termUpdate>
+<termName>New Norwegian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Long Description 1">New Norwegian</termNote>
+<termNote label="Long Description 2">Nynorsk</termNote>
+<termNote label="Visual Language Tag 1">nn</termNote>
+<termNote label="Visual Language Display Name 1">Nynorsk</termNote>
+<termNote label="Notes">A written language only.</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883616</termId>
+<termName>Norwegian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873498</termId>
+<termUpdate>add</termUpdate>
+<termName>No linguistic content</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">zxx</termNote>
+<termNote label="Long Description 1">No linguistic content</termNote>
+<termNote label="Audio Language Display Name 1">No linguistic content</termNote>
+<termNote label="Visual Language Tag 1">zxx</termNote>
+<termNote label="Visual Language Display Name 1">No linguistic content</termNote>
+<termNote label="Code">urn:ietf:bcp:47:zxx</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873522</termId>
+<termName>Special</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883655</termId>
+<termUpdate>add</termUpdate>
+<termName>Northern Sotho</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">nso</termNote>
+<termNote label="Long Description 1">Northern Sotho</termNote>
+<termNote label="Audio Language Display Name 1">Sesotho sa Leboa</termNote>
+<termNote label="Visual Language Tag 1">nso</termNote>
+<termNote label="Visual Language Display Name 1">Sesotho sa Leboa</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nso</termNote>
+</term>
+<term>
+<termId>16873450</termId>
+<termUpdate>add</termUpdate>
+<termName>Norwegian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">no</termNote>
+<termNote label="Long Description 1">Norwegian</termNote>
+<termNote label="Audio Language Display Name 1">Norsk</termNote>
+<termNote label="Visual Language Tag 1">no</termNote>
+<termNote label="Visual Language Display Name 1">Norsk</termNote>
+<termNote label="Code">urn:ietf:bcp:47:no</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883616</termId>
+<termName>Norwegian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883616</termId>
+<termUpdate>add</termUpdate>
+<termName>Norwegian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Norwegian</termNote>
+<termNote label="Language Group Tag">no</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:no</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883871</termId>
+<termName>New Norwegian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873450</termId>
+<termName>Norwegian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883617</termId>
+<termName>Norwegian Bokmål</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883617</termId>
+<termUpdate>add</termUpdate>
+<termName>Norwegian Bokmål</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Long Description 1">Norwegian Bokmål</termNote>
+<termNote label="Audio Language Display Name 1">bokmål</termNote>
+<termNote label="Visual Language Tag 1">nb</termNote>
+<termNote label="Visual Language Display Name 1">bokmål</termNote>
+<termNote label="Code">urn:ietf:bcp:47:nb</termNote>
+<termNote label="Notes">A written language only.</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16883616</termId>
+<termName>Norwegian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873451</termId>
+<termUpdate>add</termUpdate>
+<termName>Nyanja</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ny</termNote>
+<termNote label="Long Description 1">Nyanja</termNote>
+<termNote label="Long Description 2">Chewa</termNote>
+<termNote label="Audio Language Display Name 1">Chichewa</termNote>
+<termNote label="Visual Language Tag 1">ny</termNote>
+<termNote label="Visual Language Display Name 1">Chichewa</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ny</termNote>
+</term>
+<term>
+<termId>16883656</termId>
+<termUpdate>add</termUpdate>
+<termName>Odia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">or</termNote>
+<termNote label="Long Description 1">Odia</termNote>
+<termNote label="Long Description 2">Oriya</termNote>
+<termNote label="Audio Language Display Name 1">ଓଡ଼ିଆ</termNote>
+<termNote label="Visual Language Tag 1">or</termNote>
+<termNote label="Visual Language Display Name 1">ଓଡ଼ିଆ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:or</termNote>
+</term>
+<term>
+<termId>16873453</termId>
+<termUpdate>add</termUpdate>
+<termName>Palauan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pau</termNote>
+<termNote label="Long Description 1">Palauan</termNote>
+<termNote label="Audio Language Display Name 1">a tekoi er a Belau</termNote>
+<termNote label="Visual Language Tag 1">pau</termNote>
+<termNote label="Visual Language Display Name 1">a tekoi er a Belau</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pau</termNote>
+</term>
+<term>
+<termId>16873452</termId>
+<termUpdate>add</termUpdate>
+<termName>Panjabi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pa</termNote>
+<termNote label="Long Description 1">Panjabi</termNote>
+<termNote label="Long Description 2">Punjabi</termNote>
+<termNote label="Audio Language Display Name 1">ਪੰਜਾਬੀ</termNote>
+<termNote label="Visual Language Tag 1">pa</termNote>
+<termNote label="Visual Language Display Name 1">ਪੰਜਾਬੀ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pa</termNote>
+</term>
+<term>
+<termId>16873457</termId>
+<termUpdate>add</termUpdate>
+<termName>Pashto</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ps</termNote>
+<termNote label="Long Description 1">Pashto</termNote>
+<termNote label="Long Description 2">Pushto</termNote>
+<termNote label="Audio Language Display Name 1">پښتو</termNote>
+<termNote label="Visual Language Tag 1">ps</termNote>
+<termNote label="Visual Language Display Name 1">پښتو</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ps</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873519</termId>
+<termName>Pashto</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873519</termId>
+<termUpdate>add</termUpdate>
+<termName>Pashto</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Pashto</termNote>
+<termNote label="Language Group Tag">ps</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:ps</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873457</termId>
+<termName>Pashto</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873401</termId>
+<termUpdate>add</termUpdate>
+<termName>Persian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">fa</termNote>
+<termNote label="Long Description 1">Persian</termNote>
+<termNote label="Long Description 2">fārsi</termNote>
+<termNote label="Audio Language Display Name 1">فارسی</termNote>
+<termNote label="Visual Language Tag 1">fa</termNote>
+<termNote label="Visual Language Display Name 1">فارسی</termNote>
+<termNote label="Code">urn:ietf:bcp:47:fa</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873507</termId>
+<termName>Persian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873507</termId>
+<termUpdate>add</termUpdate>
+<termName>Persian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Persian</termNote>
+<termNote label="Language Group Tag">fa</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:fa</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873401</termId>
+<termName>Persian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873456</termId>
+<termName>Dari</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873454</termId>
+<termUpdate>add</termUpdate>
+<termName>Pitcairn-Norfolk</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pih</termNote>
+<termNote label="Long Description 1">Pitcairn-Norfolk</termNote>
+<termNote label="Long Description 2">Pitkern-Norfolk</termNote>
+<termNote label="Audio Language Display Name 1">Pitkern-Norfolk</termNote>
+<termNote label="Visual Language Tag 1">pih</termNote>
+<termNote label="Visual Language Display Name 1">Pitkern-Norfolk</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pih</termNote>
+</term>
+<term>
+<termId>16873455</termId>
+<termUpdate>add</termUpdate>
+<termName>Polish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pl</termNote>
+<termNote label="Long Description 1">Polish</termNote>
+<termNote label="Long Description 2">Polski</termNote>
+<termNote label="Visual Language Tag 1">pl</termNote>
+<termNote label="Visual Language Display Name 1">Polski</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pl</termNote>
+</term>
+<term>
+<termId>16873458</termId>
+<termUpdate>add</termUpdate>
+<termName>Portuguese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pt</termNote>
+<termNote label="Long Description 1">Portuguese</termNote>
+<termNote label="Audio Language Display Name 1">Português</termNote>
+<termNote label="Visual Language Tag 1">pt</termNote>
+<termNote label="Visual Language Display Name 1">Português</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pt</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873533</termId>
+<termName>Portuguese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873533</termId>
+<termUpdate>add</termUpdate>
+<termName>Portuguese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Portuguese</termNote>
+<termNote label="Language Group Tag">pt</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:pt</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873458</termId>
+<termName>Portuguese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873459</termId>
+<termName>Portuguese as spoken in Brazil</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873460</termId>
+<termName>Portuguese as spoken in Portugal</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873459</termId>
+<termUpdate>add</termUpdate>
+<termName>Portuguese as spoken in Brazil</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pt-BR</termNote>
+<termNote label="Long Description 1">Portuguese as spoken in Brazil</termNote>
+<termNote label="Audio Language Display Name 1">Português (Brasil)</termNote>
+<termNote label="Visual Language Tag 1">pt-BR</termNote>
+<termNote label="Visual Language Display Name 1">Português (Brasil)</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pt-BR</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873533</termId>
+<termName>Portuguese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873460</termId>
+<termUpdate>add</termUpdate>
+<termName>Portuguese as spoken in Portugal</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pt</termNote>
+<termNote label="Long Description 1">Portuguese as spoken in Portugal</termNote>
+<termNote label="Audio Language Display Name 1">Português</termNote>
+<termNote label="Visual Language Tag 1">pt-PT</termNote>
+<termNote label="Visual Language Display Name 1">Português</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pt-PT</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873533</termId>
+<termName>Portuguese</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883396</termId>
+<termUpdate>add</termUpdate>
+<termName>Portuguese, with no information as to dialect</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pt</termNote>
+<termNote label="Long Description 1">Portuguese, with no information as to dialect</termNote>
+<termNote label="Audio Language Display Name 1">Português, sem informação quanto ao dialeto</termNote>
+<termNote label="Visual Language Tag 1">pt</termNote>
+<termNote label="Visual Language Display Name 1">Português, sem informação quanto ao dialeto</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pt-000</termNote>
+</term>
+<term>
+<termId>16883657</termId>
+<termUpdate>add</termUpdate>
+<termName>Punjabi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">pa</termNote>
+<termNote label="Long Description 1">Punjabi</termNote>
+<termNote label="Long Description 2">Panjabi</termNote>
+<termNote label="Audio Language Display Name 1">ਪੰਜਾਬੀ</termNote>
+<termNote label="Audio Language Display Name 2">پن٘جابی</termNote>
+<termNote label="Visual Language Tag 1">pa</termNote>
+<termNote label="Visual Language Display Name 1">ਪੰਜਾਬੀ</termNote>
+<termNote label="Visual Language Display Name 2">پن٘جابی</termNote>
+<termNote label="Code">urn:ietf:bcp:47:pa</termNote>
+</term>
+<term>
+<termId>16873462</termId>
+<termUpdate>add</termUpdate>
+<termName>Romanian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ro</termNote>
+<termNote label="Long Description 1">Romanian</termNote>
+<termNote label="Long Description 2">Moldovan</termNote>
+<termNote label="Audio Language Display Name 1">Română</termNote>
+<termNote label="Visual Language Tag 1">ro</termNote>
+<termNote label="Visual Language Display Name 1">Română</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ro</termNote>
+</term>
+<term>
+<termId>16873461</termId>
+<termUpdate>add</termUpdate>
+<termName>Rundi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">rn</termNote>
+<termNote label="Long Description 1">Rundi</termNote>
+<termNote label="Audio Language Display Name 1">Ikirundi</termNote>
+<termNote label="Visual Language Tag 1">rn</termNote>
+<termNote label="Visual Language Display Name 1">Ikirundi</termNote>
+<termNote label="Code">urn:ietf:bcp:47:rn</termNote>
+</term>
+<term>
+<termId>16873463</termId>
+<termUpdate>add</termUpdate>
+<termName>Russian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ru</termNote>
+<termNote label="Long Description 1">Russian</termNote>
+<termNote label="Audio Language Display Name 1">ру́сский язы́к</termNote>
+<termNote label="Visual Language Tag 1">ru</termNote>
+<termNote label="Visual Language Display Name 1">ру́сский язы́к</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ru</termNote>
+</term>
+<term>
+<termId>16873468</termId>
+<termUpdate>add</termUpdate>
+<termName>Samoan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sm</termNote>
+<termNote label="Long Description 1">Samoan</termNote>
+<termNote label="Audio Language Display Name 1">Gagana faʻa Sāmoa</termNote>
+<termNote label="Visual Language Tag 1">sm</termNote>
+<termNote label="Visual Language Display Name 1">Gagana faʻa Sāmoa</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sm</termNote>
+</term>
+<term>
+<termId>16884058</termId>
+<termUpdate>add</termUpdate>
+<termName>Sanskrit</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sa</termNote>
+<termNote label="Long Description 1">Sanskrit</termNote>
+<termNote label="Audio Language Display Name 1">संस्कृतम्</termNote>
+<termNote label="Visual Language Tag 1">sa</termNote>
+<termNote label="Visual Language Display Name 1">संस्कृतम्</termNote>
+</term>
+<term>
+<termId>16873471</termId>
+<termUpdate>add</termUpdate>
+<termName>Serbian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sr</termNote>
+<termNote label="Long Description 1">Serbian</termNote>
+<termNote label="Audio Language Display Name 1">Srpski</termNote>
+<termNote label="Audio Language Display Name 2">српска</termNote>
+<termNote label="Visual Language Tag 1">sr-Latn</termNote>
+<termNote label="Visual Language Tag 2">sr-Cyrl</termNote>
+<termNote label="Visual Language Display Name 1">Srpski</termNote>
+<termNote label="Visual Language Display Name 2">српска</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sr</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873521</termId>
+<termName>Serbo-Croatian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883658</termId>
+<termUpdate>add</termUpdate>
+<termName>Serbo-Croatian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sh</termNote>
+<termNote label="Long Description 1">Serbo-Croatian</termNote>
+<termNote label="Audio Language Display Name 1">srpskohrvatski</termNote>
+<termNote label="Audio Language Display Name 2">српскохрватски</termNote>
+<termNote label="Visual Language Tag 1">sh-Latn</termNote>
+<termNote label="Visual Language Tag 2">sh-Cyrl</termNote>
+<termNote label="Visual Language Display Name 1">srpskohrvatski</termNote>
+<termNote label="Visual Language Display Name 2">српскохрватски</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sh</termNote>
+</term>
+<term>
+<termId>16873521</termId>
+<termUpdate>add</termUpdate>
+<termName>Serbo-Croatian</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Serbo-Croatian</termNote>
+<termNote label="Language Group Tag">sh</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:sh</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873413</termId>
+<termName>Croatian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873386</termId>
+<termName>Montenegrin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873471</termId>
+<termName>Serbian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873387</termId>
+<termUpdate>add</termUpdate>
+<termName>Seychellois Creole</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">crs</termNote>
+<termNote label="Long Description 1">Seychellois Creole</termNote>
+<termNote label="Long Description 2">Seselwa Creole French</termNote>
+<termNote label="Audio Language Display Name 1">Seychellois Creole</termNote>
+<termNote label="Visual Language Tag 1">crs</termNote>
+<termNote label="Visual Language Display Name 1">Seychellois Creole</termNote>
+<termNote label="Code">urn:ietf:bcp:47:crs</termNote>
+</term>
+<term>
+<termId>16873520</termId>
+<termUpdate>add</termUpdate>
+<termName>Sign Languages</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Sign Languages</termNote>
+<termNote label="Language Group Tag">sgn</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:sgn</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873528</termId>
+<termName>American Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873529</termId>
+<termName>Australian Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883872</termId>
+<termName>Brazilian Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884050</termId>
+<termName>British Sign Language</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883659</termId>
+<termUpdate>add</termUpdate>
+<termName>Sindhi</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sd</termNote>
+<termNote label="Long Description 1">Sindhi</termNote>
+<termNote label="Audio Language Display Name 1">سنڌي</termNote>
+<termNote label="Audio Language Display Name 2">सिन्धी</termNote>
+<termNote label="Visual Language Display Name 1">سنڌي</termNote>
+<termNote label="Visual Language Display Name 2">सिन्धी</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sd</termNote>
+</term>
+<term>
+<termId>16873465</termId>
+<termUpdate>add</termUpdate>
+<termName>Sinhala</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">si</termNote>
+<termNote label="Long Description 1">Sinhala</termNote>
+<termNote label="Long Description 2">Sinhalese</termNote>
+<termNote label="Audio Language Display Name 1">සිංහල</termNote>
+<termNote label="Visual Language Tag 1">si</termNote>
+<termNote label="Visual Language Display Name 1">සිංහල</termNote>
+<termNote label="Code">urn:ietf:bcp:47:si</termNote>
+</term>
+<term>
+<termId>16873466</termId>
+<termUpdate>add</termUpdate>
+<termName>Slovak</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sk</termNote>
+<termNote label="Long Description 1">Slovak</termNote>
+<termNote label="Long Description 2">Slovakian</termNote>
+<termNote label="Audio Language Display Name 1">Slovenčina</termNote>
+<termNote label="Visual Language Tag 1">sk</termNote>
+<termNote label="Visual Language Display Name 1">Slovenčina</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sk</termNote>
+</term>
+<term>
+<termId>16873467</termId>
+<termUpdate>add</termUpdate>
+<termName>Slovenian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sl</termNote>
+<termNote label="Long Description 1">Slovenian</termNote>
+<termNote label="Long Description 2">Slovene</termNote>
+<termNote label="Audio Language Display Name 1">Slovenščina</termNote>
+<termNote label="Visual Language Tag 1">sl</termNote>
+<termNote label="Visual Language Display Name 1">Slovenščina</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sl</termNote>
+</term>
+<term>
+<termId>16873469</termId>
+<termUpdate>add</termUpdate>
+<termName>Somali</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">so</termNote>
+<termNote label="Long Description 1">Somali</termNote>
+<termNote label="Audio Language Display Name 1">Af-Soomaali</termNote>
+<termNote label="Visual Language Tag 1">so</termNote>
+<termNote label="Visual Language Display Name 1">Af-Soomaali</termNote>
+<termNote label="Code">urn:ietf:bcp:47:so</termNote>
+</term>
+<term>
+<termId>16873474</termId>
+<termUpdate>add</termUpdate>
+<termName>Southern Sotho</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">st</termNote>
+<termNote label="Long Description 1">Southern Sotho</termNote>
+<termNote label="Long Description 2">Sesotho</termNote>
+<termNote label="Audio Language Display Name 1">Sotho</termNote>
+<termNote label="Visual Language Tag 1">st</termNote>
+<termNote label="Visual Language Display Name 1">Sotho</termNote>
+<termNote label="Code">urn:ietf:bcp:47:st</termNote>
+</term>
+<term>
+<termId>16873396</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es</termNote>
+<termNote label="Long Description 1">Spanish</termNote>
+<termNote label="Long Description 2">Globalized Spanish</termNote>
+<termNote label="Audio Language Display Name 1">Español</termNote>
+<termNote label="Visual Language Tag 1">es</termNote>
+<termNote label="Visual Language Display Name 1">Español</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873503</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Spanish</termNote>
+<termNote label="Language Group Tag">es</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:es</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873396</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873398</termId>
+<termName>Castilian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16889068</termId>
+<termName>Spanish as spoken in Argentina</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884060</termId>
+<termName>Spanish as spoken in Bolivia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883660</termId>
+<termName>Spanish as spoken in Chile</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884061</termId>
+<termName>Spanish as spoken in Colombia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884067</termId>
+<termName>Spanish as spoken in Costa Rica</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883398</termId>
+<termName>Spanish as spoken in Cuba</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884062</termId>
+<termName>Spanish as spoken in Ecuador</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884068</termId>
+<termName>Spanish as spoken in El Salvador</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884071</termId>
+<termName>Spanish as spoken in Honduras</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873397</termId>
+<termName>Spanish as spoken in Latin America</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883662</termId>
+<termName>Spanish as spoken in Mexico</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884069</termId>
+<termName>Spanish as spoken in Nicaragua</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884070</termId>
+<termName>Spanish as spoken in Panama</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884063</termId>
+<termName>Spanish as spoken in Paraguay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884064</termId>
+<termName>Spanish as spoken in Peru</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883663</termId>
+<termName>Spanish as spoken in Puerto Rico</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884065</termId>
+<termName>Spanish as spoken in Uruguay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16883664</termId>
+<termName>Spanish as spoken in Valencia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16884066</termId>
+<termName>Spanish as spoken in Venezuela</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16889068</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Argentina</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-DZ</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Argentina</termNote>
+<termNote label="Audio Language Display Name 1">español argentino</termNote>
+<termNote label="Visual Language Tag 1">es-DZ</termNote>
+<termNote label="Visual Language Display Name 1">español argentino</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884060</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Bolivia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-BO</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Bolivia</termNote>
+<termNote label="Audio Language Display Name 1">español boliviano</termNote>
+<termNote label="Visual Language Tag 1">es-BO</termNote>
+<termNote label="Visual Language Display Name 1">español boliviano</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883660</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Chile</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-CL</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Chile</termNote>
+<termNote label="Audio Language Display Name 1">Español chileno</termNote>
+<termNote label="Visual Language Tag 1">es-CL</termNote>
+<termNote label="Visual Language Display Name 1">Español chileno</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-CL</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884061</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Colombia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-COL</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Colombia</termNote>
+<termNote label="Audio Language Display Name 1">español colombiano</termNote>
+<termNote label="Visual Language Tag 1">es-COL</termNote>
+<termNote label="Visual Language Display Name 1">español colombiano</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884067</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Costa Rica</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-CR</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Costa Rica</termNote>
+<termNote label="Audio Language Display Name 1">español costarricense</termNote>
+<termNote label="Visual Language Tag 1">es-CR</termNote>
+<termNote label="Visual Language Display Name 1">español costarricense</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883398</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Cuba</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-CU</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Cuba</termNote>
+<termNote label="Audio Language Display Name 1">Español Cubano</termNote>
+<termNote label="Visual Language Tag 1">es-CU</termNote>
+<termNote label="Visual Language Display Name 1">Español Cubano</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-CU</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884062</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Ecuador</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-EC</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Ecuador</termNote>
+<termNote label="Audio Language Display Name 1">español ecuatoriano</termNote>
+<termNote label="Visual Language Tag 1">es-EC</termNote>
+<termNote label="Visual Language Display Name 1">español ecuatoriano</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884068</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in El Salvador</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-SV</termNote>
+<termNote label="Long Description 1">Spanish as spoken in El Salvador</termNote>
+<termNote label="Audio Language Display Name 1">el salvadoreño español</termNote>
+<termNote label="Visual Language Tag 1">es-SV</termNote>
+<termNote label="Visual Language Display Name 1">el salvadoreño español</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884071</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Honduras</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-HN</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Honduras</termNote>
+<termNote label="Audio Language Display Name 1">español hondureño</termNote>
+<termNote label="Visual Language Tag 1">es-HN</termNote>
+<termNote label="Visual Language Display Name 1">español hondureño</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873397</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Latin America</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-419</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Latin America</termNote>
+<termNote label="Audio Language Display Name 1">Español</termNote>
+<termNote label="Visual Language Tag 1">es-419</termNote>
+<termNote label="Visual Language Display Name 1">Español</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-419</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883662</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Mexico</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-MX</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Mexico</termNote>
+<termNote label="Audio Language Display Name 1">Español mexicano</termNote>
+<termNote label="Visual Language Tag 1">es-MX</termNote>
+<termNote label="Visual Language Display Name 1">Español mexicano</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-MX</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884069</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Nicaragua</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-NI</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Nicaragua</termNote>
+<termNote label="Audio Language Display Name 1">español nicaragüense</termNote>
+<termNote label="Visual Language Tag 1">es-NI</termNote>
+<termNote label="Visual Language Display Name 1">español nicaragüense</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884070</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Panama</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-PA</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Panama</termNote>
+<termNote label="Audio Language Display Name 1">español panameño</termNote>
+<termNote label="Visual Language Tag 1">es-PA</termNote>
+<termNote label="Visual Language Display Name 1">español panameño</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884063</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Paraguay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-PY</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Paraguay</termNote>
+<termNote label="Audio Language Display Name 1">español paraguayo</termNote>
+<termNote label="Visual Language Tag 1">es-PY</termNote>
+<termNote label="Visual Language Display Name 1">español paraguayo</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884064</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Peru</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-PE</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Peru</termNote>
+<termNote label="Audio Language Display Name 1">español peruano</termNote>
+<termNote label="Visual Language Tag 1">es-PE</termNote>
+<termNote label="Visual Language Display Name 1">español peruano</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883663</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Puerto Rico</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-PR</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Puerto Rico</termNote>
+<termNote label="Audio Language Display Name 1">Español puertorriqueño</termNote>
+<termNote label="Visual Language Tag 1">es-PR</termNote>
+<termNote label="Visual Language Display Name 1">Español puertorriqueño</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-PR</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884065</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Uruguay</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-UY</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Uruguay</termNote>
+<termNote label="Audio Language Display Name 1">español uruguayo</termNote>
+<termNote label="Visual Language Tag 1">es-UY</termNote>
+<termNote label="Visual Language Display Name 1">español uruguayo</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883664</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Valencia</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-ES-VC</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Valencia</termNote>
+<termNote label="Long Description 2">Valencian</termNote>
+<termNote label="Audio Language Display Name 1">Español valencià</termNote>
+<termNote label="Audio Language Display Name 2">valencià</termNote>
+<termNote label="Visual Language Tag 1">es-ES-VC</termNote>
+<termNote label="Visual Language Display Name 1">Español valencià</termNote>
+<termNote label="Visual Language Display Name 2">valencià</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-ES-VC</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884066</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish as spoken in Venezuela</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es-VE</termNote>
+<termNote label="Long Description 1">Spanish as spoken in Venezuela</termNote>
+<termNote label="Audio Language Display Name 1">es-VE</termNote>
+<termNote label="Audio Language Display Name 2">español venezolano</termNote>
+<termNote label="Visual Language Display Name 1">español venezolano</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873503</termId>
+<termName>Spanish</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16883673</termId>
+<termUpdate>add</termUpdate>
+<termName>Spanish, with no information as to dialect</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">es</termNote>
+<termNote label="Long Description 1">Spanish, with no information as to dialect</termNote>
+<termNote label="Audio Language Display Name 1">Español, sin información en cuanto a dialecto</termNote>
+<termNote label="Visual Language Tag 1">es</termNote>
+<termNote label="Visual Language Display Name 1">Español, sin información en cuanto a dialecto</termNote>
+<termNote label="Code">urn:ietf:bcp:47:es-000</termNote>
+</term>
+<term>
+<termId>16873522</termId>
+<termUpdate>add</termUpdate>
+<termName>Special</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Special</termNote>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873498</termId>
+<termName>No linguistic content</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+<relation weight="100">
+<relationType>NT</relationType>
+<termId>16873490</termId>
+<termName>Undetermined</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873472</termId>
+<termUpdate>add</termUpdate>
+<termName>Sranan Tongo</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">srn</termNote>
+<termNote label="Long Description 1">Sranan Tongo</termNote>
+<termNote label="Audio Language Display Name 1">Sranan Tongo</termNote>
+<termNote label="Visual Language Tag 1">srn</termNote>
+<termNote label="Visual Language Display Name 1">Sranan Tongo</termNote>
+<termNote label="Code">urn:ietf:bcp:47:srn</termNote>
+</term>
+<term>
+<termId>16883609</termId>
+<termUpdate>add</termUpdate>
+<termName>Standard Arabic</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">arb</termNote>
+<termNote label="Long Description 1">Standard Arabic</termNote>
+<termNote label="Audio Language Display Name 1">فصحى العصر</termNote>
+<termNote label="Visual Language Tag 1">arb</termNote>
+<termNote label="Visual Language Display Name 1">فصحى العصر</termNote>
+<termNote label="Code">urn:ietf:bcp:47:arb</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873501</termId>
+<termName>Arabic</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873476</termId>
+<termUpdate>add</termUpdate>
+<termName>Swahili</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">swh</termNote>
+<termNote label="Long Description 1">Swahili</termNote>
+<termNote label="Audio Language Display Name 1">Kiswahili</termNote>
+<termNote label="Visual Language Tag 1">sw</termNote>
+<termNote label="Visual Language Display Name 1">Kiswahili</termNote>
+<termNote label="Code">urn:ietf:bcp:47:swh</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873524</termId>
+<termName>Swahili</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873524</termId>
+<termUpdate>add</termUpdate>
+<termName>Swahili</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Swahili</termNote>
+<termNote label="Language Group Tag">sw</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:sw</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873476</termId>
+<termName>Swahili</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873473</termId>
+<termUpdate>add</termUpdate>
+<termName>Swati</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ss</termNote>
+<termNote label="Long Description 1">Swati</termNote>
+<termNote label="Long Description 2">SiSwati</termNote>
+<termNote label="Audio Language Display Name 1">SiSwati</termNote>
+<termNote label="Visual Language Tag 1">ss</termNote>
+<termNote label="Visual Language Display Name 1">SiSwati</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ss</termNote>
+</term>
+<term>
+<termId>16873475</termId>
+<termUpdate>add</termUpdate>
+<termName>Swedish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">sv</termNote>
+<termNote label="Long Description 1">Swedish</termNote>
+<termNote label="Audio Language Display Name 1">Svenska</termNote>
+<termNote label="Visual Language Tag 1">sv</termNote>
+<termNote label="Visual Language Display Name 1">Svenska</termNote>
+<termNote label="Code">urn:ietf:bcp:47:sv</termNote>
+</term>
+<term>
+<termId>16884073</termId>
+<termUpdate>add</termUpdate>
+<termName>Swiss German</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">gsw</termNote>
+<termNote label="Long Description 1">Swiss German</termNote>
+<termNote label="Audio Language Display Name 1">Schwiizerdütsch</termNote>
+<termNote label="Visual Language Tag 1">gsw</termNote>
+<termNote label="Visual Language Display Name 1">Schwiizerdütsch</termNote>
+</term>
+<term>
+<termId>16873482</termId>
+<termUpdate>add</termUpdate>
+<termName>Tagalog</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tl</termNote>
+<termNote label="Long Description 1">Tagalog</termNote>
+<termNote label="Audio Language Display Name 1">Wikang Tagalog</termNote>
+<termNote label="Visual Language Tag 1">tl</termNote>
+<termNote label="Visual Language Display Name 1">Wikang Tagalog</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tl</termNote>
+</term>
+<term>
+<termId>16873488</termId>
+<termUpdate>add</termUpdate>
+<termName>Tahitian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ty</termNote>
+<termNote label="Long Description 1">Tahitian</termNote>
+<termNote label="Audio Language Display Name 1">Reo Tahiti</termNote>
+<termNote label="Visual Language Tag 1">ty</termNote>
+<termNote label="Visual Language Display Name 1">Reo Tahiti</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ty</termNote>
+</term>
+<term>
+<termId>16873478</termId>
+<termUpdate>add</termUpdate>
+<termName>Tajik</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tg</termNote>
+<termNote label="Long Description 1">Tajik</termNote>
+<termNote label="Audio Language Display Name 1">тоҷикӣ</termNote>
+<termNote label="Visual Language Tag 1">tg-Cyrl</termNote>
+<termNote label="Visual Language Display Name 1">тоҷикӣ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tg</termNote>
+</term>
+<term>
+<termId>16873477</termId>
+<termUpdate>add</termUpdate>
+<termName>Tamil</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ta</termNote>
+<termNote label="Long Description 1">Tamil</termNote>
+<termNote label="Audio Language Display Name 1">தமிழ்</termNote>
+<termNote label="Visual Language Tag 1">ta</termNote>
+<termNote label="Visual Language Display Name 1">தமிழ்</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ta</termNote>
+</term>
+<term>
+<termId>16883665</termId>
+<termUpdate>add</termUpdate>
+<termName>Telugu</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">te</termNote>
+<termNote label="Long Description 1">Telugu</termNote>
+<termNote label="Audio Language Display Name 1">తెలుగు</termNote>
+<termNote label="Visual Language Tag 1">te</termNote>
+<termNote label="Visual Language Display Name 1">తెలుగు</termNote>
+<termNote label="Code">urn:ietf:bcp:47:te</termNote>
+</term>
+<term>
+<termId>16873479</termId>
+<termUpdate>add</termUpdate>
+<termName>Thai</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">th</termNote>
+<termNote label="Long Description 1">Thai</termNote>
+<termNote label="Audio Language Display Name 1">ภาษาไทย</termNote>
+<termNote label="Visual Language Tag 1">th</termNote>
+<termNote label="Visual Language Display Name 1">ภาษาไทย</termNote>
+<termNote label="Code">urn:ietf:bcp:47:th</termNote>
+</term>
+<term>
+<termId>16883666</termId>
+<termUpdate>add</termUpdate>
+<termName>Tibetan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">bo</termNote>
+<termNote label="Long Description 1">Tibetan</termNote>
+<termNote label="Audio Language Display Name 1">བོད་སྐད་</termNote>
+<termNote label="Visual Language Tag 1">bo</termNote>
+<termNote label="Visual Language Display Name 1">བོད་སྐད་</termNote>
+<termNote label="Code">urn:ietf:bcp:47:bo</termNote>
+</term>
+<term>
+<termId>16873480</termId>
+<termUpdate>add</termUpdate>
+<termName>Tigrinya</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ti</termNote>
+<termNote label="Long Description 1">Tigrinya</termNote>
+<termNote label="Audio Language Display Name 1">ትግርኛ</termNote>
+<termNote label="Visual Language Tag 1">ti</termNote>
+<termNote label="Visual Language Display Name 1">ትግርኛ</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ti</termNote>
+</term>
+<term>
+<termId>16873485</termId>
+<termUpdate>add</termUpdate>
+<termName>Tok Pisin</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tpi</termNote>
+<termNote label="Long Description 1">Tok Pisin</termNote>
+<termNote label="Audio Language Display Name 1">Tok Pisin</termNote>
+<termNote label="Visual Language Tag 1">tpi</termNote>
+<termNote label="Visual Language Display Name 1">Tok Pisin</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tpi</termNote>
+</term>
+<term>
+<termId>16873484</termId>
+<termUpdate>add</termUpdate>
+<termName>Tonga (Tonga Islands)</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">to</termNote>
+<termNote label="Long Description 1">Tonga (Tonga Islands)</termNote>
+<termNote label="Long Description 2">Tongan</termNote>
+<termNote label="Audio Language Display Name 1">lea fakatonga</termNote>
+<termNote label="Visual Language Tag 1">to</termNote>
+<termNote label="Visual Language Display Name 1">lea fakatonga</termNote>
+<termNote label="Code">urn:ietf:bcp:47:to</termNote>
+</term>
+<term>
+<termId>16883667</termId>
+<termUpdate>add</termUpdate>
+<termName>Tsonga</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ts</termNote>
+<termNote label="Long Description 1">Tsonga</termNote>
+<termNote label="Audio Language Display Name 1">Xitsonga</termNote>
+<termNote label="Visual Language Tag 1">ts</termNote>
+<termNote label="Visual Language Display Name 1">Xitsonga</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ts</termNote>
+</term>
+<term>
+<termId>16873483</termId>
+<termUpdate>add</termUpdate>
+<termName>Tswana</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tn</termNote>
+<termNote label="Long Description 1">Tswana</termNote>
+<termNote label="Long Description 2">Setswana</termNote>
+<termNote label="Audio Language Display Name 1">Tswana</termNote>
+<termNote label="Visual Language Tag 1">tn</termNote>
+<termNote label="Visual Language Display Name 1">Tswana</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tn</termNote>
+</term>
+<term>
+<termId>16884074</termId>
+<termUpdate>add</termUpdate>
+<termName>Tulu</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tcy</termNote>
+<termNote label="Long Description 1">Tulu</termNote>
+<termNote label="Audio Language Display Name 1">ತುಳು</termNote>
+<termNote label="Visual Language Tag 1">tcy</termNote>
+<termNote label="Visual Language Display Name 1">ತುಳು</termNote>
+</term>
+<term>
+<termId>16873486</termId>
+<termUpdate>add</termUpdate>
+<termName>Turkish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tr</termNote>
+<termNote label="Long Description 1">Turkish</termNote>
+<termNote label="Audio Language Display Name 1">Türkçe</termNote>
+<termNote label="Visual Language Tag 1">tr</termNote>
+<termNote label="Visual Language Display Name 1">Türkçe</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tr</termNote>
+</term>
+<term>
+<termId>16873481</termId>
+<termUpdate>add</termUpdate>
+<termName>Turkmen</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tk</termNote>
+<termNote label="Long Description 1">Turkmen</termNote>
+<termNote label="Audio Language Display Name 1">Türkmençe</termNote>
+<termNote label="Visual Language Tag 1">tk</termNote>
+<termNote label="Visual Language Display Name 1">Türkmençe</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tk</termNote>
+</term>
+<term>
+<termId>16873487</termId>
+<termUpdate>add</termUpdate>
+<termName>Tuvaluan</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">tvl</termNote>
+<termNote label="Long Description 1">Tuvaluan</termNote>
+<termNote label="Long Description 2">Tuvalu</termNote>
+<termNote label="Audio Language Display Name 1">Tuvaluan</termNote>
+<termNote label="Visual Language Tag 1">tvl</termNote>
+<termNote label="Visual Language Display Name 1">Tuvaluan</termNote>
+<termNote label="Code">urn:ietf:bcp:47:tvl</termNote>
+</term>
+<term>
+<termId>16873489</termId>
+<termUpdate>add</termUpdate>
+<termName>Ukrainian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">uk</termNote>
+<termNote label="Long Description 1">Ukrainian</termNote>
+<termNote label="Audio Language Display Name 1">українська мова</termNote>
+<termNote label="Visual Language Tag 1">uk</termNote>
+<termNote label="Visual Language Display Name 1">українська мова</termNote>
+<termNote label="Code">urn:ietf:bcp:47:uk</termNote>
+</term>
+<term>
+<termId>16873490</termId>
+<termUpdate>add</termUpdate>
+<termName>Undetermined</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">und</termNote>
+<termNote label="Long Description 1">Undetermined</termNote>
+<termNote label="Audio Language Display Name 1">Undetermined</termNote>
+<termNote label="Visual Language Tag 1">und</termNote>
+<termNote label="Visual Language Display Name 1">Undetermined</termNote>
+<termNote label="Code">urn:ietf:bcp:47:und</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873522</termId>
+<termName>Special</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873491</termId>
+<termUpdate>add</termUpdate>
+<termName>Urdu</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">ur</termNote>
+<termNote label="Long Description 1">Urdu</termNote>
+<termNote label="Audio Language Display Name 1">اُردُو‬</termNote>
+<termNote label="Visual Language Tag 1">ur</termNote>
+<termNote label="Visual Language Display Name 1">اُردُو‬</termNote>
+<termNote label="Code">urn:ietf:bcp:47:ur</termNote>
+</term>
+<term>
+<termId>16873492</termId>
+<termUpdate>add</termUpdate>
+<termName>Uzbek</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">uz</termNote>
+<termNote label="Long Description 1">Uzbek</termNote>
+<termNote label="Audio Language Display Name 1">oʻzbekcha</termNote>
+<termNote label="Visual Language Tag 1">uz</termNote>
+<termNote label="Visual Language Display Name 1">oʻzbekcha</termNote>
+<termNote label="Code">urn:ietf:bcp:47:uz</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873525</termId>
+<termName>Uzbek</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873525</termId>
+<termUpdate>add</termUpdate>
+<termName>Uzbek</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+<termNote label="Language Group Name">Uzbek</termNote>
+<termNote label="Language Group Tag">uz</termNote>
+<termNote label="Language Group Code">urn:ietf:bcp:47:uz</termNote>
+<relation weight="100">
+<relationType>EQT</relationType>
+<termId>16873492</termId>
+<termName>Uzbek</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16873493</termId>
+<termUpdate>add</termUpdate>
+<termName>Vietnamese</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">vi</termNote>
+<termNote label="Long Description 1">Vietnamese</termNote>
+<termNote label="Audio Language Display Name 1">Tiếng Việt</termNote>
+<termNote label="Visual Language Tag 1">vi</termNote>
+<termNote label="Visual Language Display Name 1">Tiếng Việt</termNote>
+<termNote label="Code">urn:ietf:bcp:47:vi</termNote>
+</term>
+<term>
+<termId>16873389</termId>
+<termUpdate>add</termUpdate>
+<termName>Welsh</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">cy</termNote>
+<termNote label="Long Description 1">Welsh</termNote>
+<termNote label="Audio Language Display Name 1">Cymraeg</termNote>
+<termNote label="Visual Language Tag 1">cy</termNote>
+<termNote label="Visual Language Display Name 1">Cymraeg</termNote>
+<termNote label="Code">urn:ietf:bcp:47:cy</termNote>
+</term>
+<term>
+<termId>16873527</termId>
+<termUpdate>add</termUpdate>
+<termName>Western Armenian</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">hyw</termNote>
+<termNote label="Long Description 1">Western Armenian</termNote>
+<termNote label="Audio Language Display Name 1">արեւմտահայերէն</termNote>
+<termNote label="Visual Language Tag 1">hyw</termNote>
+<termNote label="Visual Language Display Name 1">արեւմտահայերէն</termNote>
+<termNote label="Code">urn:ietf:bcp:47:hyw</termNote>
+<termNote label="Notes">Refers to Armenian as spoken in the diaspora.</termNote>
+<relation weight="100">
+<relationType>BT</relationType>
+<termId>16873510</termId>
+<termName>Armenian Family</termName>
+<termVocabulary>Language Groupings LMT</termVocabulary>
+</relation>
+</term>
+<term>
+<termId>16884075</termId>
+<termUpdate>add</termUpdate>
+<termName>Wolof</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">wo</termNote>
+<termNote label="Long Description 1">Wolof</termNote>
+<termNote label="Audio Language Display Name 1">Wolof</termNote>
+<termNote label="Visual Language Tag 1">wo</termNote>
+<termNote label="Visual Language Display Name 1">Wolof</termNote>
+</term>
+<term>
+<termId>16883668</termId>
+<termUpdate>add</termUpdate>
+<termName>Xhosa</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">xh</termNote>
+<termNote label="Long Description 1">Xhosa</termNote>
+<termNote label="Audio Language Display Name 1">isiXhosa</termNote>
+<termNote label="Visual Language Tag 1">xh</termNote>
+<termNote label="Visual Language Display Name 1">isiXhosa</termNote>
+<termNote label="Code">urn:ietf:bcp:47:xh</termNote>
+</term>
+<term>
+<termId>16883669</termId>
+<termUpdate>add</termUpdate>
+<termName>Yiddish</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">yi</termNote>
+<termNote label="Long Description 1">Yiddish</termNote>
+<termNote label="Audio Language Display Name 1">ייִדיש‎</termNote>
+<termNote label="Visual Language Tag 1">yi</termNote>
+<termNote label="Visual Language Display Name 1">ייִדיש‎</termNote>
+<termNote label="Code">urn:ietf:bcp:47:yi</termNote>
+</term>
+<term>
+<termId>16883671</termId>
+<termUpdate>add</termUpdate>
+<termName>Yoruba</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">yo</termNote>
+<termNote label="Long Description 1">Yoruba</termNote>
+<termNote label="Audio Language Display Name 1">Èdè Yorùbá</termNote>
+<termNote label="Visual Language Tag 1">yo</termNote>
+<termNote label="Visual Language Display Name 1">Èdè Yorùbá</termNote>
+<termNote label="Code">urn:ietf:bcp:47:yo</termNote>
+</term>
+<term>
+<termId>16873497</termId>
+<termUpdate>add</termUpdate>
+<termName>Zulu</termName>
+<termVocabulary>Language Metadata Table LMT</termVocabulary>
+<termNote label="Audio Language Tag">zu</termNote>
+<termNote label="Long Description 1">Zulu</termNote>
+<termNote label="Long Description 2">isiZulu</termNote>
+<termNote label="Audio Language Display Name 1">isiZulu</termNote>
+<termNote label="Visual Language Tag 1">zu</termNote>
+<termNote label="Visual Language Display Name 1">isiZulu</termNote>
+<termNote label="Code">urn:ietf:bcp:47:zu</termNote>
+</term>
+</Zthes>
