@@ -1,7 +1,6 @@
 /**
- *  @module  app-lmt
+ *  @module  seerver-app
  *  @author  Mr MXF
- *  @version 0.4
  *
  * A very simple Koa Server to do the following:
  *  - Render a register into a number of different views
@@ -28,7 +27,8 @@
 
 //pull in any credentials from the .env file into process.env
 require('dotenv').config()
-config = require('./inc/config-process')
+const config = require('./inc/config-process')
+const DEBUG= config.get("DEBUG")
 const pino = require('pino')
 //log to stderr by default
 const log = pino(config.get('logging'), pino.destination(2))
@@ -64,7 +64,10 @@ const prefix = `${(raw_prefix[0] == "/") ? "" : "/"}${raw_prefix}`
 if (config.get('logging.log_requests'))
   app.use(request_logger())
 
-//enable file uploads for the XML conversion tool using koa-body
+//do some pre-processing so that the correct register is mapped to the correct route
+app.use(require('./inc/register-middleware'))
+
+//enable file uploads for the conversion tool using koa-body
 app.use(bodyParser({
   formidable: { uploadDir: config.get("upload_folder")},    //This is where the files would come
   multipart: true,
@@ -76,25 +79,25 @@ const serve = require('koa-static')
 app.use(mount(prefix, serve(config.get('static.root'), { index: "index.html", })))
 
 //>>> serve metadata for the ui
-app.use(mount(prefix, require('./route-metadata').routes()))
+app.use(mount(prefix, require('./route/metadata').routes()))
 
 //>>> serve index page
-app.use(mount(prefix, require('./route-index').routes()))
+app.use(mount(prefix, require('./route/index').routes()))
 
 //>>> serve the views from the buttons
-app.use(mount(prefix, require('./route-xml').routes()))
-app.use(mount(prefix, require('./route-xsd').routes()))
+// app.use(mount(prefix, require('./route/xml').routes()))
+// app.use(mount(prefix, require('./route/xsd').routes()))
 
-app.use(mount(prefix, require('./route-view-control-doc').routes()))
-app.use(mount(prefix, require('./route-view-xml').routes()))
-app.use(mount(prefix, require('./route-view-schema').routes()))
+// app.use(mount(prefix, require('./route/view-control-doc').routes()))
+// app.use(mount(prefix, require('./route/view-xml').routes()))
+// app.use(mount(prefix, require('./route/view-schema').routes()))
 
-app.use(mount(prefix, require('./route-table-lang').routes()))
-app.use(mount(prefix, require('./route-table-group').routes()))
+// app.use(mount(prefix, require('./route/table-lang').routes()))
+// app.use(mount(prefix, require('./route/table-group').routes()))
 
-app.use(mount(prefix, require('./route-tool-diff').routes()))
-app.use(mount(prefix, require('./route-tool-validate').routes()))
+// app.use(mount(prefix, require('./route/tool-diff').routes()))
+// app.use(mount(prefix, require('./route/tool-validate').routes()))
 
-app.use(mount(prefix, require('./route-tool-convert').routes()))
+// app.use(mount(prefix, require('./route/tool-convert').routes()))
 
 module.exports = app

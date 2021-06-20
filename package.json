@@ -2,13 +2,13 @@
   "name": "smpte-ra-tool-simple-registers",
   "version": "0.9.2",
   "description": "Display Simple Register",
-  "main": "lmt-srv/server-lmt.js",
+  "main": "simple-registers/server.js",
   "engines": {
     "node": "12.x"
   },
   "scripts": {
-    "start": "node lmt-srv/server-lmt.js",
-    "pretty": "node lmt-srv/server-lmt.js | pino-pretty",
+    "start": "node simple-registers/server.js",
+    "pretty": "node simple-registers/server.js | pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mrmxf",

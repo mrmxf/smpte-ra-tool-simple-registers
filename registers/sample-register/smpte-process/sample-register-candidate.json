@@ -1,0 +1,25 @@
+[{
+        "number": 1,
+        "english": "one",
+        "french": "un",
+        "japanese": "一つ"
+    },
+    {
+        "number": 2,
+        "english": "two",
+        "french": "deux",
+        "japanese": "二つ"
+    },
+    {
+        "number": 3,
+        "english": "three",
+        "french": "trois",
+        "japanese": "三つ"
+    },
+    {
+        "number": 4,
+        "english": "four",
+        "french": "quatre",
+        "japanese": "四"
+    }
+]

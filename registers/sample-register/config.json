@@ -1,0 +1,31 @@
+{
+    "doc": "Configuration file for sample-register",
+    "app_title": "Register: Sample",
+    "app_description_MD": "_**TEST** Sample Register, not for production_",
+    "version": "0.1.0",
+    "isDisplayed": true,
+    "folder": {
+        "server": "server",
+        "browser": "browser",
+        "process": "smpte-process"
+    },
+    "smpte_process": {
+        "control-doc": "sample-controlDoc.pdf",
+        "control-doc-download-name": "smpte-sample-controlDoc(test).pdf",
+        "register": {
+            "current": "sample-register.json",
+            "previous": "sample-register-previous.json",
+            "candidate": "sample-register-candidate.json"
+        },
+        "narrative": {
+            "current": "sample-narrative.md",
+            "previous": "sample-narrative-previous.md",
+            "candidate": "sample-narrative-candidate.md"
+        },
+        "schema": {
+            "current": "sample-schema.json",
+            "previous": "sample-schema.json",
+            "candidate": "sample-schema.json"
+        }
+    }
+}

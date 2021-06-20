@@ -1,7 +1,12 @@
 {
     "_help": {
         "format": "String",
-        "default": "Default configuration from config/schema_defaults.json"
+        "default": "Default configuration from config/config_defaults+schema.json"
+    },
+    "DEBUG": {
+        "format": "Boolean",
+        "default": false,
+        "doc": "Turns on verbose logging and other integrity checks for new plugins"
     },
     "server_name": {
         "format": "String",
@@ -11,9 +16,27 @@
         "format": "String",
         "default": "RA-SR"
     },
-    "root_path": {
-        "format": "String",
-        "default": "public/"
+    "home": {
+        "doc": "This section has the same format as a register config, but renders the home page instead",
+        "format": "Object",
+        "default": {
+            "doc": "configuration for the home page (i.e. no register selected)",
+            "app_title": "SMPTE RA Tool - Simple Registers",
+            "app_description_MD": "**Alpha** release of the Simple Register Tool",
+            "version": "2.0.0",
+            "path": {
+                "server": {
+                    "doc": "folder from which the server finds static files, relative to project",
+                    "format": "String",
+                    "default": "public/"
+                },
+                "narrative": {
+                    "doc": "markdown file relative to server path",
+                    "format": "String",
+                    "default": "index.md"
+                }
+            }
+        }
     },
     "version": {
         "format": "String",
@@ -23,8 +46,18 @@
         "format": "int",
         "default": 3000
     },
+    "registers": {
+        "format": "Array",
+        "default": [{
+            "name": "Sample Register",
+            "short_name": "SAMPLE",
+            "url_prefix": "/_sample",
+            "folder_path": "registers/sample_register",
+            "isDisplayed": false
+        }]
+    },
     "static": {
-        "format": "String",
+        "format": "Object",
         "default": {
             "html": {
                 "centered_start": "<div class=\"container\"><div class=\"row\">",
@@ -55,7 +88,7 @@
     "url_prefix": {
         "doc": "A prfix to mount the server somewhere other than the root",
         "format": "String",
-        "default": ""
+        "default": "/test"
     },
     "upload_folder": {
         "format": "String",
