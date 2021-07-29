@@ -27,7 +27,7 @@
 
 //pull in any credentials from the .env file into process.env
 require('dotenv').config()
-const config = require('./inc/config-process')
+const config = require('./cfg-va-che/cfg-va-che.js')
 const DEBUG= config.get("DEBUG")
 const pino = require('pino')
 //log to stderr by default

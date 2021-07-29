@@ -4,7 +4,7 @@
  */
 
 let diff = require('deep-diff').diff
-config = require('./inc/config-process')
+config = require('./cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 const esc = require('escape-html')
 

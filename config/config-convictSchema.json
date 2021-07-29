@@ -1,0 +1,41 @@
+{
+    "doc": {
+        "format": "String"
+    },
+    "DEBUG": {
+        "format": "Boolean",
+        "doc": "Turns on verbose logging and other integrity checks for new plugins"
+    },
+    "server_name": {
+        "format": "String"
+    },
+    "short_server_name": {
+        "format": "String"
+    },
+    "home": {
+        "doc": "This section has the same format as a register config, but renders the home page instead",
+        "format": "Object"
+    },
+    "version": {
+        "format": "String"
+    },
+    "port": {
+        "format": "int"
+    },
+    "registers": {
+        "format": "Array"
+    },
+    "static": {
+        "format": "Object"
+    },
+    "url_prefix": {
+        "doc": "A prfix to mount the server somewhere other than the root",
+        "format": "String"
+    },
+    "upload_folder": {
+        "format": "String"
+    },
+    "logging": {
+        "format": "Object"
+    }
+}

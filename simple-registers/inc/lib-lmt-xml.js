@@ -4,7 +4,7 @@
  */
 const fs = require('fs')
 const path = require('path')
-config = require('./inc/config-process')
+config = require('./cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 
 module.exports.xml = () => {

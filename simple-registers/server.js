@@ -1,4 +1,4 @@
-config = require('./inc/config-process')
+config = require('./cfg-va-che/cfg-va-che.js')
 const app = require('./server-app.js')
 
 const port = config.get("port")

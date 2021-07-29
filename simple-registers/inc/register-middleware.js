@@ -9,7 +9,7 @@
  *  `ctx.smpte.request.path`     - path with config(url_prefix) removed or false. e.g. "/lmt/table_view"
  *  `ctx.smpte.request.endpoint` - path with config(url_prefix) removed or false e.g. "/table_view""
  */
-const config = require('../inc/config-process')
+const config = require('../cfg-va-che/cfg-va-che.js')
 const DEBUG = config.get("DEBUG")
 const log = require('pino')(config.get('logging'))
 

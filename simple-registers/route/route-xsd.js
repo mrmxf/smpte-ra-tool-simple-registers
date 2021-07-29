@@ -4,7 +4,7 @@
  */
 const Router = require('koa-router')
 const router = new Router();
-config = require('./inc/config-process')
+config = require('./cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 
 const lmt = require('./lib-lmt-xml')
