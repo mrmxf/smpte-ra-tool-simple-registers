@@ -60,7 +60,7 @@ in the **registers** folder with a command like
 # execute from the registers/ subfolder
 #
 cd registers
-git submodule add --depth 1 git@github.com:smpte/<repoName>.git
+git submodule add --depth 1 git@github.com:smpte/<repoName>.git registers/
 git config -f .gitmodules submodule.<repoName>.shallow true
 ```
 
