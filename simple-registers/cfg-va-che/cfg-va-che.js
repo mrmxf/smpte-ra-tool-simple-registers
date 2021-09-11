@@ -7,23 +7,31 @@
  * substitution for more modular configuration
  *
  */
- const fs = require('fs')
- const path = require('path')
- const convict = require('convict')
+const fs = require('fs')
+const path = require('path')
+const convict = require('convict')
 
- //load in the defaults and the schema first
- const schemaPath = path.join('config', 'config-convictSchema.json')
- const defaultPath = path.join('config', 'config-defaults.json')
- let schema = fs.readFileSync(schemaPath)
+//load in the defaults and the schema first
+const schemaPath = path.join('config', 'config-convictSchema.json')
+const defaultPath = path.join('config', 'config-defaults.json')
+let schema = fs.readFileSync(schemaPath)
 
- //initialise the config object by loading configs in order
- let config = convict(JSON.parse(schema))
+//initialise the config object by loading configs in order
+let config = convict(JSON.parse(schema))
 
- config.loadFile(defaultPath)
- //validate
- config.validate({ allowed: 'strict' })
+//load the defaults
+config.loadFile(defaultPath)
 
- if (config.get("DEBUG"))
-     console.log(config.getProperties())
+//overlay the -development or -production
+const mode = process.env.NODE_ENV
+const modalPath = path.join('config', `config-${mode}.json`)
 
- module.exports = config
+//validate
+config.validate({
+    allowed: 'strict'
+})
+
+if (config.get("DEBUG"))
+    console.log(config.getProperties())
+
+module.exports = config
