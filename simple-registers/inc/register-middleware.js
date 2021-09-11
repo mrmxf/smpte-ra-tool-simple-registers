@@ -21,7 +21,7 @@ const middleware = async (ctx, next) => {
     let m = {
         server:{
             name:config.get('serverName'),
-            shorts_:config.get('server_short_name'),
+            shorts_:config.get('serverNameShort'),
         },
         register: {},
         prefix: p,

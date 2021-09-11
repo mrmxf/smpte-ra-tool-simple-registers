@@ -1,6 +1,10 @@
 {
     "DEBUG": true,
-    "registers":[{
+    "logging": {
+        "level": "trace",
+        "logRequests": true
+    },
+    "registers": [{
         "name": "Sample Register",
         "short_name": "SAMPLE",
         "urlPrefix": "/_sample",

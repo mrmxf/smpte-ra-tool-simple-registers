@@ -16,7 +16,7 @@ const thisRoute = `/`
 let status = 200
 
 let template
-let template_file_path = path.join(config.get('static.root'), config.get('static.template'))
+let template_file_path = path.join(config.get('home.path.static'), config.get('home.path.template'))
 try {
     template = fs.readFileSync(template_file_path, 'utf-8')
 } catch (err) {
@@ -26,7 +26,7 @@ try {
 }
 
 let narrative
-let narrative_file_path = path.join(config.get('static.root'), config.get('static.narrative'))
+let narrative_file_path = path.join(config.get('home.path.static'), config.get('home.path.narrative'))
 try {
     narrative = fs.readFileSync(narrative_file_path, 'utf-8')
     narrative = marked(narrative)

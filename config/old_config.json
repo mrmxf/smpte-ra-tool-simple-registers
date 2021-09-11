@@ -34,7 +34,7 @@
     },
     "urlPrefix": "",
     "cache": "dist/cache",
-    "uploadFolder":"/tmp",
+    "uploadFolderPath":"/tmp",
     "logging": {
         "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",
@@ -74,7 +74,7 @@
             },
             "urlPrefix": "",
             "cache": "dist/cache",
-            "uploadFolder":"/tmp",
+            "uploadFolderPath":"/tmp",
             "logging": {
                 "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
                 "level": "info",

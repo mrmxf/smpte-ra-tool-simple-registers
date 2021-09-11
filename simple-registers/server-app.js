@@ -25,8 +25,6 @@
 /* jshint node: true */
 'use strict'
 
-//pull in any credentials from the .env file into process.env
-require('dotenv').config()
 const config = require('./cfg-va-che/cfg-va-che.js')
 const DEBUG= config.get("DEBUG")
 const pino = require('pino')
@@ -61,7 +59,7 @@ const prefix = `${(raw_prefix[0] == "/") ? "" : "/"}${raw_prefix}`
 /* =========  define the app behaviour, routes and map the functions  ================================  */
 
 //enable logging
-if (config.get('logging.log_requests'))
+if (config.get('logging.logRequests'))
   app.use(request_logger())
 
 //do some pre-processing so that the correct register is mapped to the correct route
@@ -69,14 +67,14 @@ app.use(require('./inc/register-middleware'))
 
 //enable file uploads for the conversion tool using koa-body
 app.use(bodyParser({
-  formidable: { uploadDir: config.get("uploadFolder")},    //This is where the files would come
+  formidable: { uploadDir: config.get("uploadFolderPath")},    //This is where the files would come
   multipart: true,
   urlencoded: true
 }));
 
 //>>> serve static pages as defined in config
 const serve = require('koa-static')
-app.use(mount(prefix, serve(config.get('static.root'), { index: "index.html", })))
+app.use(mount(prefix, serve(config.get('home.path.static'), { index: "index.html", })))
 
 //>>> serve metadata for the ui
 app.use(mount(prefix, require('./route/metadata').routes()))

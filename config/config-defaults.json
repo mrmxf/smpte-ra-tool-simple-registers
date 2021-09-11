@@ -1,23 +1,16 @@
 {
-    "doc": "Default configuration from config/config_defaults+schema.json",
+    "configDescription": "Default configuration from config/config_defaults+schema.json",
     "DEBUG": false,
     "serverName": "SMPTE RA Tool - Simple Registers",
     "shortServerName": "RA-SR",
     "home": {
-        "app_title": "SMPTE RA Tool - Simple Registers",
-        "app_description_MD": "**Alpha** release of the Simple Register Tool",
+        "appTitle": "SMPTE-RA Tool - Simple Registers",
+        "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
         "version": "2.0.0",
         "path": {
-            "server": {
-                "doc": "folder from which the server finds static files, relative to project",
-                "format": "String",
-                "default": "public/"
-            },
-            "narrative": {
-                "doc": "markdown file relative to server path",
-                "format": "String",
-                "default": "index.md"
-            }
+            "static":  "public/",
+            "template" :"index.template.html",
+            "narrative":  "index.md"
         }
     },
     "version": "0.9.1",
