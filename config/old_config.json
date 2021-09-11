@@ -1,6 +1,6 @@
 {
     "_help":"Default configuration file. See https://www.npmjs.com/package/config for development and other overrides",
-    "server_name":"SMPTE Reg Tool",
+    "serverName":"SMPTE Reg Tool",
     "root_path":"dist/",
     "app_title": "Register: Language Metadata Table",
     "app_description": "<emphasis><strong>PREVIEW</strong> LMT pending development as SMPTE ST xxxx</emphasis>",
@@ -32,9 +32,9 @@
             }
         }
     },
-    "url_prefix": "",
+    "urlPrefix": "",
     "cache": "dist/cache",
-    "upload_folder":"/tmp",
+    "uploadFolderPath":"/tmp",
     "logging": {
         "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",
@@ -72,9 +72,9 @@
                     }
                 }
             },
-            "url_prefix": "",
+            "urlPrefix": "",
             "cache": "dist/cache",
-            "upload_folder":"/tmp",
+            "uploadFolderPath":"/tmp",
             "logging": {
                 "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
                 "level": "info",

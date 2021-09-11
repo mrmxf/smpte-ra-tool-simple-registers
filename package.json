@@ -28,7 +28,6 @@
   "dependencies": {
     "convict": "^6.1.0",
     "deep-diff": "^1.0.2",
-    "dotenv": "^8.2.0",
     "ecstatic": "^4.1.4",
     "escape-html": "^1.0.3",
     "koa": "^2.12.0",

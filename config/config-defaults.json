@@ -1,65 +1,31 @@
 {
-    "doc": "Default configuration from config/config_defaults+schema.json",
+    "configDescription": "Default configuration from config/config_defaults+schema.json",
     "DEBUG": false,
-    "server_name": "SMPTE RA Tool - Simple Registers",
-    "short_server_name": "RA-SR",
-    "home": {
-        "app_title": "SMPTE RA Tool - Simple Registers",
-        "app_description_MD": "**Alpha** release of the Simple Register Tool",
-        "version": "2.0.0",
-        "path": {
-            "server": {
-                "doc": "folder from which the server finds static files, relative to project",
-                "format": "String",
-                "default": "public/"
-            },
-            "narrative": {
-                "doc": "markdown file relative to server path",
-                "format": "String",
-                "default": "index.md"
-            }
-        }
-    },
+    "serverName": "SMPTE-RA Tool - Simple Registers",
+    "serverNameShort": "RA-SR",
     "version": "0.9.1",
     "port": 3000,
+    "urlPrefix": "/",
+    "uploadFolderPath": "/tmp",
+    "logging": {
+        "level": "info",
+        "logRequests": false
+    },
+    "home": {
+        "appTitle": "SMPTE-RA Tool - Simple Registers",
+        "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
+        "version": "2.0.0",
+        "path": {
+            "static":  "public/",
+            "template" :"index.template.html",
+            "narrative":  "index.md"
+        }
+    },
     "registers": [{
         "name": "Sample Register",
         "short_name": "SAMPLE",
-        "url_prefix": "/_sample",
+        "urlPrefix": "/_sample",
         "folder_path": "registers/sample_register",
         "isDisplayed": false
-    }],
-    "static": {
-        "html": {
-            "centered_start": "<div class=\"container\"><div class=\"row\">",
-            "centered_end": "</div></div>",
-            "left_gutter": "<div class=\"col col-1\"><!-- left gutter --></div>",
-            "center_div": "<div id=\"lmt-rendering\" class=\"col-md-12\">",
-            "right_gutter": "<div class=\"col-1\"><!-- right gutter --></div>",
-            "full_width_start": "<div id=\"lmt-rendering\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-auto\">",
-            "full_width_end": "</div></div></div></div>"
-        },
-        "control-doc": "lmt-control.pdf",
-        "control-doc-download": "smpte-st-xxxx(online):2020.pdf",
-        "lmt": "lmt.xml",
-        "lmt_ref": "lmt-ref.xml",
-        "narrative": "lmt-narrative.md",
-        "root": "dist",
-        "schema": "lmt-schema.xsd",
-        "template": "index.template.html",
-        "style": {
-            "diff": {
-                "added": " style=\"background:#ddffdd;\"",
-                "deleted": " style=\"background:#ffdddd;\"",
-                "unchanged": ""
-            }
-        }
-    },
-    "url_prefix": "/test",
-    "upload_folder": "/tmp",
-    "logging": {
-        "doc": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
-        "level": "info",
-        "log_requests": false
-    }
+    }]
 }

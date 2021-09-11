@@ -9,7 +9,7 @@ const log = require('pino')(config.get('logging'))
 
 module.exports.xml = () => {
     let xml_doc
-    let xml_doc_file_path = path.join(config.get('static.root'), config.get('static.lmt'))
+    let xml_doc_file_path = path.join(config.get('home.path.static'), config.get('static.lmt'))
     try {
         xml_doc = fs.readFileSync(xml_doc_file_path, 'utf-8')
     } catch (err) {
@@ -21,7 +21,7 @@ module.exports.xml = () => {
 
 module.exports.xml_ref = () => {
     let xml_doc
-    let xml_doc_file_path = path.join(config.get('static.root'), config.get('static.lmt_ref'))
+    let xml_doc_file_path = path.join(config.get('home.path.static'), config.get('static.lmt_ref'))
     try {
         xml_doc = fs.readFileSync(xml_doc_file_path, 'utf-8')
     } catch (err) {
@@ -33,7 +33,7 @@ module.exports.xml_ref = () => {
 
 module.exports.schema = () => {
     let xml_doc
-    let xml_doc_file_path = path.join(config.get('static.root'), config.get('static.schema'))
+    let xml_doc_file_path = path.join(config.get('home.path.static'), config.get('static.schema'))
     try {
         xml_doc = fs.readFileSync(xml_doc_file_path, 'utf-8')
     } catch (err) {

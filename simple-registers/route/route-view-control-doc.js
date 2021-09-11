@@ -11,7 +11,7 @@ const path = require('path')
 const lmt = require('./lib-lmt-xml')
 
 router.get(`/view-control-doc`, (ctx, next) => {
-    let doc_filepath= path.join(config.get('static.root'),config.get('static.control-doc'))
+    let doc_filepath= path.join(config.get('home.path.static'),config.get('static.control-doc'))
     let doc= fs.readFileSync(doc_filepath)
     let filename= config.get("static.control-doc-download")
     if (doc) {

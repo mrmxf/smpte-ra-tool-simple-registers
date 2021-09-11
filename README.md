@@ -67,7 +67,8 @@ git config -f .gitmodules submodule.<repoName>.shallow true
 for example
 
 ```sh
-git submodule add --depth 1 git@github.com:mrmxf/smpte-reg-lmt.git
+#   ├─ git submodule ├─ shallow    ├─ register repo                          ├─ relative folder location
+git submodule add     --depth 1     git@github.com:mrmxf/smpte-reg-lmt.git   registers/smpte-reg-lmt/
 git config -f .gitmodules submodule.spmte-reg-lmt.shallow true
 ```
 
