@@ -1,16 +1,8 @@
 {
     "configDescription": "Default configuration from config/config_defaults+schema.json",
     "DEBUG": false,
-    "serverName": "SMPTE-RA Tool - Simple Registers",
-    "serverNameShort": "RA-SR",
-    "version": "0.9.1",
-    "port": 3000,
-    "urlPrefix": "/",
-    "uploadFolderPath": "/tmp",
-    "logging": {
-        "level": "info",
-        "logRequests": false
-    },
+    "serverName": "SMPTE RA Tool - Simple Registers",
+    "shortServerName": "RA-SR",
     "home": {
         "appTitle": "SMPTE-RA Tool - Simple Registers",
         "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
@@ -21,11 +13,48 @@
             "narrative":  "index.md"
         }
     },
-    "registers": [{
-        "name": "Sample Register",
-        "short_name": "SAMPLE",
-        "urlPrefix": "/_sample",
-        "folder_path": "registers/sample_register",
-        "isDisplayed": false
-    }]
+    "version": "0.9.1",
+    "port": 3000,
+    "registers": [
+        {
+            "name": "Sample Register",
+            "short_name": "SAMPLE",
+            "urlPrefix": "/_sample",
+            "folder_path": "registers/sample_register",
+            "isDisplayed": false
+        }
+    ],
+    "static": {
+        "html": {
+            "centered_start": "<div class=\"container\"><div class=\"row\">",
+            "centered_end": "</div></div>",
+            "left_gutter": "<div class=\"col col-1\"><!-- left gutter --></div>",
+            "center_div": "<div id=\"lmt-rendering\" class=\"col-md-12\">",
+            "right_gutter": "<div class=\"col-1\"><!-- right gutter --></div>",
+            "full_width_start": "<div id=\"lmt-rendering\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-auto\">",
+            "full_width_end": "</div></div></div></div>"
+        },
+        "control-doc": "lmt-control.pdf",
+        "control-doc-download": "smpte-st-xxxx(online):2020.pdf",
+        "lmt": "lmt.xml",
+        "lmt_ref": "lmt-ref.xml",
+        "narrative": "lmt-narrative.md",
+        "root": "dist",
+        "schema": "lmt-schema.xsd",
+        "template": "index.template.html",
+        "style": {
+            "diff": {
+                "added": " style=\"background:#ddffdd;\"",
+                "deleted": " style=\"background:#ffdddd;\"",
+                "unchanged": ""
+            }
+        }
+    },
+    "urlPrefix": "/test",
+    "uploadFolder": "/tmp",
+    "logging": {
+        "doc": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
+        "level": "info",
+        "log_requests": false
+    }
 }

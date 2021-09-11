@@ -1,100 +1,62 @@
 {
-    "configDescription": {
-        "doc": "A description of the configFile",
+    "doc": {
+        "doc":"A documentation string for diaply to the user for a property",
         "format": "String",
-        "default": "configDescription not set"
-    },
-    "env":{
-        "doc":"The application environment taken from NODE_ENV environment variable",
-        "format": ["production", "development", "test"],
-        "default": "development",
-        "env": "NODE_ENV"
+        "default":"help string missing"
     },
     "DEBUG": {
         "doc": "Turns on verbose logging and other integrity checks for new plugins",
         "format": "Boolean",
-        "default": "false"
+        "default": false
     },
     "serverName": {
-        "doc": "The full name of the server displayed by the App",
+        "doc":"Name of the server displayed to the user",
         "format": "String",
-        "default": "serverName not set"
+        "default":"Server Name Not Set In Config"
     },
-    "serverNameShort": {
-        "doc": "The short name of the server displayed by the app",
+    "shortServerName": {
+        "doc":"Name of the server displayed in Forms and Icons",
         "format": "String",
-        "default": "serverNameShort not set"
+        "default":"NoName"
+    },
+    "home": {
+        "doc": "Home Folder for help text. This section has the same format as a register config, but renders the home page instead",
+        "format": "Object",
+        "default": {}
     },
     "version": {
-        "doc": "a text string representing the version of the app",
+        "doc":"Version of the server, for display to the user",
         "format": "String",
-        "default": "version not set"
+        "default": "0.0.0"
     },
     "port": {
-        "doc": "an integer port number that the server listens on",
-        "format": "integer",
-        "default": "3000"
+        "doc":"The port that the server listens to",
+        "format": "int",
+        "default":3000
+    },
+    "registers": {
+        "doc":"An array of register config objects",
+        "format": "Array",
+        "default":3000
+    },
+    "static": {
+        "doc":"Not used any more",
+        "format": "Object",
+        "default":{}
     },
     "urlPrefix": {
-        "doc": "A prfix to mount the server somewhere other than the root",
+        "doc": "A prefix to mount the server somewhere other than the root",
         "format": "String",
         "default":"/"
     },
-    "uploadFolderPath": {
-        "doc": "path for storing uploaded content",
+    "uploadFolder": {
+        "doc":"The temp folder for holding upload files",
         "format": "String",
         "default":"/tmp"
     },
     "logging": {
-        "level":{
-            "doc": "one of 'fatal', 'error', 'warn', 'info', 'debug', 'trace' or 'silent",
-            "format": "String",
-            "default":"debug"
-        },
-        "logRequests": {
-            "doc": "path for storing uploaded content",
-            "format": "Boolean",
-            "default":false
-        }
-    },
-    "home": {
-        "doc": "This section has the same format as a register config, but renders the home page instead",
-        "appTitle": {
-            "format": "String",
-            "default": "appTitle not set"
-        },
-        "appDescriptionMD": {
-            "doc": "A markdown description of the App - displayed on the home page",
-            "format": "String",
-            "default": "appDescriptionMD not set"
-        },
-        "version": {
-            "doc": "a text string representing the version of the app",
-            "format": "String",
-            "default": "version not set"
-        },
-        "path": {
-            "static": {
-                "doc": "folder from which the server finds static files, relative to project",
-                "format": "String",
-                "default": "server not set"
-            },
-            "template": {
-                "doc": "html file template for the home page inside which rendered markdown is inserted",
-                "format": "String",
-                "default": "template not set"
-            },
-            "narrative": {
-                "doc": "markdown file relative to server path",
-                "format": "String",
-                "default": "narrative not set"
-            }
-        },
-        "format": "Object"
-    },
-    "registers": {
-        "doc":"An array of register objects with the same structure as `home`",
-        "format": "Array",
-        "default":[]
+        "doc":"Object to control the Pino Logger",
+        "format": "Object",
+        "default":{}
     }
 }

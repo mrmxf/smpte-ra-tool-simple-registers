@@ -10,14 +10,19 @@
 const fs = require('fs')
 const convict = require('convict')
 
-//default to development unless the user explicitly sets production
-process.env.NODE_ENV = (process.env.NODE_ENV == undefined) ? "development" : process.env.NODE_ENV
+ //load in the defaults and the schema first
+ const schemaPath = path.join('config', 'config-convictSchema.json')
+ const defaultPath = path.join('config', 'config-defaults.json')
+ let schema = fs.readFileSync(schemaPath)
 
 //load in the defaults and the schema first
 const defaultSchemaPath = `./config/config-convictSchema.json`
 const defaultsPath = `./config/config-defaults.json`
 
 let log = { info: console.log, error: console.log, warning: console.log }
+ config.loadFile(defaultPath)
+ //validate
+ config.validate({ allowed: 'strict' })
 
 let convictSchemaPath = defaultSchemaPath
 

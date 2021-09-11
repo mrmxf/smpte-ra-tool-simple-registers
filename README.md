@@ -1,5 +1,11 @@
 # smpte-ra-tool-simple-registers
 
+## TODO
+
+* Add JEST and some test scripts for the core
+* Add jest test scripts on enumerated registers before deploy
+## Introduction
+
 **SMPTE Registration Authority Tool** for publishing and viewing **simple registers**.
 These are typically a single JSON, YAML or XML file that represents a controlled vocabulary of some kind.
 
@@ -15,8 +21,14 @@ This is a refactor of the work that led to the Langage Metadata Table in SMPTE. 
 
 ## Usage
 
-'yarn run' will start the server using the defaults
+Install yarn, then install dependencies, then install the registers and then start tha application. to contain everything in a docker application for easy deployment - see the docker section below.
 
+'''sh
+# to install yarn
+yarn                                # install all dependencies
+git submodule add <module-uri>      # repeat as needed for registers
+yarn start                          # start the server using the defaults
+'''
 ## configuration
 
 The Server uses [convict](https://www.npmjs.com/package/convict) for configuration.
