@@ -12,12 +12,14 @@
  const convict = require('convict')
 
  //load in the defaults and the schema first
- const schemaPath = path.join('config', 'config_defaults+schema.json')
+ const schemaPath = path.join('config', 'config-convictSchema.json')
+ const defaultPath = path.join('config', 'config-defaults.json')
  let schema = fs.readFileSync(schemaPath)
 
  //initialise the config object by loading configs in order
  let config = convict(JSON.parse(schema))
 
+ config.loadFile(defaultPath)
  //validate
  config.validate({ allowed: 'strict' })
 

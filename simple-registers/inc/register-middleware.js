@@ -4,10 +4,10 @@
  *
  * Properties are passed in `ctx.smpte`.Examples below
  *   use         ctx.request.path = "/draft/register/lmt/table_view"
- *   and config.get("url_prefix") = "/draft/register"
+ *   and config.get("urlPrefix") = "/draft/register"
  *
- *  `ctx.smpte.request.path`     - path with config(url_prefix) removed or false. e.g. "/lmt/table_view"
- *  `ctx.smpte.request.endpoint` - path with config(url_prefix) removed or false e.g. "/table_view""
+ *  `ctx.smpte.request.path`     - path with config(urlPrefix) removed or false. e.g. "/lmt/table_view"
+ *  `ctx.smpte.request.endpoint` - path with config(urlPrefix) removed or false e.g. "/table_view""
  */
 const config = require('../cfg-va-che/cfg-va-che.js')
 const DEBUG = config.get("DEBUG")
@@ -17,10 +17,10 @@ const fs = require('fs')
 const path = require('path')
 
 const middleware = async (ctx, next) => {
-    const p = config.get('url_prefix')
+    const p = config.get('urlPrefix')
     let m = {
         server:{
-            name:config.get('server_name'),
+            name:config.get('serverName'),
             shorts_:config.get('server_short_name'),
         },
         register: {},
@@ -34,8 +34,8 @@ const middleware = async (ctx, next) => {
     m.request.path = ((p.length == 0) || (ctx.request.path.startsWith(p))) ? ctx.request.path.slice(m.prefix.length) : false
     if (m.request.path) {
         config.get("registers").forEach(register => {
-            if (m.request.path.startsWith(m.register[register.url_prefix])) {
-                m.request.endpoint= m.request.path.slice(register.url_prefix.length)
+            if (m.request.path.startsWith(m.register[register.urlPrefix])) {
+                m.request.endpoint= m.request.path.slice(register.urlPrefix.length)
                 m.folder_path= register.folder_path
                 m.register. register
             }

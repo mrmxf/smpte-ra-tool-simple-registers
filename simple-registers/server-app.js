@@ -55,7 +55,7 @@ if (process.env.hasOwnProperty('HTTP_USER') && process.env.hasOwnProperty('HTTP_
 process.env.NODE_ENV = (undefined == process.env.NODE_ENV) ? 'production' : process.env.NODE_ENV
 
 //mount the app with the desired prefix (and force a leading slash)
-const raw_prefix = config.get('url_prefix')
+const raw_prefix = config.get('urlPrefix')
 const prefix = `${(raw_prefix[0] == "/") ? "" : "/"}${raw_prefix}`
 
 /* =========  define the app behaviour, routes and map the functions  ================================  */
@@ -69,7 +69,7 @@ app.use(require('./inc/register-middleware'))
 
 //enable file uploads for the conversion tool using koa-body
 app.use(bodyParser({
-  formidable: { uploadDir: config.get("upload_folder")},    //This is where the files would come
+  formidable: { uploadDir: config.get("uploadFolder")},    //This is where the files would come
   multipart: true,
   urlencoded: true
 }));

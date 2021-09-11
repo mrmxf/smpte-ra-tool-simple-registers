@@ -46,7 +46,7 @@ module.exports.get_view_data = (register) => {
         app_title: config.get('app_title'),
         app_description: config.get('app_description'),
         version: config.get('version'),
-        prefix: config.get('url_prefix'),
+        prefix: config.get('urlPrefix'),
         files: files.html,
         tabs: tabs.html,
         gtm_id: process.env.hasOwnProperty('GTM_ID') ? process.env.GTM_ID : null,
