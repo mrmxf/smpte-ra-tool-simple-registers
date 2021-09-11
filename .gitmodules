@@ -1,0 +1,3 @@
+[submodule "registers/smpte-reg-lmt"]
+	path = registers/smpte-reg-lmt
+	url = git@github.com:mrmxf/smpte-reg-lmt.git
