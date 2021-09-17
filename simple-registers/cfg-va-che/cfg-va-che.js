@@ -27,7 +27,7 @@ let log = { info: console.log, error: console.log, warning: console.log }
 let convictSchemaPath = defaultSchemaPath
 
 //attempt to load the schema
-let schema, schemaJson, config
+let schemaJson, config
 
 try {
     schemaJson = fs.readFileSync(convictSchemaPath)
