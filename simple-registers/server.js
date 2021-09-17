@@ -1,3 +1,4 @@
+require('dotenv').config()
 config = require('./cfg-va-che/cfg-va-che.js')
 const app = require('./server-app.js')
 

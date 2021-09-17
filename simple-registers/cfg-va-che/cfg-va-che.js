@@ -8,13 +8,31 @@
  *
  */
 const fs = require('fs')
+const path = require('path')
 const convict = require('convict')
 
- //load in the defaults and the schema first
- const schemaPath = path.join('config', 'config-convictSchema.json')
- const defaultPath = path.join('config', 'config-defaults.json')
- let schema = fs.readFileSync(schemaPath)
+//load in the defaults and the schema first
+const schemaPath = path.join('config', 'config-convictSchema.json')
+const defaultPath = path.join('config', 'config-defaults.json')
+let schema = fs.readFileSync(schemaPath)
 
+//initialise the config object by loading configs in order
+let config = convict(JSON.parse(schema))
+
+//load the defaults
+config.loadFile(defaultPath)
+
+//overlay the -development or -production
+const mode = process.env.NODE_ENV
+const modalPath = path.join('config', `config-${mode}.json`)
+
+//validate
+config.validate({
+    allowed: 'strict'
+})
+
+if (config.get("DEBUG"))
+    console.log(config.getProperties())
 //load in the defaults and the schema first
 const defaultSchemaPath = `./config/config-convictSchema.json`
 const defaultsPath = `./config/config-defaults.json`
