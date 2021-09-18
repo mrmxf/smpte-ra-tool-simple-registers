@@ -1,0 +1,10 @@
+{
+  "colorize": true,
+  "crlf": false,
+  "levelFirst": false,
+  "messageKey": "msg",
+  "levelKey": "level",
+  "messageFormat": false,
+  "timestampKey": "time",
+  "translateTime": "yyyymmdd-HHMMss.L"
+}

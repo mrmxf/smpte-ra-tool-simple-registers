@@ -8,25 +8,25 @@
 const path = require('path')
 const Router = require('koa-router')
 const router = new Router();
-config = require('../cfg-va-che/cfg-va-che.js')
+const config = require('../cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 
-const lmt_body = require('../inc/lib-body')
+const homepageBody = require('../inc/lib-body')
 
 const thisRoute = `/`
 
 router.get(thisRoute, (ctx, next) => {
     //create the data structure for the home page
-    const document_root = config.get(`path.document_root`)
-    const narrative_md = config.get(`path.home_narrative`)
+    const documentRoot = config.get(`home.path.static`)
+    const narrativeMd = config.get(`home.path.narrative`)
 
-    home_config = {
-        narrative: path.join(document_root, narrative_md),
+   const  homepageConfig = {
+        narrative: path.join(documentRoot, narrativeMd),
         config
     }
-    let view_data = lmt_body.get_view_data(home_page)
+    let view_data = homepageBody.getPageData(homepageConfig)
 
-    let rendering = lmt_body.body(view_data)
+    let rendering = homepageBody.renderPageData(view_data)
     ctx.body = rendering.body
     ctx.status = rendering.status
 

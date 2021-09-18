@@ -1,6 +1,6 @@
 {
-    "doc": {
-        "doc":"A documentation string for diaply to the user for a property",
+    "configDescription": {
+        "doc":"A documentation string for display to the user for this config",
         "format": "String",
         "default":"help string missing"
     },
@@ -14,7 +14,7 @@
         "format": "String",
         "default":"Server Name Not Set In Config"
     },
-    "shortServerName": {
+    "serverNameShort": {
         "doc":"Name of the server displayed in Forms and Icons",
         "format": "String",
         "default":"NoName"
@@ -49,7 +49,7 @@
         "format": "String",
         "default":"/"
     },
-    "uploadFolder": {
+    "uploadFolderPath": {
         "doc":"The temp folder for holding upload files",
         "format": "String",
         "default":"/tmp"

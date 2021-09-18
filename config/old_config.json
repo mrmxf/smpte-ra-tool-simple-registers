@@ -38,7 +38,7 @@
     "logging": {
         "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",
-        "log_requests": false
+        "logRequests": false
     },
     "apps":[
         {
@@ -78,7 +78,7 @@
             "logging": {
                 "_help": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
                 "level": "info",
-                "log_requests": false
+                "logRequests": false
             }
         }
     ]

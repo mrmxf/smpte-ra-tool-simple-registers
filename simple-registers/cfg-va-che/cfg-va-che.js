@@ -38,14 +38,14 @@ const defaultSchemaPath = `./config/config-convictSchema.json`
 const defaultsPath = `./config/config-defaults.json`
 
 let log = { info: console.log, error: console.log, warning: console.log }
- config.loadFile(defaultPath)
- //validate
- config.validate({ allowed: 'strict' })
+config.loadFile(defaultPath)
+//validate
+config.validate({ allowed: 'strict' })
 
 let convictSchemaPath = defaultSchemaPath
 
 //attempt to load the schema
-let schemaJson, config
+let schemaJson
 
 try {
     schemaJson = fs.readFileSync(convictSchemaPath)
@@ -88,29 +88,34 @@ try {
 }
 
 //load overrides
-const env = config.get("env")
-const overridesPath = `./config/config-${env}.json`
-
 try {
-    config.loadFile(overridesPath)
+    const env = config.get("NODE_ENV")
+    const overridesPath = `./config/config-${env}.json`
     try {
-        config.validate();
+        config.loadFile(overridesPath)
+        try {
+            config.validate();
+        } catch (err) {
+            log.error(`overrides from ${overridesPath} do not validate`)
+            log.error(`Giving up: ${err}`)
+            process.exit(1)
+        }
+        log.info(`updating config from ${overridesPath}`)
     } catch (err) {
-        log.error(`overrides from ${overridesPath} do not validate`)
-        log.error(`Giving up: ${err}`)
-        process.exit(1)
+        log.warning(`Cannot load config file (${overridesPath}), using defaults`)
     }
-    log.info(`updating config from ${overridesPath}`)
-} catch (err) {
-    log.warning(`Cannot load config file (${overridesPath}), using defaults`)
+} catch (e) {
+    log.warning(`environment NODE_ENV unset; overrides not loaded`)
+
 }
+
 
 const pino = require('pino')
 //log to stderr by default
 log = pino(config.get('logging'), pino.destination(2))
 
 
-log.debug ("All Configuration Properties:")
+log.debug("All Configuration Properties:")
 log.debug(config.getProperties())
 log.flush()
 

@@ -1,20 +1,20 @@
 {
-    "configDescription": "Default configuration from config/config_defaults+schema.json",
+    "configDescription": "Devlopment configuration from config/config-defaults.json",
     "DEBUG": false,
     "serverName": "SMPTE RA Tool - Simple Registers",
-    "shortServerName": "RA-SR",
+    "serverNameShort": "RA-SR",
     "home": {
         "appTitle": "SMPTE-RA Tool - Simple Registers",
         "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
         "version": "2.0.0",
         "path": {
-            "static":  "public/",
+            "static":  "./public",
             "template" :"index.template.html",
-            "narrative":  "index.md"
+            "narrative":  "homepage.md"
         }
     },
     "version": "0.9.1",
-    "port": 3000,
+    "port": 3001,
     "registers": [
         {
             "name": "Sample Register",
@@ -50,11 +50,11 @@
             }
         }
     },
-    "urlPrefix": "/test",
-    "uploadFolder": "/tmp",
+    "urlPrefix": "/",
+    "uploadFolderPath": "/tmp",
     "logging": {
         "doc": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",
-        "log_requests": false
+        "logRequests": true
     }
 }

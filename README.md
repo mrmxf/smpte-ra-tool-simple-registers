@@ -4,6 +4,7 @@
 
 * Add JEST and some test scripts for the core
 * Add jest test scripts on enumerated registers before deploy
+
 ## Introduction
 
 **SMPTE Registration Authority Tool** for publishing and viewing **simple registers**.
@@ -29,6 +30,7 @@ yarn                                # install all dependencies
 git submodule add <module-uri>      # repeat as needed for registers
 yarn start                          # start the server using the defaults
 '''
+
 ## configuration
 
 The Server uses [convict](https://www.npmjs.com/package/convict) for configuration.

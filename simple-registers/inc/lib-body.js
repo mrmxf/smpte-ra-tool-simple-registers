@@ -16,22 +16,22 @@ const thisRoute = `/`
 let status = 200
 
 let template
-let template_file_path = path.join(config.get('home.path.static'), config.get('home.path.template'))
+let templateFilePath = path.join(config.get('home.path.static'), config.get('home.path.template'))
 try {
-    template = fs.readFileSync(template_file_path, 'utf-8')
+    template = fs.readFileSync(templateFilePath, 'utf-8')
 } catch (err) {
-    log.error(`route:${thisRoute}  cannot read template file ${template_file_path}`)
+    log.error(`route:${thisRoute}  cannot read template file ${templateFilePath}`)
     template = "Internal error: unable to load page"
     status = 500
 }
 
 let narrative
-let narrative_file_path = path.join(config.get('home.path.static'), config.get('home.path.narrative'))
+let narrativeFilePath = path.join(config.get('home.path.static'), config.get('home.path.narrative'))
 try {
-    narrative = fs.readFileSync(narrative_file_path, 'utf-8')
+    narrative = fs.readFileSync(narrativeFilePath, 'utf-8')
     narrative = marked(narrative)
 } catch (err) {
-    log.error(`route:${thisRoute}  cannot read narrative file ${narrative_file_path}`)
+    log.error(`route:${thisRoute}  cannot read narrative file ${narrativeFilePath}`)
     narrative = "Internal error: unable to load page"
     status = 500
 }
@@ -41,11 +41,11 @@ try {
  * @param {Object} register.config - object parsed from the register's config.json
  * @param {String} register.narrative_md - relative path to the narrative markdown for the body
  */
-module.exports.get_view_data = (register) => {
+module.exports.getPageData = (register) => {
     return {
-        app_title: config.get('app_title'),
-        app_description: config.get('app_description'),
-        version: config.get('version'),
+        app_title: config.get('home.appTitle'),
+        app_description: config.get('home.appDescriptionMD'),
+        version: config.get('home.version'),
         prefix: config.get('urlPrefix'),
         files: files.html,
         tabs: tabs.html,
@@ -56,6 +56,6 @@ module.exports.get_view_data = (register) => {
     }
 }
 
-module.exports.body = function (data) {
+module.exports.renderPageData = function (data) {
     return { status: status, body: mustache.render(data.template, data) }
 }

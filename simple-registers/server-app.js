@@ -26,7 +26,7 @@
 'use strict'
 
 const config = require('./cfg-va-che/cfg-va-che.js')
-const DEBUG= config.get("DEBUG")
+const DEBUG = config.get("DEBUG")
 const pino = require('pino')
 //log to stderr by default
 const log = pino(config.get('logging'), pino.destination(2))
@@ -35,7 +35,7 @@ const log = pino(config.get('logging'), pino.destination(2))
 const Koa = require('koa')
 const bodyParser = require('koa-body')
 const mount = require('koa-mount')
-const request_logger = require('koa-pino-logger')
+const requestLogger = require('koa-pino-logger')
 
 /** the unique app object that will listen on a given port */
 const app = new Koa();
@@ -58,29 +58,35 @@ const prefix = `${(raw_prefix[0] == "/") ? "" : "/"}${raw_prefix}`
 
 /* =========  define the app behaviour, routes and map the functions  ================================  */
 
-//enable logging
-if (config.get('logging.logRequests'))
-  app.use(request_logger())
+/** create a list of all routers for debugging */
+const allRouters = []
+
+//enable logging if config says so
+if (config.get('logging.logRequests')) app.use(requestLogger())
 
 //do some pre-processing so that the correct register is mapped to the correct route
 app.use(require('./inc/register-middleware'))
 
 //enable file uploads for the conversion tool using koa-body
 app.use(bodyParser({
-  formidable: { uploadDir: config.get("uploadFolderPath")},    //This is where the files would come
+  formidable: { uploadDir: config.get("uploadFolderPath") },    //This is where the files would come
   multipart: true,
   urlencoded: true
 }));
 
 //>>> serve static pages as defined in config
 const serve = require('koa-static')
-app.use(mount(prefix, serve(config.get('home.path.static'), { index: "index.html", })))
+// app.use(mount(prefix, serve(config.get('home.path.static'), { index: "index.html", })))
+app.use(serve(config.get('home.path.static'), { index: "index.html", }))
 
 //>>> serve metadata for the ui
 app.use(mount(prefix, require('./route/metadata').routes()))
 
-//>>> serve index page
-app.use(mount(prefix, require('./route/index').routes()))
+//>>> serve home page
+const routeHomePage = require('./route/route-homepage')
+allRouters.push(routeHomePage)
+// app.use(mount(prefix, routeHomePage.routes()))
+app.use( routeHomePage.routes())
 
 //>>> serve the views from the buttons
 // app.use(mount(prefix, require('./route/xml').routes()))
@@ -97,5 +103,9 @@ app.use(mount(prefix, require('./route/index').routes()))
 // app.use(mount(prefix, require('./route/tool-validate').routes()))
 
 // app.use(mount(prefix, require('./route/tool-convert').routes()))
+
+//registered routes
+console.log("registered routes....")
+console.log(allRouters.map(r => r.stack.map(i => i.path + i.regexp.toString())))
 
 module.exports = app
