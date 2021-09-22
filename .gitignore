@@ -4,6 +4,10 @@ tmp-*
 **/temp-*/**
 **/tmp-*/**
 
+# all registers except the sample register
+registers/**
+!registers/sample-register/**
+
 #node modules
 node_modules
 

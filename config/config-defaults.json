@@ -1,29 +1,27 @@
 {
     "configDescription": "Devlopment configuration from config/config-defaults.json",
     "DEBUG": false,
-    "serverName": "SMPTE RA Tool - Simple Registers",
+    "serverName": "SMPTE RA Simple Registers Framework",
     "serverNameShort": "RA-SR",
     "home": {
-        "appTitle": "SMPTE-RA Tool - Simple Registers",
+        "appTitle": "Simple Registers Framework",
         "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
         "version": "2.0.0",
         "path": {
-            "static":  "./public",
-            "template" :"index.template.html",
-            "narrative":  "homepage.md"
+            "static": "./public",
+            "template": "template.html",
+            "narrative": "homepage.md"
         }
     },
     "version": "0.9.1",
     "port": 3001,
-    "registers": [
-        {
-            "name": "Sample Register",
-            "short_name": "SAMPLE",
-            "urlPrefix": "/_sample",
-            "folder_path": "registers/sample_register",
-            "isDisplayed": false
-        }
-    ],
+    "registers": [{
+        "name": "Sample Register",
+        "short_name": "SAMPLE",
+        "urlPrefix": "/_sample",
+        "folder_path": "registers/sample_register",
+        "isDisplayed": false
+    }],
     "static": {
         "html": {
             "centered_start": "<div class=\"container\"><div class=\"row\">",
@@ -41,7 +39,7 @@
         "narrative": "lmt-narrative.md",
         "root": "dist",
         "schema": "lmt-schema.xsd",
-        "template": "index.template.html",
+        "template": "template.html",
         "style": {
             "diff": {
                 "added": " style=\"background:#ddffdd;\"",
@@ -55,6 +53,24 @@
     "logging": {
         "doc": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",
-        "logRequests": true
+        "logRequests": true,
+        "transport": {
+            "targets": [{
+                "level":"debug",
+                "target": "pino/file",
+                "options": {
+                    "destination": 2,
+                    "_help": "1=stderr, 2=stdout"
+                }
+            },{
+                "level":"trace",
+                "target": "pino/file",
+                "options": {
+                    "destination": "tmp-log-output.log",
+                    "_help": "1=stderr, 2=stdout"
+                }
+            }]
+
+        }
     }
 }

@@ -1,34 +1,57 @@
 <html>
+<!-- See readme for how this template is renered -->
 
 <head>
     {{#gtm_id}}
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','{{ gtm_id }}');</script>
-        <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '{{ gtm_id }}');
+    </script>
+    <!-- End Google Tag Manager -->
     {{/gtm_id}}
-    <title>{{ app_title }}</title>
+    <title>{{ appTitle }}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro|PT+Sans+Caption|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" /> -->
-    <link rel="stylesheet" href="css/site.css" />
-    <link rel="stylesheet" href="css/prism-twilight.css" />
-    <link rel="icon" href="css/favicon.ico" />
+    <!-- <link rel="stylesheet" href="css/site.css" /> -->
+    <!-- <link rel="stylesheet" href="css/prism-twilight.css" /> -->
+    <link rel="icon" href="favicon.ico" />
 
-    <script src="r/sui/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <script src="r/sui/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" class="ui" href="r/sui/semantic.min.css" />
+    <!-- Include scripts and css for fomantic-ui styling -->
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
+    <!-- the CDN will be removed and these files replaced when the fomantic build is working -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="fui-smpte/semantic.js"></script> -->
+    <!-- <link href="fui-smpte/semantic.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="fui-smpte/semantic.min.js"></script> -->
+    <!-- <link href="fui-smpte/semantic.min.css" rel="stylesheet" type="text/css" /> -->
 
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet" />
 
@@ -37,62 +60,55 @@
 
 <body>
     {{#gtm_id}}
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm_id }}"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm_id }}" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     {{/gtm_id}}
-    <div class="header-wrapper">
-        <div class="container">
-              <header>
-                <div class="row align-items-end">
-                    <div class="col-md-3 align-self-end">
-                    <img src="/images/logo-smpte-iris-words-alpha.svg" alt="SMPTE logo">
-                  </div>
-                  <div class="col-md-9 align-self-center">
-                    <div id="notifications">{{ notifications }}</div>
-                    <h1 id="doc-title">{{ app_title }}</h1>
-                    <div id="doc-description">{{ &app_description }}</div>
-                  </div>
+    <div class="ui menu">
+        <div class="ui container">
+            <a class="item" target="_blank" href="https://smpte-ra.org">
+                <img class="ui mini image" src="/images/logo-smpte-iris-alpha.svg" alt="SMPTE logo">
+            </a>
+            <a class="item" href="/">
+                <i class="home icon"></i> smpte-ra
+            </a>
+            {{&menuForRegister}}
+            <div class="right item">
+                <div class="ui simple dropdown item">
+                    <i class="grid layout icon"></i>
+                    Test Registers
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item"><i class="globe icon"></i> LMT</a>
+                        <a class="item"><i class="settings  icon"></i> Sample</a>
+                        <a class="item"><i class="settings icon"></i> VR DoF</a>
+                    </div>
                 </div>
-            </header>
+                {{&menuForRegistersList}}
+                <div class="ui input"><input type="text" placeholder="Search TBC ..."></div>
+            </div>
         </div>
     </div>
-    <div class="container">
+    <!-- Always have a 1 wide gutter for the body text -->
+    <div class="ui grid">
         <div class="row">
-            <main class="col-md-12">
-                <div class="container">
-                    <div class="row">
-                        <!--  ==========  lmt-narrative.md rendered here  ==========  -->
-                        <div id="lmt-narrative" class="col">{{ &narrative }}</div>
-                    </div>
-                    <div class="row">
-                        <!--  ==========  lmt-files rendered here  ==========  -->
-                        <div id="lmt-files-wrapper" class="col">{{ &files }}</div>
-                    </div>
-                    <div class="row">
-                        <!--  ==========  lmt-tabs rendered here  ==========  -->
-                        <div id="lmt-tabs-wrapper" class="col">{{ &tabs }}</div>
-                    </div>
+            <div class="one wide column"></div>
+            <div class="fifteen wide column">
+                <div class="ui padded text container segment">
+                    {{&notificationMessages}}
+                    {{&registerSecondaryMenu}}
+                    {{&wrapperOpen}}
+                    {{pageNarrative}}
+                    {{&uiView}}
+                    {{&wrapperClose}}
                 </div>
-            </main>
+            </div>
+            <div class="one wide column"></div>
         </div>
     </div>
-    <!--  ==========  LMT XML / tables rendered here  ==========    -->
-    <!--
-                The rendered area is intentionally outside the main windows because some
-                of the conent is REALLY wide and require scroll bars.
-                the configs
-                  static.html.left_gutter
-                  static.html.render_div control this
-                  static.html.right_gutter
-                All bootstrap grid positioning is left to the underlying Javascript
-            -->
-    {{ &rendered_output }}
-    <script>
-        // Everything should be pretty much loaded into the browser so start the app
-        app.start()
-    </script>
+    <!--  ==========  Register Content is rendered here  ==========    -->
+    {{&dataView}}
 </body>
 
 </html>

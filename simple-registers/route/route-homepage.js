@@ -11,7 +11,7 @@ const router = new Router();
 const config = require('../cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 
-const homepageBody = require('../inc/lib-body')
+const homepageBody = require('../inc/lib-coreTemplate')
 
 const thisRoute = `/`
 
@@ -24,7 +24,7 @@ router.get(thisRoute, (ctx, next) => {
         narrative: path.join(documentRoot, narrativeMd),
         config
     }
-    let view_data = homepageBody.getPageData(homepageConfig)
+    let view_data = homepageBody.createTemplateData(homepageConfig)
 
     let rendering = homepageBody.renderPageData(view_data)
     ctx.body = rendering.body

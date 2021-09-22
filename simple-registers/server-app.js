@@ -26,10 +26,10 @@
 'use strict'
 
 const config = require('./cfg-va-che/cfg-va-che.js')
+const log = require('pino')(config.get('logging'))
+const serverName = config.get(`serverNameShort`) + ":"
+
 const DEBUG = config.get("DEBUG")
-const pino = require('pino')
-//log to stderr by default
-const log = pino(config.get('logging'), pino.destination(2))
 
 //required libraries for koa server, router and url mount
 const Koa = require('koa')
@@ -52,60 +52,67 @@ if (process.env.hasOwnProperty('HTTP_USER') && process.env.hasOwnProperty('HTTP_
 //assume production unless specified in .env
 process.env.NODE_ENV = (undefined == process.env.NODE_ENV) ? 'production' : process.env.NODE_ENV
 
+//readability variables
+const appTitle = config.get('home.appTitle')
+
 //mount the app with the desired prefix (and force a leading slash)
-const raw_prefix = config.get('urlPrefix')
-const prefix = `${(raw_prefix[0] == "/") ? "" : "/"}${raw_prefix}`
+const rawPrefix = config.get('urlPrefix')
+const mountPrefix = `${(rawPrefix[0] == "/") ? "" : "/"}${rawPrefix}`
+log.info(`${serverName} Mounting app (${appTitle}) with url prefix '${mountPrefix}''`)
 
 /* =========  define the app behaviour, routes and map the functions  ================================  */
 
-/** create a list of all routers for debugging */
+//>>> create a list of all routers for debugging
 const allRouters = []
 
-//enable logging if config says so
-if (config.get('logging.logRequests')) app.use(requestLogger())
+//>>> enable logging if config says so
+if (config.get('logging.logRequests')) {
+  log.info(`${serverName} logging all requests (see config)`)
+  app.use(requestLogger())
+}
 
-//do some pre-processing so that the correct register is mapped to the correct route
-app.use(require('./inc/register-middleware'))
+//>>> Add metadata to ctx with smpte middleware
+//    this does the parsing to that each plugin has an easy(ish) time
+const smpteMiddleware = require('./inc/smpte-middleware')
+app.use(smpteMiddleware)
 
-//enable file uploads for the conversion tool using koa-body
+//>>> enable file uploads
 app.use(bodyParser({
   formidable: { uploadDir: config.get("uploadFolderPath") },    //This is where the files would come
   multipart: true,
   urlencoded: true
 }));
 
-//>>> serve static pages as defined in config
-const serve = require('koa-static')
-// app.use(mount(prefix, serve(config.get('home.path.static'), { index: "index.html", })))
-app.use(serve(config.get('home.path.static'), { index: "index.html", }))
-
 //>>> serve metadata for the ui
-app.use(mount(prefix, require('./route/metadata').routes()))
+app.use(mount(mountPrefix, require('./route/route-metadata').routes()))
 
 //>>> serve home page
 const routeHomePage = require('./route/route-homepage')
 allRouters.push(routeHomePage)
-// app.use(mount(prefix, routeHomePage.routes()))
-app.use( routeHomePage.routes())
+app.use(mount(mountPrefix, routeHomePage.routes()))
+// app.use( routeHomePage.routes())
 
 //>>> serve the views from the buttons
-// app.use(mount(prefix, require('./route/xml').routes()))
-// app.use(mount(prefix, require('./route/xsd').routes()))
+// app.use(mount(mountPrefix, require('./route/xml').routes()))
+// app.use(mount(mountPrefix, require('./route/xsd').routes()))
 
-// app.use(mount(prefix, require('./route/view-control-doc').routes()))
-// app.use(mount(prefix, require('./route/view-xml').routes()))
-// app.use(mount(prefix, require('./route/view-schema').routes()))
+// app.use(mount(mountPrefix, require('./route/view-control-doc').routes()))
+// app.use(mount(mountPrefix, require('./route/view-xml').routes()))
+// app.use(mount(mountPrefix, require('./route/view-schema').routes()))
 
-// app.use(mount(prefix, require('./route/table-lang').routes()))
-// app.use(mount(prefix, require('./route/table-group').routes()))
+// app.use(mount(mountPrefix, require('./route/table-lang').routes()))
+// app.use(mount(mountPrefix, require('./route/table-group').routes()))
 
-// app.use(mount(prefix, require('./route/tool-diff').routes()))
-// app.use(mount(prefix, require('./route/tool-validate').routes()))
+// app.use(mount(mountPrefix, require('./route/tool-diff').routes()))
+// app.use(mount(mountPrefix, require('./route/tool-validate').routes()))
 
-// app.use(mount(prefix, require('./route/tool-convert').routes()))
+// app.use(mount(mountPrefix, require('./route/tool-convert').routes()))
+
+//>>> serve a static pages if route has not been handled
+app.use(mount(mountPrefix, require('koa-static')(config.get('home.path.static'), { index: "index.html", })))
 
 //registered routes
-console.log("registered routes....")
-console.log(allRouters.map(r => r.stack.map(i => i.path + i.regexp.toString())))
+log.info(`${serverName} Listing registered routes....`)
+allRouters.map(r => r.stack.map(i => log.info(`${serverName} route: ${i.path + i.regexp.toString()}`)))
 
 module.exports = app

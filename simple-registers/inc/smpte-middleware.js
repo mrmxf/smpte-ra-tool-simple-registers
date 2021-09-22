@@ -19,9 +19,9 @@ const path = require('path')
 const middleware = async (ctx, next) => {
     const p = config.get('urlPrefix')
     let m = {
-        server:{
-            name:config.get('serverName'),
-            shorts_:config.get('serverNameShort'),
+        server: {
+            name: config.get('serverName'),
+            shortName: config.get('serverNameShort'),
         },
         register: {},
         prefix: p,
@@ -35,15 +35,17 @@ const middleware = async (ctx, next) => {
     if (m.request.path) {
         config.get("registers").forEach(register => {
             if (m.request.path.startsWith(m.register[register.urlPrefix])) {
-                m.request.endpoint= m.request.path.slice(register.urlPrefix.length)
-                m.folder_path= register.folder_path
-                m.register. register
+                m.request.endpoint = m.request.path.slice(register.urlPrefix.length)
+                m.folderPath = register.folderPath
+                m.register.register
             }
         })
     }
 
     ctx.smpte = m
-    if(DEBUG) log.debug(m, "SMPTE middleware metadata")
+    if (DEBUG) log.debug(m, "SMPTE middleware metadata")
+
+    await next()
 }
 
 module.exports = middleware

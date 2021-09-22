@@ -1,8 +1,20 @@
 {
     "configDescription": {
-        "doc":"A documentation string for display to the user for this config",
+        "doc": "A documentation string for display to the user for this config",
         "format": "String",
-        "default":"help string missing"
+        "default": "help string missing"
+    },
+    "env": {
+        "doc": "The application environment.",
+        "format": ["production", "development", "test"],
+        "default": "development",
+        "env": "NODE_ENV"
+    },
+    "gtm_id": {
+        "doc": "Google Tage Manager ID(s).",
+        "format": "Array",
+        "default": [],
+        "env": "GTM_ID"
     },
     "DEBUG": {
         "doc": "Turns on verbose logging and other integrity checks for new plugins",
@@ -10,14 +22,14 @@
         "default": false
     },
     "serverName": {
-        "doc":"Name of the server displayed to the user",
+        "doc": "Name of the server displayed to the user",
         "format": "String",
-        "default":"Server Name Not Set In Config"
+        "default": "Server Name Not Set In Config"
     },
     "serverNameShort": {
-        "doc":"Name of the server displayed in Forms and Icons",
+        "doc": "Name of the server displayed in Forms and Icons",
         "format": "String",
-        "default":"NoName"
+        "default": "NoName"
     },
     "home": {
         "doc": "Home Folder for help text. This section has the same format as a register config, but renders the home page instead",
@@ -25,38 +37,38 @@
         "default": {}
     },
     "version": {
-        "doc":"Version of the server, for display to the user",
+        "doc": "Version of the server, for display to the user",
         "format": "String",
         "default": "0.0.0"
     },
     "port": {
-        "doc":"The port that the server listens to",
+        "doc": "The port that the server listens to",
         "format": "int",
-        "default":3000
+        "default": 3000
     },
     "registers": {
-        "doc":"An array of register config objects",
+        "doc": "An array of register config objects",
         "format": "Array",
-        "default":3000
+        "default": []
     },
     "static": {
-        "doc":"Not used any more",
+        "doc": "Not used any more",
         "format": "Object",
-        "default":{}
+        "default": {}
     },
     "urlPrefix": {
         "doc": "A prefix to mount the server somewhere other than the root",
         "format": "String",
-        "default":"/"
+        "default": "/"
     },
     "uploadFolderPath": {
-        "doc":"The temp folder for holding upload files",
+        "doc": "The temp folder for holding upload files",
         "format": "String",
-        "default":"/tmp"
+        "default": "/tmp"
     },
     "logging": {
-        "doc":"Object to control the Pino Logger",
+        "doc": "Object to control the Pino Logger",
         "format": "Object",
-        "default":{}
+        "default": {}
     }
 }

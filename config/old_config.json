@@ -23,7 +23,7 @@
         "narrative": "lmt-narrative.md",
         "root": "dist",
         "schema":"lmt-schema.xsd",
-        "template": "index.template.html",
+        "template": "template.html",
         "style":{
             "diff":{
                 "added":" style=\"background:#ddffdd;\"",
@@ -63,7 +63,7 @@
                 "reference": "lmt-ref.xml",
                 "narrative": "lmt-narrative.md",
                 "schema":"lmt-schema.xsd",
-                "template": "index.template.html",
+                "template": "template.html",
                 "style":{
                     "diff":{
                         "added":" style=\"background:#ddffdd;\"",

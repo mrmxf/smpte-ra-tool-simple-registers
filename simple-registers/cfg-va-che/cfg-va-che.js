@@ -6,117 +6,113 @@
  * JSON schema for standards support and then mustache
  * substitution for more modular configuration
  *
+ * log all errors to console.log until succesful load and then log
+ * success with pino
  */
 const fs = require('fs')
 const path = require('path')
 const convict = require('convict')
 
+let log = { info: console.log, warning: console.log, error: console.log, }
+
 //load in the defaults and the schema first
 const schemaPath = path.join('config', 'config-convictSchema.json')
 const defaultPath = path.join('config', 'config-defaults.json')
-let schema = fs.readFileSync(schemaPath)
-
-//initialise the config object by loading configs in order
-let config = convict(JSON.parse(schema))
-
-//load the defaults
-config.loadFile(defaultPath)
-
-//overlay the -development or -production
-const mode = process.env.NODE_ENV
-const modalPath = path.join('config', `config-${mode}.json`)
-
-//validate
-config.validate({
-    allowed: 'strict'
-})
-
-if (config.get("DEBUG"))
-    console.log(config.getProperties())
-//load in the defaults and the schema first
-const defaultSchemaPath = `./config/config-convictSchema.json`
-const defaultsPath = `./config/config-defaults.json`
-
-let log = { info: console.log, error: console.log, warning: console.log }
-config.loadFile(defaultPath)
-//validate
-config.validate({ allowed: 'strict' })
-
-let convictSchemaPath = defaultSchemaPath
 
 //attempt to load the schema
-let schemaJson
-
+let schema
 try {
-    schemaJson = fs.readFileSync(convictSchemaPath)
+    schema = fs.readFileSync(schemaPath)
 } catch (err) {
-    log.error(`Failed to load config schema from ${convictSchemaPath}`)
+    log.error(`Failed to load config schema from ${schemaPath}`)
     log.error(`Giving up: ${err}`)
     process.exit(1)
 }
 
 try {
-    schema = JSON.parse(schemaJson)
+    schema = JSON.parse(schema)
 } catch (err) {
-    log.error(`schema in ${convictSchemaPath} cannot be parsed`)
+    log.error(`schema in ${schemaPath} cannot be parsed`)
     log.error(`Giving up: ${err}`)
     process.exit(1)
 }
 
+let config
 try {
     config = convict(schema)
 } catch (err) {
-    log.error(`config schema from ${convictSchemaPath}  has errors`)
+    log.error(`config schema from ${schemaPath}  has errors`)
+    log.error(`Giving up: ${err}`)
+    process.exit(1)
+}
+
+try {
+    config.validate({ allowed: 'strict' });
+} catch (err) {
+    log.error(`default values in schema ${schemaPath} do not validate`)
     log.error(`Giving up: ${err}`)
     process.exit(1)
 }
 
 //load defaults
 try {
-    config.loadFile(defaultsPath)
-    log.info(`updating config from ${defaultsPath}`)
+    config.loadFile(defaultPath)
 } catch (err) {
-    log.warning(`Cannot load config file (${defaultsPath}), using defaults`)
+    log.warning(`Cannot load config defaults from (${defaultPath})`)
+    log.error(`Giving up: ${err}`)
+    process.exit(1)
 }
 
 try {
     config.validate();
 } catch (err) {
-    log.error(`defaults from ${defaultsPath} does not validate`)
+    log.error(`defaults from ${defaultPath} do not validate against schema in ${schemaPath}`)
     log.error(`Giving up: ${err}`)
     process.exit(1)
 }
 
 //load overrides
+let env
+let modalPath
 try {
-    const env = config.get("NODE_ENV")
-    const overridesPath = `./config/config-${env}.json`
+    env = config.get("env")
+    modalPath = path.join('config', `config-${env}.json`)
     try {
-        config.loadFile(overridesPath)
+        config.loadFile(modalPath)
         try {
             config.validate();
         } catch (err) {
-            log.error(`overrides from ${overridesPath} do not validate`)
+            log.error(`config modal overrides from ${modalPath} do not validate against schema in ${schemaPath}`)
             log.error(`Giving up: ${err}`)
             process.exit(1)
         }
-        log.info(`updating config from ${overridesPath}`)
     } catch (err) {
-        log.warning(`Cannot load config file (${overridesPath}), using defaults`)
+        log.warning(`Cannot load config file (${modalPath}), using defaults`)
     }
 } catch (e) {
     log.warning(`environment NODE_ENV unset; overrides not loaded`)
 
 }
 
+// print some logging information about the config
 
-const pino = require('pino')
-//log to stderr by default
-log = pino(config.get('logging'), pino.destination(2))
+log = require('pino')(config.get('logging'))
+const serverName = config.get(`serverNameShort`) + ":"
 
+log.info(`${serverName}       config schema loaded ${schemaPath}`)
+log.info(`${serverName}     config defaults loaded ${defaultPath}`)
 
-log.debug("All Configuration Properties:")
-log.debug(config.getProperties())
+if (modalPath)
+    log.info(`${serverName}    config overrides loaded ${modalPath}`)
+else {
+    if (env)
+        log.info(`${serverName}    config overrides file   ${modalPath}`)
+    else
+        log.info(`${serverName} no config overrides loaded (set NODE-ENV environment variable to enable)`)
+}
+
+// log.debug("All Configuration Properties:")
+// log.debug(config.getProperties())
 log.flush()
 
 module.exports = config
