@@ -27,8 +27,8 @@ Install yarn, then install dependencies, then install the registers and then sta
 ```sh
 # to install with yarn
 git clone https://github.com/mrmxf/smpte-ra-tool-simple-registers.git
- # For each register to be included:
-git submodule add <module-uri> registers/
+# For each register to be included:
+git submodule add <git module-uri> registers/<register-name.>
 git submodule init
 git submodule update
 # now install dependencies
