@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "launch",
+            "name": "CA server.js",
+            "program": "${workspaceFolder}/simple-registers/server.js"
+        },
+        {
             "type": "pwa-node",
             "request": "launch",
             "name": "sr-server",

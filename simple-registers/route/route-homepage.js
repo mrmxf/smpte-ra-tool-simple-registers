@@ -17,16 +17,17 @@ const thisRoute = `/`
 
 router.get(thisRoute, (ctx, next) => {
     //create the data structure for the home page
-    const documentRoot = config.get(`home.path.static`)
-    const narrativeMd = config.get(`home.path.narrative`)
+    const documentRootPath = config.get(`home.path.static`)
+    const narrativeMdFilename = config.get(`home.path.narrative`)
 
-   const  homepageConfig = {
-        narrative: path.join(documentRoot, narrativeMd),
-        config
-    }
-    let view_data = homepageBody.createTemplateData(homepageConfig)
+   const  homepageConfig = config
 
-    let rendering = homepageBody.renderPageData(view_data)
+    // load the default template and homepage narrative
+    let narrativeMD = homepageBody.loadNarrativeMD()
+    let templateHTML = homepageBody.loadTemplateHTML()
+    let viewData = homepageBody.createTemplateData(homepageConfig)
+
+    let rendering = homepageBody.renderPageData(viewData, narrativeMD, templateHTML)
     ctx.body = rendering.body
     ctx.status = rendering.status
 

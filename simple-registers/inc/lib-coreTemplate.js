@@ -3,7 +3,7 @@
  */
 const fs = require('fs')
 const path = require('path')
-config = require('../cfg-va-che/cfg-va-che.js')
+const config = require('../cfg-va-che/cfg-va-che.js')
 const mustache = require('mustache')
 const mdit = require('markdown-it')()
 const log = require('pino')(config.get('logging'))
@@ -11,7 +11,6 @@ const log = require('pino')(config.get('logging'))
 const files = require('./lib-files')
 const tabs = require('./lib-tabs')
 const { register } = require('../route/route-metadata.js')
-const { config } = require('dotenv')
 
 const thisRoute = `/`
 
@@ -30,6 +29,7 @@ module.exports.loadTemplateHTML = (templateFilePath) => {
         templateHTML = "Internal error: unable to load page template"
         status = 500
     }
+    return templateHTML
     }
 
 module.exports.loadNarrativeMD = (narrativeFilePath) => {
@@ -43,6 +43,7 @@ module.exports.loadNarrativeMD = (narrativeFilePath) => {
         narrativeMD = "Internal error: unable to load page"
         status = 500
     }
+    return narrativeMD
 }
 
 /** return the properties to construct the view for this register / view
