@@ -9,14 +9,15 @@
  *  `ctx.smpte.request.path`     - path with config(urlPrefix) removed or false. e.g. "/lmt/table_view"
  *  `ctx.smpte.request.endpoint` - path with config(urlPrefix) removed or false e.g. "/table_view""
  */
-const config = require('../cfg-va-che/cfg-va-che.js')
-const DEBUG = config.get("DEBUG")
-const log = require('pino')(config.get('logging'))
-
 const fs = require('fs')
 const path = require('path')
 
-const middleware = async (ctx, next) => {
+const config = require('../cfg-va-che/cfg-va-che.js')
+const DEBUG = config.get("DEBUG")
+const log = require('pino')(config.get('logging'))
+let registers = require('../inc/lib-registers')
+
+async function middleware(ctx, next) {
     const p = config.get('urlPrefix')
     let m = {
         server: {
@@ -33,13 +34,14 @@ const middleware = async (ctx, next) => {
     //make some useful paths
     m.request.path = ((p.length == 0) || (ctx.request.path.startsWith(p))) ? ctx.request.path.slice(m.prefix.length) : false
     if (m.request.path) {
-        config.get("registers").forEach(register => {
-            if (m.request.path.startsWith(m.register[register.urlPrefix])) {
-                m.request.endpoint = m.request.path.slice(register.urlPrefix.length)
-                m.folderPath = register.folderPath
-                m.register.register
+        for (let registerName in registers) {
+            let register = registers[registerName]
+            let cfg = register.cfg
+            if (m.request.path.startsWith(register._absRoute)) {
+                m.request.endpoint = register._absRoute
+                m.folderPath = cfg.folder.pluginPath
             }
-        })
+        }
     }
 
     ctx.smpte = m

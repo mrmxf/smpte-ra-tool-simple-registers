@@ -24,6 +24,8 @@
  */
 /* jshint node: true */
 'use strict'
+const fs = require('fs')
+const path = require('path')
 
 const config = require('./cfg-va-che/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
@@ -39,6 +41,9 @@ const requestLogger = require('koa-pino-logger')
 
 /** the unique app object that will listen on a given port */
 const app = new Koa();
+
+/** pull in the registers helper */
+const registers = require('./inc/lib-registers')
 
 /** put everything behind HTTP AUTH if the environemnt forces it */
 if (process.env.hasOwnProperty('HTTP_USER') && process.env.hasOwnProperty('HTTP_PASSWORD')) {
@@ -78,7 +83,9 @@ app.use(smpteMiddleware)
 
 //>>> enable file uploads
 app.use(bodyParser({
-  formidable: { uploadDir: config.get("uploadFolderPath") },    //This is where the files would come
+  formidable: {
+    uploadDir: config.get("uploadFolderPath")
+  }, //This is where the files would come
   multipart: true,
   urlencoded: true
 }));
@@ -86,11 +93,23 @@ app.use(bodyParser({
 //>>> serve metadata for the ui
 app.use(mount(mountPrefix, require('./route/route-metadata').routes()))
 
+//>>> iterate through active registers
+for (let registerName in registers){
+  let register = registers[registerName]
+
+  //initialise the plugin with its config as a simple object (no need for config.get)
+  register.plugin.init(register.cfg)
+  //add in the routes (all prefixes handled by plugin)
+  app.use( register.plugin.router.routes())
+  //add the router to the list so that we can report on available routes
+  allRouters.push(register.plugin.router)
+}
+
 //>>> serve home page
 const routeHomePage = require('./route/route-homepage')
 allRouters.push(routeHomePage)
 app.use(mount(mountPrefix, routeHomePage.routes()))
-// app.use( routeHomePage.routes())
+
 
 //>>> serve the views from the buttons
 // app.use(mount(mountPrefix, require('./route/xml').routes()))
@@ -109,7 +128,9 @@ app.use(mount(mountPrefix, routeHomePage.routes()))
 // app.use(mount(mountPrefix, require('./route/tool-convert').routes()))
 
 //>>> serve a static pages if route has not been handled
-app.use(mount(mountPrefix, require('koa-static')(config.get('home.path.static'), { index: "index.html", })))
+app.use(mount(mountPrefix, require('koa-static')(config.get('home.path.static'), {
+  index: "index.html",
+})))
 
 //registered routes
 log.info(`${serverName} Listing registered routes....`)

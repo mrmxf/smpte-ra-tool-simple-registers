@@ -2,7 +2,7 @@
 <!-- See readme for how this template is renered -->
 
 <head>
-    {{#gtm_id}}
+    {{#googleTagManagerId}}
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -18,11 +18,11 @@
             j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', '{{ gtm_id }}');
+        })(window, document, 'script', 'dataLayer', '{{googleTagManagerId}}');
     </script>
     <!-- End Google Tag Manager -->
-    {{/gtm_id}}
-    <title>{{ appTitle }}</title>
+    {{/googleTagManagerId}}
+    <title>{{appTitle}}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="css/site.css" /> -->
@@ -31,19 +31,18 @@
 
     <!-- Include scripts and css for fomantic-ui styling -->
     <!-- You MUST include jQuery before Fomantic -->
+
+    <!-- CDN includes --->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
 
-    <!-- the CDN will be removed and these files replaced when the fomantic build is working -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="fui-smpte/semantic.js"></script> -->
-    <!-- <link href="fui-smpte/semantic.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <script src="fui-smpte/semantic.min.js"></script> -->
-    <!-- <link href="fui-smpte/semantic.min.css" rel="stylesheet" type="text/css" /> -->
-
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
+    <!-- Local includes -->
+    <!-- <script src="css_js/jquery.min.js" crossorigin="anonymous"></script> -->
+    <!-- <link href="css_js/themes/icon.min.css" rel="stylesheet" type="text/css"  /> -->
+    <!-- <link href="css_js/semantic.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="css_js/semantic.min.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,37 +54,31 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet" />
 
-    <script src="js/lmt-tabs.js"></script>
+    <script src="css_js/lmt-tabs.js"></script>
 </head>
 
 <body>
-    {{#gtm_id}}
+    {{#googleTagManagerId}}
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm_id }}" height="0" width="0"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{googleTagManagerId}}" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    {{/gtm_id}}
-    <div class="ui menu">
+    {{/googleTagManagerId}}
+    <div class="ui pointing menu">
         <div class="ui container">
+            <!-- SMPTE logo -->
             <a class="item" target="_blank" href="https://smpte-ra.org">
                 <img class="ui mini image" src="/images/logo-smpte-iris-alpha.svg" alt="SMPTE logo">
             </a>
+            <!-- Home -->
             <a class="item" href="/">
                 <i class="home icon"></i> smpte-ra
             </a>
-            {{&menuForRegister}}
+            <!-- Menu item(s) for this register -->
+            {{&menuForThisRegister}}
+            <!-- Right aligned menu item -->
             <div class="right item">
-                <div class="ui simple dropdown item">
-                    <i class="grid layout icon"></i>
-                    Test Registers
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <a class="item"><i class="globe icon"></i> LMT</a>
-                        <a class="item"><i class="settings  icon"></i> Sample</a>
-                        <a class="item"><i class="settings icon"></i> VR DoF</a>
-                    </div>
-                </div>
-                {{&menuForRegistersList}}
+                {{&menuForListOfRegisters}}
                 <div class="ui input"><input type="text" placeholder="Search TBC ..."></div>
             </div>
         </div>
@@ -94,12 +87,13 @@
     <div class="ui grid">
         <div class="row">
             <div class="one wide column"></div>
-            <div class="fifteen wide column">
-                <div class="ui padded text container segment">
+            <div class="fourteen wide column">
+                <div class="ui raised container segment">
                     {{&notificationMessages}}
                     {{&registerSecondaryMenu}}
                     {{&wrapperOpen}}
-                    {{pageNarrative}}
+                    {{&pageTitleHTML}}
+                    {{&pageNarrativeHTML}}
                     {{&uiView}}
                     {{&wrapperClose}}
                 </div>

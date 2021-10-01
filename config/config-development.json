@@ -3,12 +3,5 @@
     "logging": {
         "level": "trace",
         "logRequests": true
-    },
-    "registers": [{
-        "name": "Sample Register",
-        "short_name": "SAMPLE",
-        "urlPrefix": "/_sample",
-        "folder_path": "registers/sample_register",
-        "isDisplayed": true
-    }]
+    }
 }

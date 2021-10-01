@@ -4,14 +4,15 @@
  *
  * load index.template and use mustache to update
  *
-*/
+ */
 const path = require('path')
 const Router = require('koa-router')
 const router = new Router();
 const config = require('../cfg-va-che/cfg-va-che.js')
+const registers = require('../inc/lib-registers')
 const log = require('pino')(config.get('logging'))
 
-const homepageBody = require('../inc/lib-coreTemplate')
+const coreTemplate = require('../inc/lib-coreTemplate')
 
 const thisRoute = `/`
 
@@ -20,14 +21,20 @@ router.get(thisRoute, (ctx, next) => {
     const documentRootPath = config.get(`home.path.static`)
     const narrativeMdFilename = config.get(`home.path.narrative`)
 
-   const  homepageConfig = config
+    const homepageConfig = config.get(`home`)
 
     // load the default template and homepage narrative
-    let narrativeMD = homepageBody.loadNarrativeMD()
-    let templateHTML = homepageBody.loadTemplateHTML()
-    let viewData = homepageBody.createTemplateData(homepageConfig)
+    const narrativeHTML = coreTemplate.loadNarrativeHTML()
+    const templateHTML = coreTemplate.loadTemplateHTML()
 
-    let rendering = homepageBody.renderPageData(viewData, narrativeMD, templateHTML)
+    let viewData = coreTemplate.createTemplateData({
+        registerConfig: homepageConfig,
+        pageNarrativeHTML: narrativeHTML,
+        templateHTML: templateHTML,
+        menuForThisRegister: `<div class="ui active item">Homepage</div>`
+    })
+
+    const rendering = coreTemplate.renderPageData(viewData)
     ctx.body = rendering.body
     ctx.status = rendering.status
 

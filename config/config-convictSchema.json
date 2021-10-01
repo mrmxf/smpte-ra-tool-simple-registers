@@ -10,8 +10,8 @@
         "default": "development",
         "env": "NODE_ENV"
     },
-    "gtm_id": {
-        "doc": "Google Tage Manager ID(s).",
+    "googleTagManagerId": {
+        "doc": "Google Tage Manager ID(s). Set as a JSON array in the GTM_ID env variable",
         "format": "Array",
         "default": [],
         "env": "GTM_ID"
@@ -46,10 +46,10 @@
         "format": "int",
         "default": 3000
     },
-    "registers": {
-        "doc": "An array of register config objects",
-        "format": "Array",
-        "default": []
+    "registersFolderPath": {
+        "doc": "A string wtih a folder path of subfolders containing plugins",
+        "format": "String",
+        "default": "registers"
     },
     "static": {
         "doc": "Not used any more",

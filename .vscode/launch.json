@@ -5,21 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "name": "start server",
+            "program": "${workspaceFolder}/core/server.js",
             "request": "launch",
-            "name": "CA server.js",
-            "program": "${workspaceFolder}/simple-registers/server.js"
-        },
-        {
-            "type": "pwa-node",
-            "request": "launch",
-            "name": "sr-server",
             "envFile": "${workspaceFolder}/.env",
             "outputCapture": "std",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/simple-registers/server.js"
+            "type": "pwa-node"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "CA server.js",
+            "program": "${workspaceFolder}/core/server.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "wsl-server",
+            "envFile": "${workspaceFolder}/.env",
+            "outputCapture": "std",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/core/server.js"
         }
     ]
 }

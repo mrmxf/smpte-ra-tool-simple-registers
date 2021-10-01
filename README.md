@@ -1,4 +1,4 @@
-# smpte-ra-tool-simple-registers
+# smpte-ra-tool-core
 
 ## TODO
 
@@ -22,13 +22,13 @@ This is a refactor of the work that led to the Langage Metadata Table in SMPTE. 
 
 ## Usage
 
-Install yarn, then install dependencies, then install the registers and then start tha application. to contain everything in a docker application for easy deployment - see the docker section below.
+Install [yarn], then follow instructinos below to install dependencies, and init thes ubmodules that contain the registers. Finally, start tha aerver and open a browser to view the registers. To contain everything in a docker application for easy deployment - see the docker section below.
 
 ```sh
 # to install with yarn
 git clone https://github.com/mrmxf/smpte-ra-tool-simple-registers.git
-# For each register to be included:
-git submodule add <git module-uri> registers/<register-name.>
+# To add new modules execute the following line:
+# git submodule add <git module-uri> registers/<register-name.>
 git submodule init
 git submodule update
 # now install dependencies
@@ -120,16 +120,18 @@ The substitution engine is the super simple [mustache.io](https://mustache.githu
 Typically text is written in [Markdown - CommonMArk](https://spec.commonmark.org/)
 and rendered using [markdfown-it](https://github.com/markdown-it/markdown-it) into HTML,
 stored in a data structure and then substituted into the template. All styling
-and controls are done with [fomantic-ui](fomantic-ui)
+and controls are done with [fomantic-ui](fomantic-ui).
+
+The basic functionality is performed in [lib-coreTemplate.js]
 
 Tips:
 
 * To put raw HTML into mustache use an ampersand `{{text.with_escaped_HTML}}` `{{&text.in_raw_HTML}}`
 * Properties in the main template
-* `{{gtm_id}}` Array of Google tage manager IDs
+* `{{googleTagManagerId}}` Array of Google tage manager IDs
 * `{{appTitle}}` Name of the App
-* `{{&menuForRegister}}` raw HTML for the menu items of the current register
-* `{{&menuForRegistersList}}` raw HTML for the list of registers
+* `{{&menuForThisRegister}}` raw HTML for the menu items of the current register
+* `{{&menuForListOfRegisters}}` raw HTML for the list of registers
 * `{{&notificationMessages}}` raw HTML for any notification messages
 * `{{&registerSecondaryMenu}}` raw HTML for a secondary menu (if there is one)
 * `{{&wrapperOpen}}` for opening wrapper to surround the narrative and UI oriented view
@@ -137,3 +139,6 @@ Tips:
 * `{{&textView}}` raw HTML to be displayed in a textual context (gutters and native styling)
 * `{{&wrapperClose}}`for closing wrappers
 * `{{&dataView}}` raw HTML for a view where you control margins, gutters animation etc.
+
+[lib-coreTemplate.js]:simple
+[yarn]:https://classic.yarnpkg.com/lang/en/docs/install
