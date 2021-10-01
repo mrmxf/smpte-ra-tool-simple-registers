@@ -7,14 +7,8 @@ const config = require('../cfg-va-che/cfg-va-che')
 const mustache = require('mustache')
 const mdit = require('markdown-it')()
 const log = require('pino')(config.get('logging'))
-const registers = require("../inc/lib-registers")
 const menus = require("../inc/lib-menu")
 
-const files = require('./lib-files')
-const tabs = require('./lib-tabs')
-const {
-    register
-} = require('../route/route-metadata.js')
 
 const thisRoute = `/`
 

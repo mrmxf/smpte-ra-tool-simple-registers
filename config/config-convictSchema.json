@@ -57,9 +57,14 @@
         "default": {}
     },
     "urlPrefix": {
-        "doc": "A prefix to mount the server somewhere other than the root",
+        "doc": "A prefix to mount the server somewhere other than the root e.g. a value of 'simple-registers' mounts everything at /simple-registers/",
         "format": "String",
-        "default": "/"
+        "default": ""
+    },
+    "registersPrefix": {
+        "doc": "A prefix to mount the register plugins somewhere e.g. 'register' with urlPrifx='demo' would mount the sample register at /demo/register/sample/ ",
+        "format": "String",
+        "default": "register"
     },
     "uploadFolderPath": {
         "doc": "The temp folder for holding upload files",

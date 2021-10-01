@@ -1,5 +1,5 @@
 {
-    "doc": "Configuration file for sample-register plugin (enabled & displayed)",
+    "doc": "Configuration file for plugin: sample-register (enabled & displayed)",
     "isEnabled": true,
     "isDisplayed": true,
     "menu": "Sample",
@@ -7,17 +7,17 @@
     "routes": {
         "jsonData": "jsonData",
         "jsonSchema": "jsonSchema",
+        "validate": "validate",
         "register": "register",
         "schema": "schema",
         "document": "document"
     },
-    "_routes":"reserved property overrridden by code",
-    "_parent":"reserved property overriden by code",
+    "_routes": "reserved property overrridden by code",
+    "_parent": "reserved property overriden by code",
     "title": "Register: Sample",
     "descriptionMd": "_**TEST** Sample Register, not for production_",
     "version": "0.1.0",
     "folder": {
-        "pluginPath": "sample-register",
         "serverPath": "server",
         "browserPath": "browser",
         "processPath": "smpte-process"
@@ -25,6 +25,7 @@
     "smpteProcess": {
         "controlDoc": "sample-controlDoc.pdf",
         "controlDocDownloadName": "smpte-sample-controlDoc(test).pdf",
+        "controlDocHTML": "sample-controlDoc/index.html",
         "register": {
             "current": "sample-register.json",
             "previous": "sample-register-previous.json",

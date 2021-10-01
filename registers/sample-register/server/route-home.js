@@ -1,6 +1,7 @@
 /** @module route-home */
 /**
- * A sample register home page
+ * A route to return the home page (narrative) of this register
+ *
  * route: <mount-point>/
  */
 const path = require('path')
@@ -10,25 +11,13 @@ const menu = require('./menu')
 
 //core components for look & feel and parent menus
 const coreTemplate = require('../../../core/inc/lib-coreTemplate')
-const registers = require('../../../core/inc/lib-registers')
-
-/** load and display the register menu & narrative
- * @param {Object} cfg - the register's config.json with reserved properties
- * @param {Object} cfg._logger - the logger
- * @param {Object} cfg._routes - the route names from routes.js
- * @param {Object} cfg._parent - the application configuration 
- */
 
 module.exports = (cfg, router) => {
     const log = cfg._log
-    
-    //respond only to GET
-    router.get(cfg._absRoute, async (ctx, next) => {
-        //create the data structure for the home page
-        const staticPath = cfg._parent.home.path.static
-        const pluginPath = path.join(cfg._parent.registersFolderPath, cfg.folder.pluginPath)
-        const serverPath = path.join(pluginPath, cfg.folder.serverPath)
-        const processPath = path.join(pluginPath, cfg.folder.processPath)
+
+    // GET homepage
+    router.get(cfg._routes.home, async (ctx, next) => {
+        const processPath = path.join(cfg._folderPath, cfg.folder.processPath)
 
         const narrativeMdPath = path.join(processPath, cfg.smpteProcess.narrative.current)
         const narrativeMdPathCandidate = path.join(processPath, cfg.smpteProcess.narrative.candidate)
@@ -51,9 +40,9 @@ module.exports = (cfg, router) => {
         ctx.status = rendering.status
 
         if (rendering.status < 300) {
-            log.info(`${rendering.status} route:${cfg._absRoutee}`)
+            log.info(`${rendering.status} route:${cfg._routes.home}`)
         } else {
-            log.error(`${rendering.status} route:${cfg._absRoute}`)
+            log.error(`${rendering.status} route:${cfg._routes.home}`)
         }
     })
 

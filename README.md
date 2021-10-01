@@ -24,11 +24,10 @@ This is a refactor of the work that led to the Langage Metadata Table in SMPTE. 
 
 Install [yarn], then follow instructinos below to install dependencies, and init thes ubmodules that contain the registers. Finally, start tha aerver and open a browser to view the registers. To contain everything in a docker application for easy deployment - see the docker section below.
 
+To install with yarn & populate all the git submodules in `registers/`...
+
 ```sh
-# to install with yarn
 git clone https://github.com/mrmxf/smpte-ra-tool-simple-registers.git
-# To add new modules execute the following line:
-# git submodule add <git module-uri> registers/<register-name.>
 git submodule init
 git submodule update
 # now install dependencies
@@ -41,13 +40,25 @@ nano config/config-development.json
 yarn start
 ```
 
-If you need to remove a register...
+If you want to **add a new** git submodule to `registers/` then do the following. Note that `--depth 1` is important if multiple users are updating the register as a submodule. Git will break if you're not careful.
 
 ```sh
-git submodule deinit registers/<submodulePath>  # e.g. git submodule deinit registers/smpte-reg-lmt
-git rm <submodulePath>                          # e.g. git rm registers/smpte-reg-lmt
-git commit-m "Removed submodule xxx"            # e.g. git commit -m "removed smpte-reg-lmt from server"
-rm -rf .git/modules/<submodulePath>             # e.g. rm -rf .git/modules/registers/smpte-reg-lmt
+#ensure a shallow clone
+git submodule add --depth 1 <git module-uri> registers/<register-name>
+#label the register as shallow
+git config -f .gitmodules submodule.registers/<register-name>.shallow true
+git commit -m "Added submodule <register-name> (shallow)"
+# finally install dependencies
+yarn
+```
+
+If you need to **remove** a managed register from `registers/`...
+
+```sh
+git submodule deinit registers/<register-name>    # e.g. git submodule deinit   registers/smpte-reg-lmt
+git rm registers/<register-name>                  # e.g. git rm                 registers/smpte-reg-lmt
+git commit -m "Removed submodule <register-name>" # e.g. git commit -m "removed submodule smpte-reg-lmt"
+rm -rf .git/modules/registers/<register-name>     # e.g. rm -rf    .git/modules/registers/smpte-reg-lmt
 ```
 
 ## configuration

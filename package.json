@@ -26,6 +26,7 @@
     "SMPTE"
   ],
   "dependencies": {
+    "ajv": "^8.6.3",
     "convict": "^6.1.0",
     "deep-diff": "^1.0.2",
     "dotenv": "^10.0.0",
@@ -43,7 +44,7 @@
     "markdown-it": "^12.2.0",
     "mustache": "^4.0.1",
     "pino": "^6.2.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.25.0",
     "spacetime": "^6.16.1",
     "xml2js": "^0.4.23"
   },

@@ -99,8 +99,8 @@ try {
 log = require('pino')(config.get('logging'))
 const serverName = config.get(`serverNameShort`) + ":"
 
-log.info(`${serverName}       config schema loaded ${schemaPath}`)
-log.info(`${serverName}     config defaults loaded ${defaultPath}`)
+log.info(`${serverName}    config    schema loaded ${schemaPath}`)
+log.info(`${serverName}    config  defaults loaded ${defaultPath}`)
 
 if (modalPath)
     log.info(`${serverName}    config overrides loaded ${modalPath}`)

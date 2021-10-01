@@ -3,15 +3,17 @@
 
 
 module.exports.init = (cfg) => {
-    const home = cfg.urlPrefix
+    //The absRoute is constructed by the framework and is slash terminated
+    const home = cfg._absRoute
     module.exports.home = home
 
     //these routes can vary between plugins
-    module.exports.jsonData = `${home}/${cfg._routes.jsonData}`
-    module.exports.jsonSchema = `${home}/${cfg._routes.jsonSchema}`
+    module.exports.jsonData = `${home}${cfg.routes.jsonData}`
+    module.exports.jsonSchema = `${home}${cfg.routes.jsonSchema}`
+    module.exports.validate = `${home}${cfg.routes.validate}`
 
-    //these routes should be consistent between plugins
-    module.exports.register = `${home}/${cfg._routes.register}`
-    module.exports.schema = `${home}/${cfg._routes.schema}`
-    module.exports.document = `${home}/${cfg._routes.document}`
+    //these routes **should** be consistent between plugins
+    module.exports.register = `${home}${cfg.routes.register}`
+    module.exports.schema = `${home}${cfg.routes.schema}`
+    module.exports.document = `${home}${cfg.routes.document}`
 }

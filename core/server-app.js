@@ -94,15 +94,21 @@ app.use(bodyParser({
 app.use(mount(mountPrefix, require('./route/route-metadata').routes()))
 
 //>>> iterate through active registers
-for (let registerName in registers){
+for (let registerName in registers) {
   let register = registers[registerName]
 
-  //initialise the plugin with its config as a simple object (no need for config.get)
-  register.plugin.init(register.cfg)
-  //add in the routes (all prefixes handled by plugin)
-  app.use( register.plugin.router.routes())
-  //add the router to the list so that we can report on available routes
-  allRouters.push(register.plugin.router)
+  try {
+    //initialise the plugin with its config as a simple object (no need for config.get)
+    register.plugin.init(register.cfg)
+    //add in the routes (all prefixes handled by plugin)
+    app.use(register.plugin.router.routes())
+    log.info(`${serverName} plugin loaded: ${registerName}`)
+    //add the router to the list so that we can report on available routes
+    allRouters.push(register.plugin.router)
+  } catch (err) {
+    log.error(`${serverName} plugin failed to load: ${registerName}`)
+    log.debug(err)
+  }
 }
 
 //>>> serve home page
@@ -110,30 +116,14 @@ const routeHomePage = require('./route/route-homepage')
 allRouters.push(routeHomePage)
 app.use(mount(mountPrefix, routeHomePage.routes()))
 
-
-//>>> serve the views from the buttons
-// app.use(mount(mountPrefix, require('./route/xml').routes()))
-// app.use(mount(mountPrefix, require('./route/xsd').routes()))
-
-// app.use(mount(mountPrefix, require('./route/view-control-doc').routes()))
-// app.use(mount(mountPrefix, require('./route/view-xml').routes()))
-// app.use(mount(mountPrefix, require('./route/view-schema').routes()))
-
-// app.use(mount(mountPrefix, require('./route/table-lang').routes()))
-// app.use(mount(mountPrefix, require('./route/table-group').routes()))
-
-// app.use(mount(mountPrefix, require('./route/tool-diff').routes()))
-// app.use(mount(mountPrefix, require('./route/tool-validate').routes()))
-
-// app.use(mount(mountPrefix, require('./route/tool-convert').routes()))
-
 //>>> serve a static pages if route has not been handled
 app.use(mount(mountPrefix, require('koa-static')(config.get('home.path.static'), {
   index: "index.html",
 })))
 
-//registered routes
-log.info(`${serverName} Listing registered routes....`)
-allRouters.map(r => r.stack.map(i => log.info(`${serverName} route: ${i.path + i.regexp.toString()}`)))
+//Log all registered routes
+allRouters.map(r => r.stack.map(
+  i => log.info(`${serverName} route registered: ${i.path + i.regexp.toString()}`)
+))
 
 module.exports = app

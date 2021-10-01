@@ -5,7 +5,7 @@ const registers = require('../inc/lib-registers')
 
 module.exports.getListOfRegistersMenu = (options) => {
     let registersHTML = ""
-    for (let r in registers){
+    for (let r in registers) {
         registersHTML +=
             `<a class="item" href="${registers[r].cfg._absRoute}">
               <i class="globe icon"></i>
@@ -20,10 +20,6 @@ module.exports.getListOfRegistersMenu = (options) => {
            <i class="dropdown icon"></i>
            <div class="menu">
              ${registersHTML}
-             <div class="divider"></div>
-             <a class="item" href="register/lmt"><i class="globe icon"></i> LMT</a>
-             <a class="item" href="register/sample"><i class="settings  icon"></i> Sample</a>
-             <a class="item"><i class="settings icon"></i> VR DoF</a>
            </div>
          </div>
         `

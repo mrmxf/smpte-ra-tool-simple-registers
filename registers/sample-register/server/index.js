@@ -1,9 +1,9 @@
 /** @module sample-register */
 /**Entry point for the sample register
- * 
+ *
  * The entry point establishes routes that allows custom
  * views, menus and other services to be displayed.
- * 
+ *
  * The sample-register contains a single example of each
  * framework call.
  */
@@ -15,9 +15,6 @@
 const Router = require('koa-router')
 const router = new Router();
 let cfg
-
-const registerJson = require(`../smpte-process/sample-register.json`)
-const registerSchema = require(`../smpte-process/sample-schema.json`)
 
 /** initialise the plugin with its config
  * @param {Object} registerConfigObject - the register's config.json as an object
@@ -31,6 +28,11 @@ module.exports.init = (registerConfigObject) => {
 
     /** initialise the routes that this plugin respondes to */
     require('./route-home')(cfg, router)
+    require('./route-json-data')(cfg, router)
+    require('./route-json-schema')(cfg, router)
+    require('./route-register')(cfg, router)
+    require('./route-schema')(cfg, router)
+    require('./route-document')(cfg, router)
 }
 
 module.exports.router = router

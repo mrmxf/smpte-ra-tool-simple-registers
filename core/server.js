@@ -9,7 +9,8 @@ log.flush()
 const app = require('./server-app.js')
 
 const port = config.get("port")
-log.info(`${serverName} Listening to http://localhost:${port} with prefix(${config.get('urlPrefix')})`)
+log.info(`${serverName} --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------`)
+log.info(`${serverName} Listening to http://localhost:${port} with url prefix(${config.get('urlPrefix')})`)
 log.info(`${serverName} --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------`)
 log.flush()
 

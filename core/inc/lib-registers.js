@@ -3,15 +3,19 @@
  *    - <folder>/config.json must exist
  *    - <folder>/<serverPath>/index.js must exist
  *    - cfg.isEnabled must be true
- * 
+ *
  * @returns {Object} registers
  * @returns {Object} registers.<key> - key is the folder name
  * @returns {String} registers.<key>.configPath - path to config.json (relatie to project)
  * @returns {String} registers.<key>.entryPoint - path to index.js (relatie to project)
- * @returns {String} registers.<key>.cfg - register's config.json as an object
+
+ * @returns {Object} registers.<key>.cfg - register's config.json as an object
+ * @returns {String} registers.<key>.cfg._absRoute - absolute route to register
+ * @returns {String} registers.<key>.cfg._folderPath - path to plugin folder
+ * @returns {String} registers.<key>.cfg._log - path to the logger
  * @returns {String} registers.<key>.cfg._parent - global config as a static object
- * @returns {String} registers.<key>.plugin - module.exports from index.js
- * @returns {String} registers.<key>._absRoute - absolute route to register
+
+* @returns {Object} registers.<key>.plugin - module.exports from index.js
  */
 
 const fs = require('fs')
@@ -36,9 +40,11 @@ try {
 
 registerPluginFolders.forEach(r => {
     let register = {}
+    let thisRegisterPath = path.join(registersFolderPath, r)
+
     //check that there is a config.json & skip if not present
     try {
-        register.configPath = path.join(registersFolderPath, r, 'config.json')
+        register.configPath = path.join(thisRegisterPath, 'config.json')
         //compensate path for the fact we're in the inc folder
         register.cfg = require(tweakPath(register.configPath))
     } catch (err) {
@@ -50,9 +56,12 @@ registerPluginFolders.forEach(r => {
     //do nothing if not enabled
     if (!register.cfg.isEnabled) return
 
+    //add the folder path as a helper for register code
+    register.cfg._folderPath = thisRegisterPath
+
     //check there is an index.js to load
     try {
-        register.entryPoint = path.join(registersFolderPath, r, register.cfg.folder.serverPath, 'index.js')
+        register.entryPoint = path.join(thisRegisterPath, register.cfg.folder.serverPath, 'index.js')
         register.plugin = require(tweakPath(register.entryPoint))
     } catch (err) {
         log.error(`plugin file ${register.entryPoint} cannot be loaded - no plugin to load`)
@@ -81,7 +90,7 @@ registerPluginFolders.forEach(r => {
 
     absRoute += register.cfg.urlPrefix
     absRoute += (absRoute.endsWith('/')) ? "" : '/'
-    
+
     register.cfg._absRoute = absRoute
 
     //configure logger
