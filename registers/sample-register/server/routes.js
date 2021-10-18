@@ -11,6 +11,8 @@ module.exports.init = (cfg) => {
     module.exports.jsonData = `${home}${cfg.routes.jsonData}`
     module.exports.jsonSchema = `${home}${cfg.routes.jsonSchema}`
     module.exports.validate = `${home}${cfg.routes.validate}`
+    module.exports.convert = `${home}${cfg.routes.convert}`
+    module.exports.diff = `${home}${cfg.routes.diff}`
 
     //these routes **should** be consistent between plugins
     module.exports.register = `${home}${cfg.routes.register}`

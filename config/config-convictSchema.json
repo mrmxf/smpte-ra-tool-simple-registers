@@ -71,6 +71,11 @@
         "format": "String",
         "default": "/tmp"
     },
+    "homeIconClass": {
+        "doc": "The class name for decorating the home icons",
+        "format": "String",
+        "default": "green"
+    },
     "logging": {
         "doc": "Object to control the Pino Logger",
         "format": "Object",

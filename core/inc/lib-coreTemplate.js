@@ -32,31 +32,50 @@ module.exports.loadTemplateHTML = (templateFilePath) => {
     }
     return recentTemplateHTML
 }
-
+/**
+ * Load in the narrative Markdown and convert to HTML.
+ * Assum the first line of the narrative is a title and use it
+ * in the accordian control.
+ *
+ * @param {String} narrativeFilePath - the full file path to the narrative
+ * @returns
+ */
 module.exports.loadNarrativeHTML = (narrativeFilePath) => {
     const filePath = (narrativeFilePath) ? narrativeFilePath : defaultNarrativeFilePath
+    let loadNarrativeHTML, loadNarrativeMd
     try {
-        loadNarrativeHTML = fs.readFileSync(filePath, 'utf-8')
+        loadNarrativeMd = fs.readFileSync(filePath, 'utf-8')
+        status = 200
+    } catch (err) {
+        log.error(`route:${thisRoute}  cannot read narrative file ${filePath}`)
+        loadNarrativeHTML =
+        status = 500
+        return "Internal error: unable to load page"
+    }
+    let firstLine = loadNarrativeMd.split('\n', 1)[0];
+    //remove all heading decoration from the first line
+    firstLine = firstLine.match(/^#*\s*(.*)/)[1]
+    firstLine =`<div class="title"><i class="dropdown icon"></i>${mdit.renderInline(firstLine)}</div>`
+
+    try {
+        loadNarrativeHTML = mdit.render(loadNarrativeMd)
         status = 200
     } catch (err) {
         log.error(`route:${thisRoute}  cannot read narrative file ${filePath}`)
         loadNarrativeHTML = "Internal error: unable to load page"
         status = 500
     }
-    try {
-        loadNarrativeHTML = mdit.render(loadNarrativeHTML)
-        status = 200
-    } catch (err) {
-        log.error(`route:${thisRoute}  cannot read narrative file ${filePath}`)
-        loadNarrativeHTML = "Internal error: unable to load page"
-        status = 500
-    }
+    //put an accordian control around the narrative for space reasons
+    loadNarrativeHTML = `<div class="ui styled fluid accordion">
+    ${firstLine}
+    <div class="content">${loadNarrativeHTML}</div>
+    </div>`
     return loadNarrativeHTML
 }
 
 /** return the properties to construct the view for this register / view
  * @param {Object} options - the register to be displayed
- * @param {Object} options.config - object parsed from the register's config.json
+ * @param {Object} options.cfg - object parsed from the register's config.json
  * @param {String} register.menuForThisRegister - menuHTML to be shown for this register
  * @param {String} register.narrativeHTML - narrativeHTML the narrative HTML that
  * @param {String} register.customTemplateHTML - customTemplateHTML the template HTML for this registr
@@ -77,6 +96,7 @@ module.exports.createTemplateData = (options) => {
         version: homeData.version,
         urlPrefix: homeData.urlPrefix,
         googleTagManagerId: googleTagManagerId,
+        homeIconClass: config.get("homeIconClass"),
         //menu barelements
         menuForListOfRegisters: menus.getListOfRegistersMenu(options),
         menuForThisRegister: (options.menuForThisRegister) ? options.menuForThisRegister : "",
@@ -87,6 +107,7 @@ module.exports.createTemplateData = (options) => {
         notificationMessages: (options.notificationMessages) ? options.notificationMessages : "",
         registerSecondaryMenu: (options.registerSecondaryMenu) ? options.registerSecondaryMenu : "",
         //rendering on the default template page
+        pageTitleHTML: (options.cfg && options.cfg.pageTitle) ? mdit.render("# " + options.cfg.pageTitle) : '',
         pageNarrativeHTML: (options.pageNarrativeHTML) ? options.pageNarrativeHTML : loadNarrativeHTML,
         uiView: (options.uiView) ? options.uiView : "",
         // anything to be shown outside the page wrapper (i.e. super wide or unformatted data)

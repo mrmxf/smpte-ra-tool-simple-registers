@@ -1,0 +1,5 @@
+{
+    "title": "YAML converter",
+    "toSmpteMdFile": "convert-yaml-to-smpte.md",
+    "fromSmpteMdFile": "convert-yaml-from-smpte.md"
+}

@@ -19,6 +19,7 @@
     "registersPrefix": "register",
     "registersFolderPath":"registers",
     "uploadFolderPath": "/tmp",
+    "homeIconClass": "green",
     "logging": {
         "doc": "logging goes to stderr by default - see https://github.com/pinojs/pino/blob/HEAD/docs/transports.md",
         "level": "info",

@@ -1,4 +1,4 @@
-## Sample Register Narrative 2021-0618
+### Sample Register update 2021-10-18
 
 This narrative is a markdown file that should accompany each update
 to a register to give the visitor changelog information and a basic
@@ -7,6 +7,40 @@ background to the register.
 This Register is just a sample to check that the project works.
 You can disable this register by changing its `config.json` so
 that the framework ignores it.
+
+To test the conversion tools, paste the data below, select the right tool and off you go.
+
+**YAML sample**
+
+```yaml
+---
+- uint16: 1
+  english: one
+  french: un
+- uint16: 2
+  english: two
+  french: deux
+- uint16: 3
+  english: three
+  french: trois
+```
+
+**XML Sample**
+
+```xml
+ <?xml version="1.0" encoding="UTF-8" ?>
+ <root>
+   <row>
+     <uint16>1</uint16><english>one</english><french>un</french>
+   </row>
+   <row>
+     <uint16>2</uint16><english>two</english><french>deux</french>
+   </row>
+   <row>
+     <uint16>3</uint16><english>three</english><french>trois</french>
+   </row>
+ </root>
+```
 
 Status of the sample register:
 

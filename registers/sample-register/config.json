@@ -2,11 +2,13 @@
     "doc": "Configuration file for plugin: sample-register (enabled & displayed)",
     "isEnabled": true,
     "isDisplayed": true,
-    "menu": "Sample",
+    "menu": "Sample Register",
     "urlPrefix": "sample",
+    "pageTitle": "Sample Register",
     "routes": {
         "jsonData": "jsonData",
         "jsonSchema": "jsonSchema",
+        "convert": "convert",
         "validate": "validate",
         "register": "register",
         "schema": "schema",
@@ -19,6 +21,7 @@
     "version": "0.1.0",
     "folder": {
         "serverPath": "server",
+        "converterPath":"converters",
         "browserPath": "browser",
         "processPath": "smpte-process"
     },

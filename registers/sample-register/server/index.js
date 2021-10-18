@@ -33,6 +33,8 @@ module.exports.init = (registerConfigObject) => {
     require('./route-register')(cfg, router)
     require('./route-schema')(cfg, router)
     require('./route-document')(cfg, router)
+    require('./route-validate')(cfg, router)
+    require('./route-convert')(cfg, router)
 }
 
 module.exports.router = router

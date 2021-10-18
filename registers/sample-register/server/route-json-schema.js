@@ -47,7 +47,7 @@ module.exports = (cfg, router) => {
         const templateHTML = coreTemplate.loadTemplateHTML()
 
         let viewData = coreTemplate.createTemplateData({
-            registerConfig: cfg._parent.home,
+            cfg: cfg,
             registerSecondaryMenu: menu.html(cfg, cfg._routes.jsonSchema),
             pageNarrativeHTML: narrativeHTML,
             templateHTML: templateHTML,

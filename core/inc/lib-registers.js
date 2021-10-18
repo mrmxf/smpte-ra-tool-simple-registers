@@ -81,6 +81,9 @@ registerPluginFolders.forEach(r => {
 
     register.cfg._parent = config.get("")
 
+    //propogate some properties if they don't exist in the plugin
+    register.cfg.homeIconClass = (register.cfg.homeIconClass) ? register.cfg.homeIconClass : config.get("homeIconClass")
+
     //construct the absolute route
     let absRoute = config.get("urlPrefix")
     absRoute += (absRoute.endsWith('/')) ? "" : '/'

@@ -36,7 +36,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
 
     <!-- Local includes -->
     <!-- <script src="css_js/jquery.min.js" crossorigin="anonymous"></script> -->
@@ -45,7 +46,7 @@
     <!-- <script src="css_js/semantic.min.js"></script> -->
 
     <!-- tweak this for the prism style that you like -->
-    <link href="/css_js/prism-coy.css" rel="stylesheet" type="text/css" />
+    <link href="/css_js/prism.css" rel="stylesheet" type="text/css" />
     <!-- the site css should be empty -->
     <link href="/css_js/site.css" rel="stylesheet" type="text/css" />
 
@@ -75,7 +76,7 @@
             </a>
             <!-- Home -->
             <a class="item" href="/">
-                <i class="home icon"></i> smpte-ra
+                <i class="home {{homeIconClass}} icon"></i> smpte-ra
             </a>
             <!-- Menu item(s) for this register -->
             {{&menuForThisRegister}}
@@ -106,6 +107,15 @@
     </div>
     <!--  ==========  Register Content is rendered here  ==========    -->
     {{&dataView}}
+    <!--  ==========  Code Highlighting for any plugins  ==========    -->
+    <script src="/css_js/prism.js"></script>
+    <script language='javascript'>
+        /* initialize accoridans */
+        $(document).ready(function () {
+            $('.ui.accordion').accordion();
+        });
+    </script>
+
 </body>
 
 </html>

@@ -1,0 +1,5 @@
+{
+    "title": "XML converter",
+    "toSmpteMdFile": "convert-xml-to-smpte.md",
+    "fromSmpteMdFile": "convert-xml-from-smpte.md"
+}
