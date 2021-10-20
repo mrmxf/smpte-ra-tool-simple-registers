@@ -1,5 +1,8 @@
 {
-    "title": "YAML converter",
+    "toSmpteId": "yaml-2-smpte",
+    "fromSmpteId": "smpte-2-yaml",
+    "toSmpteLabel": "YAML → SMPTE JSON",
+    "fromSmpteLabel": "SMPTE JSON → YAML",
     "toSmpteMdFile": "convert-yaml-to-smpte.md",
     "fromSmpteMdFile": "convert-yaml-from-smpte.md"
 }

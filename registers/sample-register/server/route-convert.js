@@ -15,7 +15,7 @@ const cvt = require('../../../core/register-helpers/convert-helper')
 module.exports = (cfg, router) => {
     const log = cfg._log
 
-    // GET homepage
+    // GET convert homepage
     router.get(cfg._routes.convert, async (ctx, next) => {
         const processPath = path.join(cfg._folderPath, cfg.folder.processPath)
         const narrativeMdPath = path.join(processPath, cfg.smpteProcess.narrative.current)
@@ -28,9 +28,8 @@ module.exports = (cfg, router) => {
         filename = cfg.smpteProcess.schema.current
         schemaPath = path.join(cfg._folderPath, cfg.folder.processPath, filename)
 
-
         const cvtList = cvt.loadConvertFromFolder(cfg)
-        const res = cvt.renderPage(cfg, menu, jsonPath, schemaPath, narrativeMdPath, cvtList)
+        const res = cvt.renderPage(ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath, cvtList)
 
         ctx.status = res.status
         ctx.body = res.body
@@ -42,4 +41,11 @@ module.exports = (cfg, router) => {
         }
     })
 
+    //POST a conversion request
+    router.post(cfg._routes.convert, async (ctx, next) => {
+        //do the standard conversion
+        // ctx.request.body = {conversion: "someID", string: "xml-stuff"}
+        cvt.doConversion(cfg, ctx)
+        next()
+    })
 }

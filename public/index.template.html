@@ -107,15 +107,12 @@
     </div>
     <!--  ==========  Register Content is rendered here  ==========    -->
     {{&dataView}}
+
     <!--  ==========  Code Highlighting for any plugins  ==========    -->
     <script src="/css_js/prism.js"></script>
-    <script language='javascript'>
-        /* initialize accoridans */
-        $(document).ready(function () {
-            $('.ui.accordion').accordion();
-        });
-    </script>
 
+    <!--  ==========  Finally the javascript for the current register  ==========    -->
+    {{&pageJavascript}}
 </body>
 
 </html>

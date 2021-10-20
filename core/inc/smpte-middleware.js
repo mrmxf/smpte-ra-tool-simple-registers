@@ -17,7 +17,7 @@ const DEBUG = config.get("DEBUG")
 const log = require('pino')(config.get('logging'))
 let registers = require('../inc/lib-registers')
 
-async function middleware(ctx, next) {
+module.exports = async (ctx, next) => {
     const p = config.get('urlPrefix')
     let m = {
         server: {
@@ -49,5 +49,3 @@ async function middleware(ctx, next) {
 
     await next()
 }
-
-module.exports = middleware

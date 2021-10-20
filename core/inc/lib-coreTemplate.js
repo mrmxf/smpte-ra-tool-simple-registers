@@ -115,6 +115,7 @@ module.exports.createTemplateData = (options) => {
         //data to be passed between rendering stages
         templateHTML: (options.customTemplateHTML) ? options.customTemplateHTML : recentTemplateHTML,
         renderedOutput: (options.renderedOutput) ? options.renderedOutput : "",
+        pageJavascript: (options.ctx && options.ctx.smpte && options.ctx.smpte.pageJavascript) ? options.ctx.smpte.pageJavascript : ''
     }
 }
 

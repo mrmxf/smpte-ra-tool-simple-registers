@@ -17,7 +17,8 @@ const fs = require('fs')
 const path = require('path')
 
 //helpers for this register
-const convertWorker = require('./covnert-worker')
+const convertUi = require('./convert-helper-ui')
+const convertWorker = require('./convert-worker')
 const validateWorker = require('./validate-json-worker')
 
 //core components for look & feel and parent menus
@@ -27,17 +28,19 @@ const coreTemplate = require('../inc/lib-coreTemplate')
  *
  * @param {String} folderPath path for the app to read the folder contents
  */
-module.exports.loadConvertFromFolder = (cfg) => {
+const loadConvertFromFolder = (cfg) => {
     const folderPath = path.join(cfg._folderPath, cfg.folder.serverPath, cfg.folder.converterPath)
 
     let cvtFiles = []
+    let cvtList = [
 
+    ]
     try {
         cvtFiles = fs.readdirSync(folderPath, { withFileTypes: true })
     } catch (err) {
         log.error(`convertert for folder ${folderPath} cannot be read - no converters to load`)
         log.debug(err)
-        return []
+        return cvtList
     }
 
     //iterate to find all the json files
@@ -48,7 +51,7 @@ module.exports.loadConvertFromFolder = (cfg) => {
         //load the json into a convertor object (relative to the register-helpers folder)
         let filePath = path.join("..", "..", folderPath, f.name)
         let converter = require(filePath)
-        let workerPath = filePath.substr(0, filePath.length-4) + "js"
+        let workerPath = filePath.substr(0, filePath.length - 4) + "js"
         converter.worker = require(workerPath)
 
         //check the entry method & router exist
@@ -64,7 +67,9 @@ module.exports.loadConvertFromFolder = (cfg) => {
         //add to the list
         cvtList.push(converter)
     })
+    return cvtList
 }
+module.exports.loadConvertFromFolder = loadConvertFromFolder
 
 /**
  *
@@ -78,21 +83,21 @@ module.exports.loadConvertFromFolder = (cfg) => {
  * @return {String} ctx.body is the body HTML (proposed)
  *
  */
-module.exports.renderPage = (cfg, menu, jsonPath, schemaPath, narrativeMdPath, cvtList) => {
+module.exports.renderPage = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath, cvtList) => {
     const log = cfg._log
-    const ctx = {
+    const res = {
         status: 200,
         body: ""
     }
 
     let json, schema
 
-    //get the schema
+    //get the data
     try {
         json = fs.readFileSync(jsonPath, 'utf8')
     } catch (err) {
-        ctx.status = 500
-        log.error(`${ctx.status} route:${cfg._routes.register}`)
+        res.status = 500
+        log.error(`${res.status} route:${cfg._routes.register}`)
         log.debug(err)
         return
     }
@@ -101,39 +106,102 @@ module.exports.renderPage = (cfg, menu, jsonPath, schemaPath, narrativeMdPath, c
     try {
         schema = fs.readFileSync(schemaPath)
     } catch (err) {
-        ctx.status = 500
-        log.error(`${ctx.status} route:${cfg._routes.register}`)
+        res.status = 500
+        log.error(`${res.status} route:${cfg._routes.register}`)
         log.debug(err)
     }
 
-    //validate the data
-    let response = worker.validate(json, schema)
+    // //validate the data
+    // let response = worker.validate(json, schema)
+    let response = {
+        status: 200,
+        HTML: "Upload your source content and Select a conversion"
+    }
 
-    //prepare the UI view
-    let segmentColor = (response.ok) ? "green" : "red"
-    let uiView = `<div class ="ui ${segmentColor} segment">${response.HTML}</div>`
+    //prepare the UI view based on the results of the conversion
+    let segmentColor = "green"
+    let extraMenu = `<span class="item active" "><i class="play ${cfg.homeIconClass} icon"></i>${cfg.routes.convert}</span>`
+    let uiView = `<div class ="ui ${segmentColor} segment">
+    ${convertUi.html(cfg, cvtList)}
+    </div>`
 
     // load the default template and homepage narrative
     const narrativeHTML = coreTemplate.loadNarrativeHTML(narrativeMdPath)
     const templateHTML = coreTemplate.loadTemplateHTML()
 
     let viewData = coreTemplate.createTemplateData({
+        ctx: ctx,
         cfg: cfg,
-        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate),
+        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, extraMenu),
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,
         menuForThisRegister: `<div class="ui active item">${cfg.menu}</div>`,
-        uiView: uiView
+        uiView: uiView,
+        dataView: `<div id="dataView"></div>`
     })
 
     const rendering = coreTemplate.renderPageData(viewData)
-    ctx.body = rendering.body
-    ctx.status = rendering.status
+    res.body = rendering.body
+    res.status = rendering.status
 
     if (rendering.status < 300) {
         log.info(`${rendering.status} route:${cfg._routes.validate}`)
     } else {
         log.error(`${rendering.status} route:${cfg._routes.validate}`)
     }
-    return ctx
+    return res
+}
+
+/** reject any errors in the post object
+ *
+ * @param {Object*} cfg the register's configuration object
+ * @param {Object} ctx the koa contect
+ * @returns {boolean} false if ctx.status & ctx.body are set to return an error
+ */
+const conversionParmsOk = (cfg, ctx, cvtList) => {
+    //check that the post request has the required parameters
+    if (!ctx.request.body || !ctx.request.body.conversion || !ctx.request.body.sourceText) {
+        ctx.status = 400 //Bad Request
+        ctx.body = `Bad Request - required property missing from request`
+        return false
+    }
+
+    //check that the conversion is in this register
+    let conversionId = (ctx.request.body && ctx.request.body.conversion) ? ctx.request.body.conversion : "undefined"
+    let foundInThisRegister = false
+    cvtList.forEach(cvt => {
+        foundInThisRegister |= (conversionId === cvt.toSmpteId) || (conversionId === cvt.fromSmpteId)
+    })
+    if (!ctx.request.body || !ctx.request.body.conversion || !ctx.request.body.sourceText) {
+        ctx.status = 400 //Bad Request
+        ctx.body = `Bad Request - conversion id <strong><em>${conversionId}</em></strong> does not exist`
+        return false
+    }
+
+    return true
+}
+
+/** execute the conversion for this register
+ *
+ * @param {Object*} cfg the register's configuration object
+ * @param {Object} ctx the koa contect
+ */
+module.exports.doConversion = async (cfg, ctx) => {
+    let cvtList = loadConvertFromFolder(cfg)
+    if (!conversionParmsOk(cfg, ctx, cvtList))
+        return
+
+    let conversionId = ctx.request.body.conversion
+    // we know that there was a match and that the worker
+    // should be able to do the job or return an error in res
+    // so execute the conversion
+    let res
+    cvtList.forEach(cvt => {
+        if (conversionId === cvt.toSmpteId)
+            res = cvt.worker.toSmpte(ctx.request.body.sourceText)
+        if (conversionId === cvt.fromSmpteId)
+            res = cvt.worker.fromSmpte(ctx.request.body.sourceText)
+    })
+    ctx.status = res.status
+    ctx.body = res.body
 }

@@ -1,5 +1,8 @@
 {
-    "title": "XML converter",
+    "toSmpteId": "xml-2-smpte",
+    "fromSmpteId": "smpte-2-xml",
+    "toSmpteLabel": "XML → SMPTE JSON",
+    "fromSmpteLabel": "SMPTE JSON → XML",
     "toSmpteMdFile": "convert-xml-to-smpte.md",
     "fromSmpteMdFile": "convert-xml-from-smpte.md"
 }

@@ -16,6 +16,8 @@ const Router = require('koa-router')
 const router = new Router();
 let cfg
 
+const javascriptAutoloader = require('../../../core/register-helpers/javascript-autoloader')
+
 /** initialise the plugin with its config
  * @param {Object} registerConfigObject - the register's config.json as an object
  */
@@ -25,6 +27,9 @@ module.exports.init = (registerConfigObject) => {
     /** construct all the route names for this register & add to cfg */
     cfg._routes= require('./routes')
     cfg._routes.init(cfg)
+
+    /** autoload register's JS as `ctx.smpte.pageJavascript` for rendering */
+    router.use(javascriptAutoloader)
 
     /** initialise the routes that this plugin respondes to */
     require('./route-home')(cfg, router)
