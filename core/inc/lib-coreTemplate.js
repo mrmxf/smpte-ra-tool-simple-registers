@@ -66,7 +66,7 @@ module.exports.loadNarrativeHTML = (narrativeFilePath) => {
         status = 500
     }
     //put an accordian control around the narrative for space reasons
-    loadNarrativeHTML = `<div class="ui styled fluid accordion">
+    loadNarrativeHTML = `<div id="narrative" class="ui styled fluid accordion">
     ${firstLine}
     <div class="content">${loadNarrativeHTML}</div>
     </div>`
@@ -76,7 +76,7 @@ module.exports.loadNarrativeHTML = (narrativeFilePath) => {
 /** return the properties to construct the view for this register / view
  * @param {Object} options - the register to be displayed
  * @param {Object} options.cfg - object parsed from the register's config.json
- * @param {String} register.menuForThisRegister - menuHTML to be shown for this register
+ * @param {String} register.menuTitleForThisPage - menuHTML to be shown for this register
  * @param {String} register.narrativeHTML - narrativeHTML the narrative HTML that
  * @param {String} register.customTemplateHTML - customTemplateHTML the template HTML for this registr
  */
@@ -99,7 +99,7 @@ module.exports.createTemplateData = (options) => {
         homeIconClass: config.get("homeIconClass"),
         //menu barelements
         menuForListOfRegisters: menus.getListOfRegistersMenu(options),
-        menuForThisRegister: (options.menuForThisRegister) ? options.menuForThisRegister : "",
+        menuTitleForThisPage: (options.menuTitleForThisPage) ? options.menuTitleForThisPage : "",
         //open & close the wrapper around the page view
         wrapperOpen: (options.wrapperOpen) ? options.wrapperOpen : "",
         wrapperClose: (options.wrapperClose) ? options.wrapperClose : "",

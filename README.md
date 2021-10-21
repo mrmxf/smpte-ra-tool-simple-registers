@@ -141,7 +141,7 @@ Tips:
 * Properties in the main template
 * `{{googleTagManagerId}}` Array of Google tage manager IDs
 * `{{appTitle}}` Name of the App
-* `{{&menuForThisRegister}}` raw HTML for the menu items of the current register
+* `{{&menuTitleForThisPage}}` raw HTML for the menu items of the current register
 * `{{&menuForListOfRegisters}}` raw HTML for the list of registers
 * `{{&notificationMessages}}` raw HTML for any notification messages
 * `{{&registerSecondaryMenu}}` raw HTML for a secondary menu (if there is one)

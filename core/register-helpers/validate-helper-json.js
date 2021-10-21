@@ -31,9 +31,9 @@ const coreTemplate = require('../inc/lib-coreTemplate')
  * @return {String} ctx.body is the body HTML (proposed)
  *
  */
-module.exports = (cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
+module.exports = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
     const log = cfg._log
-    const ctx = {
+    const res = {
         status: 200,
         body: ""
     }
@@ -44,8 +44,8 @@ module.exports = (cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
     try {
         json = fs.readFileSync(jsonPath, 'utf8')
     } catch (err) {
-        ctx.status = 500
-        log.error(`${ctx.status} route:${cfg._routes.register}`)
+        res.status = 500
+        log.error(`${res.status} route:${cfg._routes.register}`)
         log.debug(err)
         return
     }
@@ -54,8 +54,8 @@ module.exports = (cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
     try {
         schema = fs.readFileSync(schemaPath)
     } catch (err) {
-        ctx.status = 500
-        log.error(`${ctx.status} route:${cfg._routes.register}`)
+        res.status = 500
+        log.error(`${res.status} route:${cfg._routes.register}`)
         log.debug(err)
     }
 
@@ -64,6 +64,7 @@ module.exports = (cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
 
     //prepare the UI view
     let segmentColor = (response.ok) ? "green" : "red"
+    let highlightMenu = `<span class="item active" "><i class="check circle outline ${cfg.homeIconClass} icon"></i>${cfg.routes.validate}</span>`
     let uiView = `<div class ="ui ${segmentColor} segment">${response.HTML}</div>`
 
     // load the default template and homepage narrative
@@ -71,22 +72,23 @@ module.exports = (cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
     const templateHTML = coreTemplate.loadTemplateHTML()
 
     let viewData = coreTemplate.createTemplateData({
+        ctx: ctx,
         cfg: cfg,
-        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate),
+        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, highlightMenu),
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,
-        menuForThisRegister: `<div class="ui active item">${cfg.menu}</div>`,
+        menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`,
         uiView: uiView
     })
 
     const rendering = coreTemplate.renderPageData(viewData)
-    ctx.body = rendering.body
-    ctx.status = rendering.status
+    res.body = rendering.body
+    res.status = rendering.status
 
     if (rendering.status < 300) {
         log.info(`${rendering.status} route:${cfg._routes.validate}`)
     } else {
         log.error(`${rendering.status} route:${cfg._routes.validate}`)
     }
-    return ctx
+    return res
 }

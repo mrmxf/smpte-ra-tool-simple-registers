@@ -6,7 +6,7 @@
  * @param {Object} cfg The config.json as a JAvascript object
  */
 
-module.exports.html = (cfg, activeRoute, extraMenus) => {
+module.exports.html = (cfg, activeRoute, highlightMenus) => {
     const _r = cfg._routes
 
     let aHo = (activeRoute == _r.home) ? " active " : ""
@@ -18,6 +18,8 @@ module.exports.html = (cfg, activeRoute, extraMenus) => {
         `<div class="ui secondary menu">
           <!-- Home -->
           <a class="item${aHo}" href="${_r.home}"><i class="home ${cfg.homeIconClass} icon"></i>${cfg.menu}</a>
+
+          ${(highlightMenus)?highlightMenus:''}
 
           <!-- ux views -->
           <div class="ui simple dropdown item">
@@ -39,7 +41,7 @@ module.exports.html = (cfg, activeRoute, extraMenus) => {
             <a class="item${aVa}" href="${_r.validate}"><i class="check circle outline icon"></i>Validate</a>
             </div>
           </div>
-          ${(extraMenus)?extraMenus:''}
+
           <!-- Right aligned menu item for full screen items-->
           <div class="right item">
             <div class="ui simple dropdown item">

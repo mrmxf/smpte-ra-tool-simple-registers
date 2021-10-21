@@ -54,6 +54,30 @@ module.exports = async (ctx, next) => {
         //only try to load javascript if this route is a register
         if (register) {
             for (let r in register.cfg.routes) {
+                if (url[1].length==0) {
+                    //the home page for this register
+                    let autoloadFilename = `autoload.js`
+                    let autoloadRouteFilename = `autoload-home.js`
+                    let absPath = path.join(register.cfg._folderPath, register.cfg.folder.browserPath)
+                    let mainJs, routeJs
+                    try {
+                        mainJs = fs.readFileSync(path.join(absPath, autoloadFilename))
+                    } catch (error) {
+                        mainJs = ""
+                    }
+                    try {
+                        routeJs = fs.readFileSync(path.join(absPath, autoloadRouteFilename))
+                    } catch (error) {
+                        routeJs = ""
+                    }
+                    if (mainJs || routeJs){
+
+                        ctx.smpte.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
+                    }
+                    else{
+                        ctx.smpte.pageJavascript = ""
+                    }
+                }
                 if (url[1] === register.cfg.routes[r]) {
                     let autoloadFilename = `autoload.js`
                     let autoloadRouteFilename = `autoload-${url[1]}.js`

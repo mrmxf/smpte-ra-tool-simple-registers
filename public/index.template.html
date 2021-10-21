@@ -25,8 +25,6 @@
     <title>{{appTitle}}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" href="css/site.css" /> -->
-    <!-- <link rel="stylesheet" href="css/prism-twilight.css" /> -->
     <link rel="icon" href="/favicon.ico" />
 
     <!-- Include scripts and css for fomantic-ui styling -->
@@ -34,10 +32,9 @@
 
     <!-- CDN includes --->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <link  href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Local includes -->
     <!-- <script src="css_js/jquery.min.js" crossorigin="anonymous"></script> -->
@@ -45,9 +42,12 @@
     <!-- <link href="css_js/semantic.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- <script src="css_js/semantic.min.js"></script> -->
 
-    <!-- tweak this for the prism style that you like -->
+    <!-- tweak prism syntax highlightinh that you like & load any quirky custom stuff in site.css -->
+    <!-- Prism
+        theme: Tomorrow Night
+        opt: markup + css + c-like + javascript + json(all variants) + yaml + yang + line numbers + Line number highlight
+    -->
     <link href="/css_js/prism.css" rel="stylesheet" type="text/css" />
-    <!-- the site css should be empty -->
     <link href="/css_js/site.css" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,7 +79,7 @@
                 <i class="home {{homeIconClass}} icon"></i> smpte-ra
             </a>
             <!-- Menu item(s) for this register -->
-            {{&menuForThisRegister}}
+            {{&menuTitleForThisPage}}
             <!-- Right aligned menu item -->
             <div class="right item">
                 {{&menuForListOfRegisters}}
@@ -97,7 +97,9 @@
                     {{&registerSecondaryMenu}}
                     {{&wrapperOpen}}
                     {{&pageTitleHTML}}
+                    <div class="line-numbers"><!-- ensure we number our code -->
                     {{&pageNarrativeHTML}}
+                    </div>
                     {{&uiView}}
                     {{&wrapperClose}}
                 </div>

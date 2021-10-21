@@ -11,28 +11,30 @@ const menu = require('./menu')
 
 //core components for look & feel and parent menus
 const coreTemplate = require('../../../core/inc/lib-coreTemplate')
+const { highlight } = require('prismjs')
 
 module.exports = (cfg, router) => {
-    const log = cfg._log
 
     // GET homepage
     router.get(cfg._routes.home, async (ctx, next) => {
+        const log = cfg._log
+        const highlightMenu = `<span class="item active" "><i class="home ${cfg.homeIconClass} icon"></i>Narrative</span>`
+
         const processPath = path.join(cfg._folderPath, cfg.folder.processPath)
 
         const narrativeMdPath = path.join(processPath, cfg.smpteProcess.narrative.current)
-        const narrativeMdPathCandidate = path.join(processPath, cfg.smpteProcess.narrative.candidate)
-        const narrativeMdPathPrevious = path.join(processPath, cfg.smpteProcess.narrative.previous)
 
         // load the default template and homepage narrative
         const narrativeHTML = coreTemplate.loadNarrativeHTML(narrativeMdPath)
         const templateHTML = coreTemplate.loadTemplateHTML()
 
         let viewData = coreTemplate.createTemplateData({
+            ctx: ctx,
             cfg: cfg,
-            registerSecondaryMenu: menu.html(cfg),
+            registerSecondaryMenu: menu.html(cfg, cfg._routes.home, highlightMenu),
             pageNarrativeHTML: narrativeHTML,
             templateHTML: templateHTML,
-            menuForThisRegister: `<div class="ui active item">${cfg.menu}</div>`
+            menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`
         })
 
         const rendering = coreTemplate.renderPageData(viewData)

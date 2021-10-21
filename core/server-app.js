@@ -73,7 +73,7 @@ const allRouters = []
 //>>> enable logging if config says so
 if (config.get('logging.logRequests')) {
   log.info(`${serverName} logging all requests (see config)`)
-  app.use(requestLogger())
+  app.use(requestLogger(config.get("logging")))
 }
 
 //>>> Add metadata to ctx with smpte middleware

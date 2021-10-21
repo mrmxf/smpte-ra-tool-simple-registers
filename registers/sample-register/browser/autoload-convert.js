@@ -1,4 +1,7 @@
-/* @module injected for the convert page */
+/**  @module autoload-convert */
+/** Module loaded into browser for the counvert routne
+ *
+ */
 
 /** trap changes in the conversion radio buttons to make the help information visible or invisible */
 $('input[type=radio][name=cvt]').on('change', function () {
@@ -18,6 +21,10 @@ $('#doConversion').on('click', function () {
         return
     }
     let cvtId = $('input[type=radio][name=cvt]:checked')[0].id
+    if (!cvtId || (cvtId.length == 0)) {
+        alert("No conversion is selected.")
+        return
+    }
     // alert("alrighty lets do the " + cvt + " conversion")
     let data = {
         conversion: cvtId,
@@ -32,6 +39,7 @@ $('#doConversion').on('click', function () {
             let resHtml
             switch (cvtId) {
                 default:
+                    var escaped = $("<div>").text(responseText).html();
                     //display json
                     resHtml = `
                     <div class="ui green padded basic center aligned segment">
@@ -39,7 +47,7 @@ $('#doConversion').on('click', function () {
                       <div class="header">Conversion ${labelHtml}</div>
                      </div>
                      <div class="ui segment">
-                      <pre><code class="language-js">${responseText}</code></pre>
+                      <pre><code class="language-json line-numbers">${escaped}</code></pre>
                      </div>
                     </div>
                     `
@@ -48,10 +56,13 @@ $('#doConversion').on('click', function () {
             Prism.highlightAll()
         })
         .fail(function (res) {
+            let cvtId = $('input[type=radio][name=cvt]:checked')[0].id
+            let lblId = `label${cvtId}`
+            let labelHtml = $(`#${lblId}`)[0].textContent
             $("#dataView").html(`
               <div class="ui red padded basic center aligned segment">
                 <div class = "ui negative compact  message">
-                <div class="header">Conversion Error Code ${res.status}</div>
+                <div class="header">Conversion ${labelHtml}: Error Code ${res.status}</div>
                 <p>${res.responseText}</p>
                 </div>
               </div>

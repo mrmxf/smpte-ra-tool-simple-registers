@@ -18,8 +18,6 @@ const path = require('path')
 
 //helpers for this register
 const convertUi = require('./convert-helper-ui')
-const convertWorker = require('./convert-worker')
-const validateWorker = require('./validate-json-worker')
 
 //core components for look & feel and parent menus
 const coreTemplate = require('../inc/lib-coreTemplate')
@@ -120,7 +118,7 @@ module.exports.renderPage = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPa
 
     //prepare the UI view based on the results of the conversion
     let segmentColor = "green"
-    let extraMenu = `<span class="item active" "><i class="play ${cfg.homeIconClass} icon"></i>${cfg.routes.convert}</span>`
+    let highlightMenu = `<span class="item active" "><i class="exchange alternate ${cfg.homeIconClass} icon"></i>${cfg.routes.convert}</span>`
     let uiView = `<div class ="ui ${segmentColor} segment">
     ${convertUi.html(cfg, cvtList)}
     </div>`
@@ -132,10 +130,10 @@ module.exports.renderPage = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPa
     let viewData = coreTemplate.createTemplateData({
         ctx: ctx,
         cfg: cfg,
-        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, extraMenu),
+        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, highlightMenu),
+        menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`,
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,
-        menuForThisRegister: `<div class="ui active item">${cfg.menu}</div>`,
         uiView: uiView,
         dataView: `<div id="dataView"></div>`
     })
@@ -194,14 +192,24 @@ module.exports.doConversion = async (cfg, ctx) => {
     let conversionId = ctx.request.body.conversion
     // we know that there was a match and that the worker
     // should be able to do the job or return an error in res
-    // so execute the conversion
-    let res
-    cvtList.forEach(cvt => {
-        if (conversionId === cvt.toSmpteId)
-            res = cvt.worker.toSmpte(ctx.request.body.sourceText)
-        if (conversionId === cvt.fromSmpteId)
-            res = cvt.worker.fromSmpte(ctx.request.body.sourceText)
+    // so execute the conversion and await asynchronous results
+    let conversionWorker
+    cvtList.forEach(async cvt => {
+        if (conversionId === cvt.toSmpteId) conversionWorker = cvt.worker.toSmpte
+        if (conversionId === cvt.fromSmpteId) conversionWorker = cvt.worker.fromSmpte
     })
-    ctx.status = res.status
-    ctx.body = res.body
+    return new Promise((resolve, reject) => {
+        //wait for async completion and then resolved with {satus:nnn, body: str}
+        conversionWorker(ctx.request.body.sourceText)
+            .then(res => {
+                ctx.status = res.status
+                ctx.body = res.body
+                resolve()
+            })
+            .catch(err => {
+                ctx.status = res.status
+                ctx.body = res.body
+                resolve()
+            })
+    })
 }

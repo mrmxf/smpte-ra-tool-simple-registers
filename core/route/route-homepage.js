@@ -28,10 +28,11 @@ router.get(thisRoute, (ctx, next) => {
     const templateHTML = coreTemplate.loadTemplateHTML()
 
     let viewData = coreTemplate.createTemplateData({
+        ctx: ctx,
         registerConfig: homepageConfig,
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,
-        menuForThisRegister: `<div class="ui active item">Homepage</div>`
+        menuTitleForThisPage: `<div class="ui active item">Homepage</div>`
     })
 
     const rendering = coreTemplate.renderPageData(viewData)

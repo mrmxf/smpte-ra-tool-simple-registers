@@ -8,6 +8,14 @@
  *
  * log all errors to console.log until succesful load and then log
  * success with pino
+ *
+ * for command line use the program pino-pretty makes life a little
+ * easier when parsing logs that scroll past your eyes
+ *
+ * ```bash
+ *   npm install -g pino-pretty
+ *   node core/server.js | pino-pretty
+ * ```
  */
 const fs = require('fs')
 const path = require('path')

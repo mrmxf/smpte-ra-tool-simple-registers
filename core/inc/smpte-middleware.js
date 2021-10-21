@@ -45,7 +45,7 @@ module.exports = async (ctx, next) => {
     }
 
     ctx.smpte = m
-    if (DEBUG) log.debug(m, "SMPTE middleware metadata")
+    //if (DEBUG) log.debug(m, "SMPTE middleware metadata")
 
     await next()
 }

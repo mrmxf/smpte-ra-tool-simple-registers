@@ -25,21 +25,27 @@ To test the conversion tools, paste the data below, select the right tool and of
   french: trois
 ```
 
-**XML Sample**
+**XML Sample**. To make reversible `xml` ⇆ `json`, this is actually `{"root": {"item": smpteJson} }`
 
 ```xml
- <?xml version="1.0" encoding="UTF-8" ?>
- <root>
-   <row>
-     <uint16>1</uint16><english>one</english><french>un</french>
-   </row>
-   <row>
-     <uint16>2</uint16><english>two</english><french>deux</french>
-   </row>
-   <row>
-     <uint16>3</uint16><english>three</english><french>trois</french>
-   </row>
- </root>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+  <item>
+    <uint16>1</uint16>
+    <english>one</english>
+    <french>un</french>
+  </item>
+  <item>
+    <uint16>2</uint16>
+    <english>two</english>
+    <french>deux</french>
+  </item>
+  <item>
+    <uint16>3</uint16>
+    <english>three</english>
+    <french>trois</french>
+  </item>
+</root>
 ```
 
 Status of the sample register:

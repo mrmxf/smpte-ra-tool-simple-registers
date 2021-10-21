@@ -49,5 +49,7 @@
     "spacetime": "^6.16.1",
     "xml2js": "^0.4.23"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "pino-pretty": "^7.1.0"
+  }
 }

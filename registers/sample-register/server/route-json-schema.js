@@ -15,10 +15,11 @@ const menu = require('./menu')
 const coreTemplate = require('../../../core/inc/lib-coreTemplate')
 
 module.exports = (cfg, router) => {
-    const log = cfg._log
 
-    // GET homepage
     router.get(cfg._routes.jsonSchema, async (ctx, next) => {
+        const log = cfg._log
+        const highlightMenu = `<span class="item active" "><i class="tasks ${cfg.homeIconClass} icon"></i>${cfg.routes.jsonSchema}</span>`
+
         const processPath = path.join(cfg._folderPath, cfg.folder.processPath)
 
         const narrativeMdPath = path.join(processPath, cfg.smpteProcess.narrative.current)
@@ -37,21 +38,23 @@ module.exports = (cfg, router) => {
             log.debug(err)
             return
         }
-        //format the HTML with left and right gutters
-        const prettyHTML = `<div class ="ui brown segment"><pre>` +
-            Prism.highlight(json, Prism.languages.javascript, 'javascript') +
-            `</pre></div>`
+
+        //allow syntax highlighting in browser using global theme
+        const prettyHTML = `<div class ="ui brown segment"><pre class="language-json line-numbers visible"><code>` +
+            json +
+            `</code></pre></div>`
 
         // load the default template and homepage narrative
         const narrativeHTML = coreTemplate.loadNarrativeHTML(narrativeMdPath)
         const templateHTML = coreTemplate.loadTemplateHTML()
 
         let viewData = coreTemplate.createTemplateData({
+            ctx: ctx,
             cfg: cfg,
-            registerSecondaryMenu: menu.html(cfg, cfg._routes.jsonSchema),
+            registerSecondaryMenu: menu.html(cfg, cfg._routes.jsonSchema, highlightMenu),
             pageNarrativeHTML: narrativeHTML,
             templateHTML: templateHTML,
-            menuForThisRegister: `<div class="ui active item">${cfg.menu}</div>`,
+            menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`,
             uiView: prettyHTML
         })
 

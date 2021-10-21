@@ -28,7 +28,7 @@ module.exports = (cfg, router) => {
         filename = cfg.smpteProcess.schema.current
         schemaPath = path.join(cfg._folderPath, cfg.folder.processPath, filename)
 
-        const res = jsonValidateHelper(cfg, menu, jsonPath, schemaPath, narrativeMdPath)
+        const res = jsonValidateHelper(ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath)
 
         ctx.status = res.status
         ctx.body = res.body

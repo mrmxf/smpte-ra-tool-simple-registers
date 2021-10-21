@@ -13,10 +13,10 @@ const menu = require('./menu')
 const cvt = require('../../../core/register-helpers/convert-helper')
 
 module.exports = (cfg, router) => {
-    const log = cfg._log
 
     // GET convert homepage
     router.get(cfg._routes.convert, async (ctx, next) => {
+        const log = cfg._log
         const processPath = path.join(cfg._folderPath, cfg.folder.processPath)
         const narrativeMdPath = path.join(processPath, cfg.smpteProcess.narrative.current)
 
@@ -46,6 +46,6 @@ module.exports = (cfg, router) => {
         //do the standard conversion
         // ctx.request.body = {conversion: "someID", string: "xml-stuff"}
         cvt.doConversion(cfg, ctx)
-        next()
+            .then(() => next())
     })
 }
