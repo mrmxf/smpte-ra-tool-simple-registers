@@ -10,4 +10,4 @@ Most registers will have a schema and some registers will have custom viewers
 written and maintained by the proponents of the register to help you
 navigate the data.
 
-The list of registers in this category is available from the main menu.
+The list of registers in this category is available from the  menu at the top of the page: **Registers ⏷**

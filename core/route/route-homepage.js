@@ -5,11 +5,11 @@
  * load index.template and use mustache to update
  *
  */
+const fs = require('fs')
 const path = require('path')
 const Router = require('koa-router')
 const router = new Router();
 const config = require('../cfg-va-che/cfg-va-che.js')
-const registers = require('../inc/lib-registers')
 const log = require('pino')(config.get('logging'))
 
 const coreTemplate = require('../inc/lib-coreTemplate')
@@ -23,10 +23,14 @@ router.get(thisRoute, (ctx, next) => {
 
     const homepageConfig = config.get(`home`)
 
-    // load the default template and homepage narrative
+    // load the default template and homepage narrative using a helper
     const narrativeHTML = coreTemplate.loadNarrativeHTML()
     const templateHTML = coreTemplate.loadTemplateHTML()
 
+    // override the page javascript
+    ctx.smpte.pageJavascript = `<script src="/css_js/autoload-home.js"></script>`
+
+    //set all the data for the template
     let viewData = coreTemplate.createTemplateData({
         ctx: ctx,
         registerConfig: homepageConfig,
@@ -35,7 +39,10 @@ router.get(thisRoute, (ctx, next) => {
         menuTitleForThisPage: `<div class="ui active item">Homepage</div>`
     })
 
+    //render the template
     const rendering = coreTemplate.renderPageData(viewData)
+
+    //give the data to koa for serving
     ctx.body = rendering.body
     ctx.status = rendering.status
 

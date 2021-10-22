@@ -14,14 +14,12 @@
         "schema": "schema",
         "document": "document"
     },
-    "_routes": "reserved property overrridden by code",
-    "_parent": "reserved property overriden by code",
     "title": "Register: Sample",
     "descriptionMd": "_**TEST** Sample Register, not for production_",
     "version": "0.1.0",
     "folder": {
         "serverPath": "server",
-        "converterPath":"converters",
+        "converterPath": "converters",
         "browserPath": "browser",
         "processPath": "smpte-process"
     },
@@ -44,5 +42,10 @@
             "previous": "sample-schema.json",
             "candidate": "sample-schema.json"
         }
-    }
+    },
+    "_absRoute": "reserved property overriden by code",
+    "_folderPath": "reserved property overriden by code",
+    "_log": "reserved property overriden by code",
+    "_parent": "reserved property overriden by code",
+    "_routes": "reserved property overrridden by code"
 }

@@ -27,6 +27,7 @@ const coreTemplate = require('../inc/lib-coreTemplate')
  * @param {String} folderPath path for the app to read the folder contents
  */
 const loadConvertFromFolder = (cfg) => {
+    const log = cfg._log
     const folderPath = path.join(cfg._folderPath, cfg.folder.serverPath, cfg.folder.converterPath)
 
     let cvtFiles = []
@@ -53,12 +54,8 @@ const loadConvertFromFolder = (cfg) => {
         converter.worker = require(workerPath)
 
         //check the entry method & router exist
-        if (!converter.worker.toSmpte) {
-            log.error(`plugin file ${workerPath} does not have a method toSMPTE() - no covnerter to load`)
-            return
-        }
-        if (!converter.worker.fromSmpte) {
-            log.error(`plugin file ${workerPath} does not have a method fromSmpte() - no covnerter to load`)
+        if (!converter.worker.toSmpte && !converter.worker.fromSmpte) {
+            log.debug(`plugin file ${workerPath} must have a method toSmpte() or fromSmpte() - no covnerter to load`)
             return
         }
 
