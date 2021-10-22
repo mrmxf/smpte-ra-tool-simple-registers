@@ -81,8 +81,9 @@ if (config.get('logging.logRequests')) {
 const smpteMiddleware = require('./inc/smpte-middleware')
 app.use(smpteMiddleware)
 
-//>>> enable file uploads
+//>>> enable file uploads & forms of 1Mbyte
 app.use(bodyParser({
+  formLimit: 1000000,
   formidable: {
     uploadDir: config.get("uploadFolderPath")
   }, //This is where the files would come
