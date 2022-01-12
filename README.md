@@ -36,8 +36,11 @@ yarn
 NODE_ENV=development
 #tweak development configuration
 nano config/config-development.json
-# Assuming success start the server using the defaults
+# Development: start the server using the defaults
 yarn start
+
+# Production: use something like pm2 to start the server
+# pm2 start --name smpte-ra-sr core/server.js
 ```
 
 If you want to **add a new** git submodule to `registers/` then do the following. Note that `--depth 1` is important if multiple users are updating the register as a submodule. Git will break if you're not careful.
