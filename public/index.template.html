@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <!-- See readme for how this template is renered -->
 
@@ -15,8 +16,7 @@
                 j = d.createElement(s),
                 dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', '{{googleTagManagerId}}');
     </script>
@@ -25,30 +25,23 @@
     <title>{{appTitle}}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="{{urlPrefix}}favicon.ico" />
 
     <!-- Include scripts and css for fomantic-ui styling -->
     <!-- You MUST include jQuery before Fomantic -->
 
-    <!-- CDN includes --->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link  href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/components/icon.min.css" rel="stylesheet" type="text/css" />
+    <script src="{{urlPrefix}}css_js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <link href="{{urlPrefix}}css_js/semantic.min.css" rel="stylesheet" type="text/css" />
+    <script src="{{urlPrefix}}css_js/semantic.min.js"></script>
+    <link href="{{urlPrefix}}css_js/themes/icon.min.css" rel="stylesheet" type="text/css"  />
 
-    <!-- Local includes -->
-    <!-- <script src="css_js/jquery.min.js" crossorigin="anonymous"></script> -->
-    <!-- <link href="css_js/themes/icon.min.css" rel="stylesheet" type="text/css"  /> -->
-    <!-- <link href="css_js/semantic.min.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <script src="css_js/semantic.min.js"></script> -->
-
-    <!-- tweak prism syntax highlightinh that you like & load any quirky custom stuff in site.css -->
+    <!-- tweak the prism syntax highlighter by choosing a theme that you like & load any quirky custom stuff in site.css -->
     <!-- Prism
         theme: Tomorrow Night
         opt: markup + css + c-like + javascript + json(all variants) + yaml + yang + line numbers + Line number highlight
     -->
-    <link href="/css_js/prism.css" rel="stylesheet" type="text/css" />
-    <link href="/css_js/site.css" rel="stylesheet" type="text/css" />
+    <link href="{{urlPrefix}}css_js/prism.css" rel="stylesheet" type="text/css" />
+    <link href="{{urlPrefix}}css_js/site.css" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,10 +65,10 @@
         <div class="ui container">
             <!-- SMPTE logo -->
             <a class="item" target="_blank" href="https://smpte-ra.org">
-                <img class="ui mini image" src="/images/logo-smpte-iris-alpha.svg" alt="SMPTE logo">
+                <img class="ui mini image" src="{{urlPrefix}}images/logo-smpte-iris-alpha.svg" alt="SMPTE logo">
             </a>
             <!-- Home -->
-            <a class="item" href="/">
+            <a class="item" href="{{urlPrefix}}">
                 <i class="home {{homeIconClass}} icon"></i> smpte-ra
             </a>
             <!-- Menu item(s) for this register -->
@@ -111,7 +104,7 @@
     {{&dataView}}
 
     <!--  ==========  Code Highlighting for any plugins  ==========    -->
-    <script src="/css_js/prism.js"></script>
+    <script src="{{urlPrefix}}css_js/prism.js"></script>
 
     <!--  ==========  Finally the javascript for the current Page  ==========    -->
     {{&pageJavascript}}

@@ -26,15 +26,21 @@ module.exports = async (ctx, next) => {
 
     let url = ctx.request.url.split('/')
 
-    //register paths are /register/registerName/convert to length >2
-    if (url.length < 2) {
-        next()
-        return
-    }
+    //register paths are /urlPrefix/register/registerName/convert to length >2
 
     //check for and remove zero length "/""
     if (url[0].length == 0)
         url.shift()
+
+    //check for and remove urlPrefix
+    if (`/${url[0]}/` == config.get("urlPrefix"))
+        url.shift()
+
+    //exit if the remaining route is not /register/registerName/thingy
+    if (url.length < 2) {
+        next()
+        return
+    }
 
     // if this url starts with the registers prefix then discard
     // the prefix so that we can find the right register
@@ -54,7 +60,7 @@ module.exports = async (ctx, next) => {
         //only try to load javascript if this route is a register
         if (register) {
             for (let r in register.cfg.routes) {
-                if (url[1].length==0) {
+                if (url[1].length == 0) {
                     //the home page for this register
                     let autoloadFilename = `autoload.js`
                     let autoloadRouteFilename = `autoload-home.js`
@@ -70,11 +76,11 @@ module.exports = async (ctx, next) => {
                     } catch (error) {
                         routeJs = ""
                     }
-                    if (mainJs || routeJs){
+                    if (mainJs || routeJs) {
 
                         ctx.smpte.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
                     }
-                    else{
+                    else {
                         ctx.smpte.pageJavascript = ""
                     }
                 }
@@ -93,11 +99,11 @@ module.exports = async (ctx, next) => {
                     } catch (error) {
                         routeJs = ""
                     }
-                    if (mainJs || routeJs){
+                    if (mainJs || routeJs) {
 
                         ctx.smpte.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
                     }
-                    else{
+                    else {
                         ctx.smpte.pageJavascript = ""
                     }
                 }

@@ -82,6 +82,7 @@ module.exports.loadNarrativeHTML = (narrativeFilePath) => {
  */
 module.exports.createTemplateData = (options) => {
     let googleTagManagerId, homeData
+    let urlPrefix = config.get("urlPrefix")
     try {
         googleTagManagerId = config.get('googleTagManagerId')
         homeData = config.get(`home`)
@@ -94,7 +95,7 @@ module.exports.createTemplateData = (options) => {
         appTitle: homeData.appTitle,
         appDescription: homeData.appDescription,
         version: homeData.version,
-        urlPrefix: homeData.urlPrefix,
+        urlPrefix: urlPrefix,
         googleTagManagerId: googleTagManagerId,
         homeIconClass: config.get("homeIconClass"),
         //menu barelements

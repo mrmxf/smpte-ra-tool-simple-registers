@@ -44,7 +44,17 @@ try {
     log.error(`Giving up: ${err}`)
     process.exit(1)
 }
+/* ************************************************************************** */
+//custom validation goes in here
 
+//urlPrefix must start and end with a slash or be a /
+schema.urlPrefix.format = function check(val) {
+    if ((val != "/") && (!/^[\/]{1}.*[\/]{1}$/.test(val))) {
+        throw new Error('urlPrefix must start and end with a slash "/" e.g. "/bibble/"')
+    }
+}
+
+/* ************************************************************************** */
 let config
 try {
     config = convict(schema)

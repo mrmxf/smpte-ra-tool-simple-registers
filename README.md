@@ -142,7 +142,8 @@ Tips:
 
 * To put raw HTML into mustache use an ampersand `{{text.with_escaped_HTML}}` `{{&text.in_raw_HTML}}`
 * Properties in the main template
-* `{{googleTagManagerId}}` Array of Google tage manager IDs
+* `{{urlPrefix}}` url route to the app (e.g. /registers/)
+* `{{googleTagManagerId}}` Array of Google tag manager IDs
 * `{{appTitle}}` Name of the App
 * `{{&menuTitleForThisPage}}` raw HTML for the menu items of the current register
 * `{{&menuForListOfRegisters}}` raw HTML for the list of registers

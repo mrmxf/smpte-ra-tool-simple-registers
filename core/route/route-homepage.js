@@ -28,7 +28,7 @@ router.get(thisRoute, (ctx, next) => {
     const templateHTML = coreTemplate.loadTemplateHTML()
 
     // override the page javascript
-    ctx.smpte.pageJavascript = `<script src="/css_js/autoload-home.js"></script>`
+    ctx.smpte.pageJavascript = `<script src="${config.get('urlPrefix')}css_js/autoload-home.js"></script>`
 
     //set all the data for the template
     let viewData = coreTemplate.createTemplateData({
