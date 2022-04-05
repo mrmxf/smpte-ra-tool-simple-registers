@@ -1,12 +1,12 @@
 {
-    "configDescription": "Devlopment configuration from config/config-defaults.json",
+    "configDescription": "Development configuration from config/config-defaults.json",
     "DEBUG": false,
-    "serverName": "SMPTE RA Simple Registers Framework",
+    "serverName": "SMPTE RA Simple Registers Demo",
     "serverNameShort": "RA-SR",
     "home": {
-        "appTitle": "Simple Registers Framework",
-        "appDescriptionMD": "**Alpha** release of the Simple Register Tool",
-        "version": "2.0.0",
+        "appTitle": "Simple Registers Demo",
+        "appDescriptionMD": "**Beta** release of the Simple Register Tool",
+        "version": "2.1.0",
         "path": {
             "static": "./public",
             "template": "index.template.html",
