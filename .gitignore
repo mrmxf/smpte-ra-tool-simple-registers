@@ -3,6 +3,7 @@ temp-*
 tmp-*
 **/temp-*/**
 **/tmp-*/**
+clogrc
 
 #node modules
 node_modules
