@@ -41,7 +41,13 @@ module.exports = (cfg, router) => {
         }
     })
 
-    //POST a conversion request
+    /** respond to a POST conversion request
+     *
+     * The call is made via an AJAX request within the convert UI page for this
+     * register. If the document returned is HTML then it is rendered by the
+     * browser javascript. If the document returned is JSON or XML then it is
+     * syntax highlighted and rendered by the browser javascript.
+     */
     router.post(cfg._routes.convert, async (ctx, next) => {
         //do the standard conversion
         // ctx.request.body = {conversion: "someID", string: "xml-stuff"}

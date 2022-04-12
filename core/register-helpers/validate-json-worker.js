@@ -1,4 +1,6 @@
 const Ajv = require("ajv/dist/2020")
+const pointer = require('json-pointer')
+const escape = require('escape-html')
 
 module.exports.validate = (json, schema) => {
   const ajv = new Ajv({
@@ -78,12 +80,33 @@ module.exports.validate = (json, schema) => {
             Error Validating JSON Document
           </div>`
 
-    validate.errors.forEach(e =>{
+    validate.errors.forEach(e => {
+      let src = pointer.get(dataObject, e.instancePath)
+      let srcHTML
+      if (src) {
+        srcHTML = `
+        <div class="ui segment">
+        <div class="header">Value in Error</div>
+        <pre><code class="language-json line-numbers">${escape(JSON.stringify(src, undefined, 2))}</code></pre>
+        </div>`
+        let pathFragments = pointer.parse(e.instancePath)
+        let parent = pathFragments.slice(0, pathFragments.length - 1)
+        parentPath = pointer.compile(parent)
+        parentSrc = pointer.get(dataObject, parentPath)
+        if (parentSrc) {
+          srcHTML += `
+          <div class="ui segment">
+          <div class="header">Parent Object</div>
+            <pre><code class="language-json line-numbers">${escape(JSON.stringify(parentSrc, undefined, 2))}</code></pre>
+          </div>`
+        }
+      }
       response.HTML += `
       <div class= "ui secondary segment">
       <div class="header">at ${e.instancePath}</div>
             ${e.message}
       <pre>${JSON.stringify(e.data, undefined, 2)}</pre>
+      ${srcHTML}
       </div>
       `
     })

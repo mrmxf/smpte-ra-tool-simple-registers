@@ -8,6 +8,10 @@ const xml2js = require('xml2js')
 /**
  *
  * @param {String} xmlString the xml to be converted to json
+ * @returns {Object} AJAXres
+ * @returns {Integer} AJAXres.status the status code for the AJAX call
+ * @returns {String}  AJAXres.body the smpte register data (JSON)
+ * @returns {String}  AJAXres.warningHtml warning message(s)
  */
 
 module.exports.toSmpte = async (xmlString) => {

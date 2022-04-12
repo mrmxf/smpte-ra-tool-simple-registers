@@ -40,7 +40,7 @@ module.exports = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
 
     let json, schema
 
-    //get the schema
+    //get the json
     try {
         json = fs.readFileSync(jsonPath, 'utf8')
     } catch (err) {
