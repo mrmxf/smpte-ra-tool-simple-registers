@@ -28,7 +28,7 @@ const coreTemplate = require('../inc/lib-coreTemplate')
  */
 const loadConvertFromFolder = (cfg) => {
     const log = cfg._log
-    const folderPath = path.join(cfg._folderPath, cfg.folder.serverPath, cfg.folder.converterPath)
+    const folderPath = path.join(cfg._folderPath, cfg.folder.serverPath, cfg.folder.workerPath)
 
     let cvtFiles = []
     let cvtList = [
@@ -197,7 +197,7 @@ module.exports.doConversion = async (cfg, ctx) => {
     })
     return new Promise((resolve, reject) => {
         //wait for async completion and then resolved with {satus:nnn, body: str}
-        conversionWorker(ctx.request.body.sourceText)
+        conversionWorker(ctx.request.body.sourceText, cfg, ctx)
             .then(res => {
                 ctx.status = res.status
                 ctx.body = res.body

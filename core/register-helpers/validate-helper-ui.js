@@ -1,6 +1,6 @@
 /** @module convert-helper-ui */
 /**
- * A helper that displays the upload & conversion options
+ * A helper that displays the validation options
  *
  * ```javascript
  *   const cvtList = cvt.loadConvertFromFolder("path/to/folder")
@@ -22,10 +22,10 @@ const mdit = require('markdown-it')()
 const sourceStep = (cfg, cvtList) => {
     let html = []
 
-    let Md = `### 1. Select Source
+    let Md = `### Upload JSON
 
-Either use the upload button to upload a source file
-or paste your content into the \`input box\`.
+Use the upload button to upload you JSON for validation or paste your
+content into the \`input box\`.
 `
     html.push(mdit.render(Md))
 
@@ -48,7 +48,7 @@ or paste your content into the \`input box\`.
     return html.join("\n")
 }
 
-const loadConverterHelpHTML = (cfg, filename) => {
+const loadValidaterHelpHTML = (cfg, filename) => {
     let filePath = path.join(cfg._folderPath, cfg.folder.serverPath, cfg.folder.workerPath, filename)
     try {
         let md = fs.readFileSync(filePath, 'utf-8')
@@ -98,7 +98,7 @@ Select your conversion from the following list.
 
             //now add the help text for this converter
             if (converter.toSmpteMdFile) {
-                let helpHtml = loadConverterHelpHTML(cfg, converter.toSmpteMdFile)
+                let helpHtml = loadValidaterHelpHTML(cfg, converter.toSmpteMdFile)
                 helpMsg.push({ id: hid, html: helpHtml })
             }
         }
@@ -115,7 +115,7 @@ Select your conversion from the following list.
 
             //now add the help text for this converter
             if (converter.fromSmpteMdFile) {
-                let helpHtml = loadConverterHelpHTML(cfg, converter.fromSmpteMdFile)
+                let helpHtml = loadValidaterHelpHTML(cfg, converter.fromSmpteMdFile)
                 helpMsg.push({ id: hid, html: helpHtml })
             }
         }
