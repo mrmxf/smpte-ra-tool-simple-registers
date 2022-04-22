@@ -1,9 +1,20 @@
+#                       _
+#   ___  _ __    _ __  | |_   ___   ___   _ _   __ _
+#  (_-< | '  \  | '_ \ |  _| / -_) |___| | '_| / _` |
+#  /__/ |_|_|_| | .__/  \__| \___|       |_|   \__,_|
+#               |_|
 #tmp files and folders
 temp-*
 tmp-*
 **/temp-*/**
 **/tmp-*/**
-clogrc
+clogrc/core/**
+clogrc/*.*
+!clogrc/stage.sh
+!clogrc/.clogrc.yml
+!clogrc/gitpod/before-tasks.sh
+!clogrc/gitpod/init-tasks.sh
+!clogrc/gitpod/startup-tasks.sh
 
 #node modules
 node_modules

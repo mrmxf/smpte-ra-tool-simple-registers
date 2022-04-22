@@ -1,6 +1,4 @@
-
 [submodule "registers/smpte-reg-lmt"]
 	path = registers/smpte-reg-lmt
-	url = git@github.com:mrmxf/smpte-reg-lmt.git
-[submodule "registers/spmte-reg-lmt"]
+	url = https://github.com/mrmxf/smpte-ra-tool-simple-registers.git
 	shallow = true

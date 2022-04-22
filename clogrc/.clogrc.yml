@@ -1,0 +1,13 @@
+#                       _
+#   ___  _ __    _ __  | |_   ___   ___   _ _   __ _
+#  (_-< | '  \  | '_ \ |  _| / -_) |___| | '_| / _` |
+#  /__/ |_|_|_| | .__/  \__| \___|       |_|   \__,_|
+#               |_|
+
+bind:
+  - "AWS_ACCESS_KEY_ID"
+  - "AWS_SECRET_ACCESS_KEY"
+clogrcFolder: clogrc
+folder:
+  resource: r
+  clogrc:   $GITPOD_REPO_ROOT/clogrc

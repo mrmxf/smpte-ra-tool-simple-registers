@@ -1,24 +1,15 @@
-# gitpod config for smpte-ra-tool-simple-registers
-
-# build on init
+#                       _
+#   ___  _ __    _ __  | |_   ___   ___   _ _   __ _
+#  (_-< | '  \  | '_ \ |  _| / -_) |___| | '_| / _` |
+#  /__/ |_|_|_| | .__/  \__| \___|       |_|   \__,_|
+#               |_|
 tasks:
-  - name: Configure ZMP doc environment
-    # ensure yarn global and zmp are on the path for this terminal
-    before: |
-      PATH="$PATH:$(yarn global bin)"
-      echo "PATH=\"$PATH\"" >> ~/.bashrc
-      echo "BEFORE task complete"
-    # install latest version of zmp into workspace
-    init: |
-      wget --quiet --output-document=$GITPOD_REPO_ROOT/zmprc/zmp https://mrmxf.com/get/zmp ; chmod +x $GITPOD_REPO_ROOT/zmprc/zmp
-      echo "INIT task complete"
-    # install zmp & clog
-    command: |
-      sudo wget --quiet --output-document=/usr/local/bin/zmp  https://mrmxf.com/get/zmp  ; sudo chmod +x /usr/local/bin/zmp
-      sudo wget --quiet --output-document=/usr/local/bin/clog https://mrmxf.com/get/clog ; sudo chmod +x /usr/local/bin/clog
-      echo "COMMAND task complete"
+  - name:    cloggy
+    before:  clogrc/gitpod/before-tasks.sh
+    init:    clogrc/gitpod/init-tasks.sh
+    command: clogrc/gitpod/startup-tasks.sh
 
-# port for preview server
+# port for server & godoc
 ports:
   - port: 3000
     onOpen: open-browser
