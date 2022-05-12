@@ -8,13 +8,6 @@ temp-*
 tmp-*
 **/temp-*/**
 **/tmp-*/**
-clogrc/core/**
-clogrc/*.*
-!clogrc/stage.sh
-!clogrc/.clogrc.yml
-!clogrc/gitpod/before-tasks.sh
-!clogrc/gitpod/init-tasks.sh
-!clogrc/gitpod/startup-tasks.sh
 
 #node modules
 node_modules
