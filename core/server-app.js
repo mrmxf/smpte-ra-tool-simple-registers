@@ -76,6 +76,10 @@ if (config.get('logging.logRequests')) {
   app.use(requestLogger(config.get("logging")))
 }
 
+//>>> Add simple register tool (srt) metadata as ctx.srt
+const srtMiddleware = require('./utils/middleware')
+app.use(srtMiddleware)
+
 //>>> Add metadata to ctx with smpte middleware
 //    this does the parsing to that each plugin has an easy(ish) time
 const smpteMiddleware = require('./inc/smpte-middleware')

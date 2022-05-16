@@ -47,7 +47,7 @@ const loadConvertFromFolder = (cfg) => {
         if (!f.isFile()) return
         if (f.name.substr(-5) !== ".json") return
 
-        //load the json into a convertor object (relative to the register-helpers folder)
+        //load the json into a convertor object (relative to the utils folder)
         let filePath = path.join("..", "..", folderPath, f.name)
         let converter = require(filePath)
         let workerPath = filePath.substr(0, filePath.length - 4) + "js"

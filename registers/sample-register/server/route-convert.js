@@ -10,7 +10,7 @@ const path = require('path')
 const menu = require('./menu')
 
 //core components for look & feel and parent menus
-const cvt = require('../../../core/register-helpers/convert-helper')
+const cvt = require('../../../core/utils/convert-helper')
 
 module.exports = (cfg, router) => {
 

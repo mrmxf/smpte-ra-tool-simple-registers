@@ -10,7 +10,7 @@ const path = require('path')
 const menu = require('./menu')
 
 //core components for look & feel and parent menus
-const jsonValidateHelper = require('../../../core/register-helpers/validate-helper-json')
+const jsonValidateHelper = require('../../../core/utils/validate-helper-json')
 
 module.exports = (cfg, router) => {
     const log = cfg._log

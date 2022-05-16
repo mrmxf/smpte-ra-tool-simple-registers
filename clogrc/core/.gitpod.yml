@@ -1,0 +1,33 @@
+#                              _
+#   ___  __ _   _ __    _ __  | |  ___
+#  (_-< / _` | | '  \  | '_ \ | | / -_)
+#  /__/ \__,_| |_|_|_| | .__/ |_| \___|
+#                      |_|
+# Gitpod configuration for this project
+# only /workspace/REPO files survive a restart
+
+tasks:
+  - name:    cloggy
+    before:  clogrc/gitpod/before-tasks.sh
+    init:    clogrc/gitpod/init-tasks.sh
+    command: clogrc/gitpod/startup-tasks.sh
+
+# port for server & godoc
+ports:
+  - port: 3000
+    onOpen: open-browser
+  - port: 6060
+    onOpen: open-browser
+  - port: 8080
+    onOpen: open-browser
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint            # lint javascript code
+    - piersdeseilligny.betterfountain   # screen writer plugin
+    - stkb.rewrap                       # wrap markdown at column boundaries
+    - ms-toolsai.jupyter                # jupyter notebook support
+    - ms-toolsai.jupyter-keymap         # jupyter notebook support
+    - ms-toolsai.jupyter-renderers      # jupyter notebook support
+    - mads-hartmann.bash-ide-vscode     # bash scripting helper
+    - DotJoshJohnson.xml                # xml formatting xpath etc

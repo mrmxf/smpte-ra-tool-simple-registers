@@ -16,7 +16,7 @@ const Router = require('koa-router')
 const router = new Router();
 let cfg
 
-const javascriptAutoloader = require('../../../core/register-helpers/javascript-autoloader')
+const javascriptAutoloader = require('../../../core/utils/javascript-autoloader')
 
 /** initialise the plugin with its config
  * @param {Object} registerConfigObject - the register's config.json as an object
