@@ -1,4 +1,6 @@
-# smpte-ra-tool-core
+# SMR - Simple Metadata Registers
+
+Deployed at SMPTE as `smpte-ra-tool-simple-registers`
 
 ## TODO
 
@@ -7,22 +9,32 @@
 
 ## Introduction
 
-**SMPTE Registration Authority Tool** for publishing and viewing **simple registers**.
-These are typically a single JSON, YAML or XML file that represents a controlled vocabulary of some kind.
+This tools was created to manage a simple register of XML or JSON data so that
+the data, schema and documentation could be accessed at a single endpoint by
+automation. Additionally, some simple tools were created for validation and
+conversion of different representations of the register(s).
 
-This is a refactor of the work that led to the Langage Metadata Table in SMPTE. This framework:
+The tools is written as a core with plugins. Each plugin is intended to be a
+seperate, indepenedent register that resides and is managed in its own GIT repo.
+
+This is a refactor of the work that led to the Langage Metadata Table in SMPTE.
+This framework:
 
 * hosts subprojects in their own folders `registers/`
-* uses [Fomantic UI](https://fomantic-ui.com/) for theming & controls (compiled into `public/sui/`)
+* uses [Fomantic UI](https://fomantic-ui.com/) for theming & controls
+  (compiled into `public/fui/`)
 * uses [Markdown-it](https://github.com/markdown-it) for rendering markdown
 * uses [mustache](https://mustache.github.io/) for substituting content at runtime
 * uses [pinojs](https://github.com/pinojs/pino) for logging
 * uses [xml2js](https://www.npmjs.com/package/xml-js) for handling XML
-* uses [hyperjump](https://github.com/hyperjump-io/json-schema-validator) for JSON schema
+* uses [ajv](https://www.npmjs.com/package/ajv) for handling JSON schema
 
 ## Usage
 
-Install [yarn], then follow instructinos below to install dependencies, and init thes ubmodules that contain the registers. Finally, start tha aerver and open a browser to view the registers. To contain everything in a docker application for easy deployment - see the docker section below.
+Install [yarn], then follow instructinos below to install dependencies, and init
+thes ubmodules that contain the registers. Finally, start tha aerver and open a
+browser to view the registers. To contain everything in a docker application for
+easy deployment - see the docker section below.
 
 To install with yarn & populate all the git submodules in `registers/`...
 
@@ -43,7 +55,9 @@ yarn start
 # pm2 start --name smpte-ra-sr core/server.js
 ```
 
-If you want to **add a new** git submodule to `registers/` then do the following. Note that `--depth 1` is important if multiple users are updating the register as a submodule. Git will break if you're not careful.
+If you want to **add a new** git submodule to `registers/` then do the
+following. Note that `--depth 1` is important if multiple users are updating the
+register as a submodule. Git will break if you're not careful.
 
 ```sh
 #ensure a shallow clone

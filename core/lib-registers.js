@@ -1,4 +1,8 @@
-/** @module registers */
+/** @module core */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /** create a static list of registers:
  *    - <folder>/config.json must exist
  *    - <folder>/<serverPath>/index.js must exist
@@ -21,7 +25,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const config = require('../cfg-va-che/cfg-va-che')
+const config = require(__smr + '/cfg-va-che')
 const log = require('pino')(config.get('logging'))
 
 const registersFolderPath = config.get('registersFolderPath')
@@ -29,7 +33,7 @@ let registerPluginFolders = []
 const registers = {}
 
 //helper to do path compensation for the require() function
-const tweakPath = p => path.join('..', '..', p)
+const tweakPath = p => path.join('..', p)
 
 try {
     registerPluginFolders = fs.readdirSync(registersFolderPath)

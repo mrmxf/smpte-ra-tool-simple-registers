@@ -1,3 +1,8 @@
+/** @module validate */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 const Ajv = require("ajv/dist/2020")
 const pointer = require('json-pointer')
 const escape = require('escape-html')

@@ -1,7 +1,10 @@
-/** @module lib-main-menu */
+/** @module core */
 
-const config = require('../cfg-va-che/cfg-va-che.js')
-const registers = require('../inc/lib-registers')
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
+const config = require(__smr+'/cfg-va-che.js')
+const registers = require('./lib-registers')
 
 module.exports.getListOfRegistersMenu = (options) => {
     let registersHTML = ""

@@ -1,4 +1,8 @@
-/** @module index */
+/** @module core */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  *  return index page for a register
  *
@@ -9,10 +13,10 @@ const fs = require('fs')
 const path = require('path')
 const Router = require('koa-router')
 const router = new Router();
-const config = require('../cfg-va-che/cfg-va-che.js')
+const config = require(__smr+'/cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 
-const coreTemplate = require('../inc/lib-coreTemplate')
+const coreTemplate = require('../lib-coreTemplate')
 
 const thisRoute = `/`
 
@@ -28,7 +32,7 @@ router.get(thisRoute, (ctx, next) => {
     const templateHTML = coreTemplate.loadTemplateHTML()
 
     // override the page javascript
-    ctx.smpte.pageJavascript = `<script src="${config.get('urlPrefix')}css_js/autoload-home.js"></script>`
+    ctx.smr.pageJavascript = `<script src="${config.get('urlPrefix')}css_js/autoload-home.js"></script>`
 
     //set all the data for the template
     let viewData = coreTemplate.createTemplateData({

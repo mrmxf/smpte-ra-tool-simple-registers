@@ -12,7 +12,7 @@ const Prism = require('prismjs')
 const menu = require('./menu')
 
 //core components for look & feel and parent menus
-const coreTemplate = require('../../../core/inc/lib-coreTemplate')
+const coreTemplate = require(__smr + '/../core/lib-coreTemplate')
 
 module.exports = (cfg, router) => {
 

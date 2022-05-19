@@ -1,4 +1,8 @@
 /** @module convert-helper */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  * A helper that manages a bunch of conversion tools and displays
  * a page with a common look and feel. Some of the code is browser
@@ -20,7 +24,7 @@ const path = require('path')
 const convertUi = require('./convert-helper-ui')
 
 //core components for look & feel and parent menus
-const coreTemplate = require('../inc/lib-coreTemplate')
+const coreTemplate = require(__smr + '/lib-coreTemplate')
 
 /**
  *
@@ -115,7 +119,7 @@ module.exports.renderPage = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPa
 
     //prepare the UI view based on the results of the conversion
     let segmentColor = "green"
-    let highlightMenu = `<span class="item active" "><i class="exchange alternate ${cfg.homeIconClass} icon"></i>${cfg.routes.convert}</span>`
+    let highlightMenu = `<span class="item active" "><i class="exchange alternate ${cfg.homeIconClass} icon"></i>${cfg.routes.convert.display}</span>`
     let uiView = `<div class ="ui ${segmentColor} segment">
     ${convertUi.html(cfg, cvtList)}
     </div>`
@@ -127,7 +131,7 @@ module.exports.renderPage = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPa
     let viewData = coreTemplate.createTemplateData({
         ctx: ctx,
         cfg: cfg,
-        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, highlightMenu),
+        registerSecondaryMenu: menu.html(cfg, cfg.routes.validate.absRoute, highlightMenu),
         menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`,
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,

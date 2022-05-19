@@ -1,7 +1,9 @@
+/** @module core */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
- *  @module  seerver-app
- *  @author  Mr MXF
- *
  * A very simple Koa Server to do the following:
  *  - Render a register into a number of different views
  *  - Create a simple index for a register
@@ -27,7 +29,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const config = require('./cfg-va-che/cfg-va-che.js')
+const config = require('./cfg-va-che.js')
 const log = require('pino')(config.get('logging'))
 const serverName = config.get(`serverNameShort`) + ":"
 
@@ -43,7 +45,7 @@ const requestLogger = require('koa-pino-logger')
 const app = new Koa();
 
 /** pull in the registers helper */
-const registers = require('./inc/lib-registers')
+const registers = require('./lib-registers')
 
 /** put everything behind HTTP AUTH if the environemnt forces it */
 if (process.env.hasOwnProperty('HTTP_USER') && process.env.hasOwnProperty('HTTP_PASSWORD')) {
@@ -76,14 +78,9 @@ if (config.get('logging.logRequests')) {
   app.use(requestLogger(config.get("logging")))
 }
 
-//>>> Add simple register tool (srt) metadata as ctx.srt
+//>>> Add simple register tool (srt) metadata as ctx.smr
 const srtMiddleware = require('./utils/middleware')
 app.use(srtMiddleware)
-
-//>>> Add metadata to ctx with smpte middleware
-//    this does the parsing to that each plugin has an easy(ish) time
-const smpteMiddleware = require('./inc/smpte-middleware')
-app.use(smpteMiddleware)
 
 //>>> enable file uploads & forms of 1Mbyte
 app.use(bodyParser({

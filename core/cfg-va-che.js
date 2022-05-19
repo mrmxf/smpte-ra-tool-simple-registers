@@ -1,4 +1,8 @@
-/** @module cfg-va-che */
+/** @module core */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  * ConFiguration with VAlidation & mustaCHE substitution
  *

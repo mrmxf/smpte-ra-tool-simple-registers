@@ -1,4 +1,8 @@
 /** @module convert-helper-ui */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  * A helper that displays the upload & conversion options
  *

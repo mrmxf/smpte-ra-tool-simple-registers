@@ -1,4 +1,8 @@
-/** @module validate-helper-json */
+/** @module validate */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  * A helper that takes a path to a file and schema and returns some HTML:
  *
@@ -17,7 +21,7 @@ const fs = require('fs')
 const worker = require('./validate-json-worker')
 
 //core components for look & feel and parent menus
-const coreTemplate = require('../inc/lib-coreTemplate')
+const coreTemplate = require('../lib-coreTemplate')
 
 /**
  *
@@ -64,7 +68,7 @@ module.exports = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
 
     //prepare the UI view
     let segmentColor = (response.ok) ? "green" : "red"
-    let highlightMenu = `<span class="item active" "><i class="check circle outline ${cfg.homeIconClass} icon"></i>${cfg.routes.validate}</span>`
+    let breadCrumbMenu = `<span class="item active" "><i class="check circle outline ${cfg.homeIconClass} icon"></i>${cfg.routes.validate.display}</span>`
     let uiView = `<div class ="ui ${segmentColor} segment">${response.HTML}</div>`
 
     // load the default template and homepage narrative
@@ -74,7 +78,7 @@ module.exports = (ctx, cfg, menu, jsonPath, schemaPath, narrativeMdPath) => {
     let viewData = coreTemplate.createTemplateData({
         ctx: ctx,
         cfg: cfg,
-        registerSecondaryMenu: menu.html(cfg, cfg._routes.validate, highlightMenu),
+        registerSecondaryMenu: menu.html(cfg, cfg.routes.validate.absRoute, breadCrumbMenu),
         pageNarrativeHTML: narrativeHTML,
         templateHTML: templateHTML,
         menuTitleForThisPage: `<div class="ui active item">${cfg.menu}</div>`,

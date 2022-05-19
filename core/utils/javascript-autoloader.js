@@ -1,4 +1,8 @@
-/** @module javascript-autoloader */
+/** @module utils */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
 /**
  * cascade all the javascript files for this page
  * and embed the as a text string at the bottom of
@@ -10,18 +14,18 @@
  *   //contents of browser/autoload-thisRoute.js
  * </script>
  * ```
- * attach the string to ctx.smpte.pageJavascript
+ * attach the string to ctx.smr.pageJavascript
  */
 const fs = require('fs')
 const path = require('path')
 
-const { register } = require('../../registers/sample-register/server/routes')
-const config = require('../cfg-va-che/cfg-va-che.js')
+const { register } = require(__smregisters + '/sample-register/server/routes')
+const config = require(__smr + '/cfg-va-che.js')
 const DEBUG = config.get("DEBUG")
 const log = require('pino')(config.get('logging'))
 
 module.exports = async (ctx, next) => {
-    const registers = require('../inc/lib-registers')
+    const registers = require('../lib-registers')
     let jsString = "/* hello mum*/"
 
     let url = ctx.request.url.split('/')
@@ -59,56 +63,46 @@ module.exports = async (ctx, next) => {
         }
         //only try to load javascript if this route is a register
         if (register) {
+            let thisUrl = ctx.request.url
+
+            // match the key of the route configuration object to get the
+            // autoloadRouteFilename if it exists
+            let thisRoute
             for (let r in register.cfg.routes) {
-                if (url[1].length == 0) {
-                    //the home page for this register
-                    let autoloadFilename = `autoload.js`
-                    let autoloadRouteFilename = `autoload-home.js`
-                    let absPath = path.join(register.cfg._folderPath, register.cfg.folder.browserPath)
-                    let mainJs, routeJs
-                    try {
-                        mainJs = fs.readFileSync(path.join(absPath, autoloadFilename))
-                    } catch (error) {
-                        mainJs = ""
-                    }
-                    try {
-                        routeJs = fs.readFileSync(path.join(absPath, autoloadRouteFilename))
-                    } catch (error) {
-                        routeJs = ""
-                    }
-                    if (mainJs || routeJs) {
-
-                        ctx.smpte.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
-                    }
-                    else {
-                        ctx.smpte.pageJavascript = ""
-                    }
-                }
-                if (url[1] === register.cfg.routes[r]) {
-                    let autoloadFilename = `autoload.js`
-                    let autoloadRouteFilename = `autoload-${url[1]}.js`
-                    let absPath = path.join(register.cfg._folderPath, register.cfg.folder.browserPath)
-                    let mainJs, routeJs
-                    try {
-                        mainJs = fs.readFileSync(path.join(absPath, autoloadFilename))
-                    } catch (error) {
-                        mainJs = ""
-                    }
-                    try {
-                        routeJs = fs.readFileSync(path.join(absPath, autoloadRouteFilename))
-                    } catch (error) {
-                        routeJs = ""
-                    }
-                    if (mainJs || routeJs) {
-
-                        ctx.smpte.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
-                    }
-                    else {
-                        ctx.smpte.pageJavascript = ""
-                    }
+                if (register.cfg.routes[r].absRoute == thisUrl) {
+                    thisRoute = r
+                    break
                 }
             }
 
+            // try and load the main autoload javascript
+            let autoloadFilename = `autoload.js`
+            let absPath = path.join(register.cfg._folderPath, register.cfg.folder.browserPath, autoloadFilename)
+            let mainJs, routeJs
+            try {
+                mainJs = fs.readFileSync(absPath)
+            } catch (error) {
+                mainJs = ""
+            }
+
+            // try and load the route autoload javascript
+            // try and load the main autoload javascript
+            if (thisRoute) {
+                autoloadFilename = `autoload-${thisRoute}.js`
+                absPath = path.join(register.cfg._folderPath, register.cfg.folder.browserPath, autoloadFilename)
+                try {
+                    routeJs = fs.readFileSync(absPath)
+                } catch (error) {
+                    routeJs = ""
+                }
+            }
+            //emit the javascript if any was loaded
+            if (mainJs || routeJs) {
+                ctx.smr.pageJavascript = `<script>\n${mainJs}\n${routeJs}\n</script>`
+            }
+            else {
+                ctx.smr.pageJavascript = ""
+            }
         }
     }
     next()

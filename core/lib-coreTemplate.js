@@ -1,13 +1,17 @@
-/** @module lib-body
- * prepare the text body of the message
+/** @module core */
+
+//  Copyright ©2022 Mr MXF info@mrmxf.com
+//  MIT License https://opensource.org/licenses/MIT
+
+/** prepare the text body of the message
  */
 const fs = require('fs')
 const path = require('path')
-const config = require('../cfg-va-che/cfg-va-che')
+const config = require(__smr + '/cfg-va-che')
 const mustache = require('mustache')
 const mdit = require('markdown-it')()
 const log = require('pino')(config.get('logging'))
-const menus = require("../inc/lib-menu")
+const menus = require(__smr + "/lib-menu")
 
 
 const thisRoute = `/`
@@ -49,13 +53,13 @@ module.exports.loadNarrativeHTML = (narrativeFilePath) => {
     } catch (err) {
         log.error(`route:${thisRoute}  cannot read narrative file ${filePath}`)
         loadNarrativeHTML =
-        status = 500
+            status = 500
         return "Internal error: unable to load page"
     }
     let firstLine = loadNarrativeMd.split('\n', 1)[0];
     //remove all heading decoration from the first line
     firstLine = firstLine.match(/^#*\s*(.*)/)[1]
-    firstLine =`<div class="title"><i class="dropdown icon"></i>${mdit.renderInline(firstLine)}</div>`
+    firstLine = `<div class="title"><i class="dropdown icon"></i>${mdit.renderInline(firstLine)}</div>`
 
     try {
         loadNarrativeHTML = mdit.render(loadNarrativeMd)
@@ -116,7 +120,7 @@ module.exports.createTemplateData = (options) => {
         //data to be passed between rendering stages
         templateHTML: (options.customTemplateHTML) ? options.customTemplateHTML : recentTemplateHTML,
         renderedOutput: (options.renderedOutput) ? options.renderedOutput : "",
-        pageJavascript: (options.ctx && options.ctx.smpte && options.ctx.smpte.pageJavascript) ? options.ctx.smpte.pageJavascript : ''
+        pageJavascript: (options.ctx && options.ctx.smr && options.ctx.smr.pageJavascript) ? options.ctx.smr.pageJavascript : ''
     }
 }
 
