@@ -19,16 +19,24 @@ module.exports.renderPane = (ctx, cfg, opt) => {
   let pasteBox = textArea.renderTextArea(ctx, cfg, opt.pasteBox)
   let upload = uploader.renderUploader(ctx, cfg, opt.uploader)
 
+  let htm= []
+
+  //emit the pane title with an accordian button
+  htm.push(`<div id="${opt.nameId}-container" class="title">`)
+  htm.push(`  <i class="dropdown icon"></i>`)
+  htm.push(`  ${(opt.label) ? opt.label : ""}`)
+  htm.push(`</div>`)
+
+
+  //emit the widgets
+  htm.push(`<div class="content">`)
+  htm.push(radio.body)
+  htm.push(pasteBox.body)
+  htm.push(upload.body)
+  htm.push(`</div>`)
+
   return {
     status: radio.status,
-    body: `
-     <div id="${opt.nameId}-container" class="title">
-       <i class="dropdown icon"></i>
-       ${(opt.label) ? opt.label : ""}
-     </div>
-     <div class="content">
-       ${radio.body}
-       ${pasteBox.body}
-       ${upload.body}
-     </div>`}
+    body: htm.join("\n")
+  }
 }

@@ -9,6 +9,7 @@ const coreTemplate = require(__smr + '/lib-coreTemplate')
 // groups for this page
 const titlePane = require(`./ui-pane-title`)
 const sourcePane= require(`./ui-pane-source`)
+const candidatePane= require(`./ui-pane-source`)
 
 /** Module to process files in 3 stages
  */ 
@@ -40,6 +41,12 @@ module.exports.renderPage = (ctx, cfg, menu, opt) => {
     //Second Pane is the source selector
     // Grab the HTML & remember the worst error
     paneData = sourcePane.renderPane(ctx, cfg, opt.source)
+    paneStatus= Math.max(paneData.status, paneStatus)
+    pageHtml+= paneData.body
+
+    //Third Pane is the candidate selector
+    // Grab the HTML & remember the worst error
+    paneData = candidatePane.renderPane(ctx, cfg, opt.candidate)
     paneStatus= Math.max(paneData.status, paneStatus)
     pageHtml+= paneData.body
 

@@ -16,12 +16,13 @@
  * Page options
  *
  * @typedef uiPageFileWorkflowOpt
- * @param       {string} paneTitle Title for page & Title block
- * @param        {string} pageHelp Text that appears near the title
- * @param           {string} route key the current route from the config file
-                                 * e.g. `convert` to use `cfg.routes.convert`
- * @param {string} breadCrumbsMenu Optional html string displaying for breadcrumbs
- * @param {uiPaneSourceOpt} source options for a source pane
+ * @param          {string} paneTitle Title for page & Title block
+ * @param           {string} pageHelp Text that appears near the title
+ * @param              {string} route key the current route from the config file
+                                    * e.g. `convert` to use `cfg.routes.convert`
+ * @param    {string} breadCrumbsMenu Optional html string displaying for breadcrumbs
+ * @param    {uiPaneSourceOpt} source options for a source pane (reference)
+ * @param {uiPaneSourceOpt} candidate options for a source pane (candidate)
  * 
  * Pane Options
  * 

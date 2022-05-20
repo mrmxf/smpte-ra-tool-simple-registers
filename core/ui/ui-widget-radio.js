@@ -28,6 +28,7 @@ module.exports.renderRadioGroup = (ctx, cfg, opt) => {
         htm.push(`  </div>`)
         htm.push(` </div>`)
     })
+    htm.push(` </div>`)
 
     return {
         status: 200,
