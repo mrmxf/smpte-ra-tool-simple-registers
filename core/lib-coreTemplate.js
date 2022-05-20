@@ -96,7 +96,7 @@ module.exports.createTemplateData = (options) => {
     return {
         //metadata elements
         serverName: config.get('serverName'),
-        appTitle: homeData.appTitle,
+        appTitle: (options.pageTitle) ? options.pageTitle : homeData.appTitle,
         appDescription: homeData.appDescription,
         version: homeData.version,
         urlPrefix: urlPrefix,
